@@ -1,20 +1,8 @@
-<div class="page-container">
-  <div id="preload" class="banner-container" fxLayoutAlign="center center">
-    <div class="banner-text">
-      <h1>HISTORICAL PROJECT COST ARCHIVE</h1>
-      <h2>
-        Historical project cost repository for Hollins Consulting!
-      </h2>
-
-      <button mat-stroked-button style="border-color: white;">
-        Browse by Client
-      </button>
-      <button mat-stroked-button style="border-color: white;">
-        Browse by Industry
-      </button>
-    </div>
-  </div>
-
+<div class="page-container" fxLayout="column">
   <app-stats></app-stats>
+  <app-banner></app-banner>
+  <app-project-carousel></app-project-carousel>
+  <app-recent-projects></app-recent-projects>
+  <app-request-access></app-request-access>
   <app-browse-tags></app-browse-tags>
 </div>
