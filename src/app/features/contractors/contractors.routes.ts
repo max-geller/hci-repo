@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { IndexListComponent } from './pages/index-list/index-list.component';
-import { IndexDetailComponent } from './pages/index-detail/index-detail.component';
+import { ContractorListComponent } from './pages/contractor-list/contractor-list.component';
+import { ContractorDetailComponent } from './pages/contractor-detail/contractor-detail.component';
 
 const routes: Routes = [
     {
@@ -11,11 +11,11 @@ const routes: Routes = [
     },
     {
         path: 'list',
-        component: IndexListComponent
+        component: ContractorListComponent
     },
     {
-        path: 'index/:id',
-        component: IndexDetailComponent,
+        path: 'contractor/:id',
+        component: ContractorDetailComponent,
     },
 ];
 
@@ -23,4 +23,4 @@ const routes: Routes = [
     imports: [RouterModule.forChild(routes)],
     exports: [RouterModule]
 })
-export class IndicesRoutes { }
+export class ContractorsRoutes { }

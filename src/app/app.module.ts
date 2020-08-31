@@ -45,6 +45,7 @@ import { ParallaxDirective } from './shared/directives/parallax.directive';
 import { RatesModule } from './features/rates/rates.module';
 import { ProjectsModule } from './features/projects/projects.module';
 import { IndicesModule } from './features/indices/indices.module';
+import { ClientsModule } from './admin/modules/clients/clients.module';
 
 @NgModule({
   declarations: [
@@ -88,7 +89,8 @@ import { IndicesModule } from './features/indices/indices.module';
     SessionsModule,
     RatesModule,
     IndicesModule,
-    ProjectsModule
+    ProjectsModule,
+    ClientsModule
   ],
   providers: [
     AuthService
