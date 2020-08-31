@@ -1,4 +1,4 @@
-<div  id="preload" class="page-layout" fxLayout="column">
+<div id="preload" class="page-layout" fxLayout="column">
   <h1>PROJECTS:</h1>
   <mat-divider></mat-divider>
   <div class="main-container" fxLayout="column">
@@ -16,29 +16,26 @@
 
 
         <div id="preload" class="course-item" fxlayout="row" style="display: flex; margin:20px;;"
-          routerLink="/courses/course/{{course.id}}" *ngFor="let project of projects$ | async">
+          routerLink="/projects/project/{{project.id}}" *ngFor="let project of projects$ | async">
           <div class="course-image" fxLayout="column">
-            <img src="{{course.previewURL}}" class="responsive" height="160px" width="260px">
+            <img src="{{project.previewURL}}" class="responsive" height="160px" width="260px">
             <div fxLayout="row" fxLayoutAlign="center center">
-              <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i> <i class="fas fa-star-half"></i> {{course.rating}} ({{course.reviews}}
-              Reviews)
-
+              {{project.id}}
             </div>
             <div fxLayout="row" fxLayoutAlign="center center">
               <p style="font-style:italic;">26hrs, 13 Sections </p>
             </div>
             <div class="instructor-container" fxLayout="row" fxLayoutAlign="start start" style="padding:20px;">
               <button mat-icon-button>
-                <img class="team-avatar" src="{{course.instructorAvatar}}" min-width="36px" height="36px">
+                <img class="team-avatar" src="{{project.instructorAvatar}}" min-width="36px" height="36px">
               </button>
               <span style="width:15px;"></span>
-              <p style="font-style:italic;line-height: 36px;margin:0px;">{{course.instructor}} </p>
+              <p style="font-style:italic;line-height: 36px;margin:0px;">{{project.instructor}} </p>
             </div>
           </div>
           <div class="course-description" fxLayout="column" fxFlex>
-            <h3>{{course.title}}</h3>
-            <h4>{{course.headline}}</h4>
+            <h3>{{project.name}}</h3>
+            <h4>{{project.headline}}</h4>
 
 
 
