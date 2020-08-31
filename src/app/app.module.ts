@@ -20,7 +20,6 @@ import { AgmCoreModule } from '@agm/core';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { InMemoryDataService } from './shared/in-memory-db/inmemory-db.service';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { TopicsComponent } from './pages/topics/topics.component';
 
 import { AuthService } from './core/services/auth.service';
 import { FooterComponent } from './shared/nav/footer/footer.component';
@@ -29,13 +28,9 @@ import { SidenavComponent } from './shared/nav/sidenav/sidenav.component';
 import { CoursesModule } from './features/courses/courses.module';
 import { GuidesModule } from './features/guides/guides.module';
 import { AdminModule } from './admin/admin.module';
-import { ProComponent } from './pages/pro/pro.component';
 import { AboutComponent } from './pages/about/about.component';
 import { TagsComponent } from './pages/tags/tags.component';
-import { StoreComponent } from './pages/store/store.component';
 import { ContactComponent } from './pages/contact/contact.component';
-import { BlogComponent } from './pages/blog/blog.component';
-import { MissionComponent } from './pages/mission/mission.component';
 import { SessionsModule } from './sessions/sessions.module';
 import { PrivacyComponent } from './pages/privacy/privacy.component';
 import { TermsComponent } from './pages/terms/terms.component';
@@ -50,17 +45,12 @@ import { ClientsModule } from './admin/modules/clients/clients.module';
 @NgModule({
   declarations: [
     AppComponent,
-    TopicsComponent,
     FooterComponent,
     IconMenuComponent,
     SidenavComponent,
-    ProComponent,
     AboutComponent,
     TagsComponent,
-    StoreComponent,
     ContactComponent,
-    BlogComponent,
-    MissionComponent,
     PrivacyComponent,
     TermsComponent,
     ProfileComponent,

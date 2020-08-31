@@ -2,13 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './pages/home/home.component';
-import { TopicsComponent } from './pages/topics/topics.component';
 import { AboutComponent } from './pages/about/about.component';
 import { TagsComponent } from './pages/tags/tags.component';
-import { MissionComponent } from './pages/mission/mission.component';
-import { BlogComponent } from './pages/blog/blog.component';
-import { ProComponent } from './pages/pro/pro.component';
-import { StoreComponent } from './pages/store/store.component';
 import { NotFoundComponent } from './shared/components/pages/not-found/not-found.component';
 import { PrivacyComponent } from './pages/privacy/privacy.component';
 import { ProfileComponent } from './pages/profile/profile.component';
@@ -26,12 +21,20 @@ const routes: Routes = [
     loadChildren: () => import('./sessions/sessions.module').then(m => m.SessionsModule),
   },
   {
-    path: 'courses',
-    loadChildren: () => import('./features/courses/courses.module').then(m => m.CoursesModule),
+    path: 'projects',
+    loadChildren: () => import('./features/projects/projects.module').then(m => m.ProjectsModule),
   },
   {
-    path: 'guides',
-    loadChildren: () => import('./features/guides/guides.module').then(m => m.GuidesModule),
+    path: 'indices',
+    loadChildren: () => import('./features/indices/indices.module').then(m => m.IndicesModule),
+  },
+  {
+    path: 'clients',
+    loadChildren: () => import('./features/clients/clients.module').then(m => m.ClientsModule),
+  },
+  {
+    path: 'contractors',
+    loadChildren: () => import('./features/contractors/contractors.module').then(m => m.ContractorsModule),
   },
   {
     path: 'rates',
@@ -45,12 +48,6 @@ const routes: Routes = [
     path: 'home',
     component: HomeComponent
   },
-
-
-  {
-    path: 'topics',
-    component: TopicsComponent
-  },
   {
     path: 'about',
     component: AboutComponent
@@ -58,22 +55,6 @@ const routes: Routes = [
   {
     path: 'tags',
     component: TagsComponent
-  },
-  {
-    path: 'mission',
-    component: MissionComponent
-  },
-  {
-    path: 'blog',
-    component: BlogComponent
-  },
-  {
-    path: 'store',
-    component: StoreComponent
-  },
-  {
-    path: 'pro',
-    component: ProComponent
   },
   {
     path: 'privacy',
