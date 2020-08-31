@@ -1,3 +1,4 @@
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -20,7 +21,6 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { InMemoryDataService } from './shared/in-memory-db/inmemory-db.service';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { TopicsComponent } from './pages/topics/topics.component';
-import { ArticlesComponent } from './features/articles/articles.component';
 
 import { AuthService } from './core/services/auth.service';
 import { FooterComponent } from './shared/nav/footer/footer.component';
@@ -40,15 +40,16 @@ import { SessionsModule } from './sessions/sessions.module';
 import { PrivacyComponent } from './pages/privacy/privacy.component';
 import { TermsComponent } from './pages/terms/terms.component';
 import { ProfileComponent } from './pages/profile/profile.component';
-import { CheckoutComponent } from './pages/checkout/checkout.component';
-import {  AngularFireFunctionsModule } from '@angular/fire/functions';
+import { AngularFireFunctionsModule } from '@angular/fire/functions';
 import { ParallaxDirective } from './shared/directives/parallax.directive';
+import { RatesModule } from './features/rates/rates.module';
+import { ProjectsModule } from './features/projects/projects.module';
+import { IndicesModule } from './features/indices/indices.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopicsComponent,
-    ArticlesComponent,
     FooterComponent,
     IconMenuComponent,
     SidenavComponent,
@@ -62,7 +63,6 @@ import { ParallaxDirective } from './shared/directives/parallax.directive';
     PrivacyComponent,
     TermsComponent,
     ProfileComponent,
-    CheckoutComponent,
     ParallaxDirective
   ],
   imports: [
@@ -85,7 +85,10 @@ import { ParallaxDirective } from './shared/directives/parallax.directive';
     CoursesModule,
     GuidesModule,
     AdminModule,
-    SessionsModule
+    SessionsModule,
+    RatesModule,
+    IndicesModule,
+    ProjectsModule
   ],
   providers: [
     AuthService

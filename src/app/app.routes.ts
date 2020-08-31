@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './pages/home/home.component';
 import { TopicsComponent } from './pages/topics/topics.component';
-import { ArticlesComponent } from './features/articles/articles.component';
 import { AboutComponent } from './pages/about/about.component';
 import { TagsComponent } from './pages/tags/tags.component';
 import { MissionComponent } from './pages/mission/mission.component';
@@ -14,7 +13,6 @@ import { NotFoundComponent } from './shared/components/pages/not-found/not-found
 import { PrivacyComponent } from './pages/privacy/privacy.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { TermsComponent } from './pages/terms/terms.component';
-import { CheckoutComponent } from './pages/checkout/checkout.component';
 
 
 const routes: Routes = [
@@ -36,6 +34,10 @@ const routes: Routes = [
     loadChildren: () => import('./features/guides/guides.module').then(m => m.GuidesModule),
   },
   {
+    path: 'rates',
+    loadChildren: () => import('./features/rates/rates.module').then(m => m.RatesModule),
+  },
+  {
     path: 'admin',
     loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule),
   },
@@ -43,14 +45,8 @@ const routes: Routes = [
     path: 'home',
     component: HomeComponent
   },
-  {
-    path: 'checkout',
-    component: CheckoutComponent
-  },
-  {
-    path: 'articles',
-    component: ArticlesComponent
-  },
+
+
   {
     path: 'topics',
     component: TopicsComponent
