@@ -1,4 +1,5 @@
 <div id="preload" class="page-layout" fxLayout="column" fxLayoutAlign="start center" style="min-height: 500px;display:flex">
+  <img src="assets/images/logo.png" style="padding: 50px;" height="100px" />
   <div class="mat-card-title">Let's get you logged in...</div>
   <form class="form-container" #loginForm="ngForm" fxLayout="column" fxLayoutAlign="start center"
     >
@@ -13,8 +14,8 @@
     </mat-form-field>
     <mat-card-actions>
       <div fxLayout="row" fxLayoutAlign="space-evenly center">
-        <button mat-raised-button color="primary" type="submit" (click)="emailSignIn()"> Login </button>
-        <button mat-raised-button> Reset Password </button>
+        <button mat-stroked-button color="primary" type="submit" (click)="emailSignIn()"> Login </button>
+        <button mat-stroked-button> Reset Password </button>
       </div>
     </mat-card-actions>
   </form>

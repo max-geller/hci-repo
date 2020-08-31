@@ -3,53 +3,12 @@
 </ngx-spinner>
 
 <div id='preload'>
-  <div class="app-navbar" fxLayout="row" style="padding-left: 20px;padding-right:20px;">
-    <div fxLayout="row" fxLayoutAlign="start center" fxFlex>
-      <button mat-icon-button fxShow="true" fxHide fxShow.lt-sm>
-        <i class="fal fa-bars" style="color:white;margin-top:6px;"></i>
-      </button>
-      <mat-nav-list>
-        <img src="assets/images/white-logo.png" height="22px" />
-        <h1 style="
-            color: white;
-            margin-left: 12px;
-            font-size: 20px !important;
-            font-weight: 400;
-          ">
-          <mat-list-item routerLink="/home">
-            <h1 style="margin-top: 12px;color:white;white-space: nowrap;">HCI COST REPO</h1>
-          </mat-list-item>
-      </mat-nav-list>
-      <mat-nav-list fxLayout="row" style="color: white; font-size: 12px;" fxShow="true" fxShow fxHide.lt-sm>
-        <mat-list-item routerLink="/projects" style="font-size: 12px !important;">
-          PROJECTS
-        </mat-list-item>
-        <mat-list-item routerLink="/clients" style="font-size: 12px !important;white-space: nowrap;">
-          CLIENTS
-        </mat-list-item>
-        <mat-list-item routerLink="/rates" style="font-size: 12px !important;white-space: nowrap;">
-          LABOR RATES
-        </mat-list-item>
-        <mat-list-item routerLink="/indices" style="font-size: 12px !important;white-space: nowrap;">
-          COST INDICES
-        </mat-list-item>
-
-        <button mat-icon-button>
-          <i class="fal fa-search" style="margin-top: 6px;"></i>
-        </button>
-      </mat-nav-list>
-    </div>
-    <div fxLayout="column" fxLayoutAlign="center end" fxFlex>
-      <app-icon-menu></app-icon-menu>
-    </div>
-  </div>
+  <app-navbar></app-navbar>
+</div>
 
 
 
-  <div id="preload" class="main-container" fxLayout="column" style="flex-grow: 1;width: 100vw;">
-    <router-outlet></router-outlet>
-
-    <app-footer></app-footer>
-
-  </div>
+<div id="preload" class="main-container" fxLayout="column" style="flex-grow: 1;width: 100vw;">
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
 </div>

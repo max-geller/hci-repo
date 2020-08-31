@@ -1,4 +1,3 @@
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -41,6 +40,8 @@ import { RatesModule } from './features/rates/rates.module';
 import { ProjectsModule } from './features/projects/projects.module';
 import { IndicesModule } from './features/indices/indices.module';
 import { ClientsModule } from './admin/modules/clients/clients.module';
+import { NavbarComponent } from './shared/nav/navbar/navbar.component';
+
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { ClientsModule } from './admin/modules/clients/clients.module';
     FooterComponent,
     IconMenuComponent,
     SidenavComponent,
+    NavbarComponent,
     AboutComponent,
     TagsComponent,
     ContactComponent,
