@@ -1,0 +1,50 @@
+<div class="footer-nav" style="min-height: 220px;" fxLayout="column wrap" fxLayoutAlign="start start">
+
+  <div class="footer-column" fxLayoutAlign="start start">
+    <div fxLayout="row">
+      <mat-nav-list style="margin-left: 20px; padding: 0px;top:0">
+        <h5 style="font-size: 14px;margin-left: 15px;font-weight: bolder;color:white;">CONTENT</h5>
+        <mat-list-item routerLink="/courses" routerLinkActive="active">Courses</mat-list-item>
+        <mat-list-item routerLink="/guides" routerLinkActive="active">Guides</mat-list-item>
+        <mat-list-item routerLink="/articles" routerLinkActive="active">Articles</mat-list-item>
+        <mat-list-item routerLink="/pro" routerLinkActive="active">Pro Members </mat-list-item>
+
+      </mat-nav-list>
+
+      <mat-nav-list style="margin-left: 20px; padding: 0px;top:0">
+        <h5 style="font-size: 14px;margin-left: 15px;font-weight: bolder;color:white;">PLATFORM</h5>
+        <mat-list-item routerLink="/mission" routerLinkActive="active">Mission</mat-list-item>
+        <mat-list-item routerLink="/about" routerLinkActive="active">About</mat-list-item>
+        <mat-list-item routerLink="/blog" routerLinkActive="active">Blog</mat-list-item>
+        <mat-list-item routerLink="/contact" routerLinkActive="active">Contact </mat-list-item>
+      </mat-nav-list>
+
+      <mat-nav-list style="margin-left: 20px; padding: 0px;top:0">
+        <h5 style="font-size: 14px;margin-left: 15px;font-weight: bolder;color:white;">RESOURCES</h5>
+        <mat-list-item routerLink="/topics" routerLinkActive="active">Browse by Topics</mat-list-item>
+        <mat-list-item routerLink="/tags" routerLinkActive="active">Browse by Tag</mat-list-item>
+        <mat-list-item >Search </mat-list-item>
+        <mat-list-item onClick="window.open('//store.devmax.io')">Store </mat-list-item>
+      </mat-nav-list>
+
+
+      <div style="margin-left: 60px;" fxShow fxHide.lt-md>
+        <div fxLayout="row">
+
+          <i onClick="window.open('//www.instagram.com/devmaxio')" class="fab fa-github fa-2x"
+            style="color: white;cursor: pointer;"></i>
+          <div class="icon-span"></div>
+          <i onClick="window.open('//www.linkedin.com/devmaxio')" class="fab fa-linkedin fa-2x"
+            style="color: white;cursor: pointer;"></i>
+          <div class="icon-span"></div>
+          <i onClick="window.open('//devmaxio.slack.com/')" class="fab fa-slack-hash fa-2x"
+            style="color: white;cursor: pointer;"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="copyright-container" fxLayoutAlign="start center">
+  <h5 style="font-weight: lighter;font-size: x-small;"> © 2020 DevMax.io, San Francisco, CA. All Rights Reserved.</h5>
+</div>
