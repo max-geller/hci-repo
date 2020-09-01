@@ -24,8 +24,6 @@ import { AuthService } from './core/services/auth.service';
 import { FooterComponent } from './shared/nav/footer/footer.component';
 import { IconMenuComponent } from './shared/nav/icon-menu/icon-menu.component';
 import { SidenavComponent } from './shared/nav/sidenav/sidenav.component';
-import { CoursesModule } from './features/courses/courses.module';
-import { GuidesModule } from './features/guides/guides.module';
 import { AdminModule } from './admin/admin.module';
 import { AboutComponent } from './pages/about/about.component';
 import { TagsComponent } from './pages/tags/tags.component';
@@ -75,8 +73,6 @@ import { NavbarComponent } from './shared/nav/navbar/navbar.component';
       HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { delay: 100 }) : [],
     AgmCoreModule.forRoot({ apiKey: 'AIzaSyCYTxkREIgB7sNozUDIhlVNNDwXg9SS3wk' }),
     HomeModule,
-    CoursesModule,
-    GuidesModule,
     AdminModule,
     SessionsModule,
     RatesModule,
