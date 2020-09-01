@@ -3,6 +3,7 @@ import { scaleLinear, scaleTime, scalePoint } from 'd3-scale';
 import { curveLinear } from 'd3-shape';
 
 import { getUniqueXDomainValues } from '@swimlane/ngx-charts/common/domain.helper';
+
 import {
   BaseChartComponent,
   ViewDimensions,

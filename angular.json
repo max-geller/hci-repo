@@ -34,12 +34,10 @@
           },
           "configurations": {
             "production": {
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.dev.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ],
+              "fileReplacements": [{
+                "replace": "src/environments/environment.dev.ts",
+                "with": "src/environments/environment.prod.ts"
+              }],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -48,8 +46,7 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "budgets": [
-                {
+              "budgets": [{
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
@@ -121,8 +118,47 @@
               "devServerTarget": "hci-repo:serve:production"
             }
           }
+        },
+        "@swimlane/ngx-charts": {
+          "projectType": "library",
+          "root": "projects/swimlane/ngx-charts",
+          "sourceRoot": "projects/swimlane/ngx-charts/src",
+          "prefix": "lib",
+          "architect": {
+            "build": {
+              "builder": "@angular-devkit/build-ng-packagr:build",
+              "options": {
+                "tsConfig": "projects/swimlane/ngx-charts/tsconfig.lib.json",
+                "project": "projects/swimlane/ngx-charts/ng-package.json"
+              },
+              "configurations": {
+                "production": {
+                  "tsConfig": "projects/swimlane/ngx-charts/tsconfig.lib.prod.json"
+                }
+              }
+            },
+            "test": {
+              "builder": "@angular-devkit/build-angular:karma",
+              "options": {
+                "main": "projects/swimlane/ngx-charts/src/test.ts",
+                "tsConfig": "projects/swimlane/ngx-charts/tsconfig.spec.json",
+                "karmaConfig": "projects/swimlane/ngx-charts/karma.conf.js"
+              }
+            },
+            "lint": {
+              "builder": "@angular-devkit/build-angular:tslint",
+              "options": {
+                "tsConfig": [
+                  "projects/swimlane/ngx-charts/tsconfig.lib.json",
+                  "projects/swimlane/ngx-charts/tsconfig.spec.json"
+                ],
+                "exclude": ["**/node_modules/**"]
+              }
+            }
+          }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "hci-repo"
 }

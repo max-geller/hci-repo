@@ -1,3 +1,5 @@
+
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -37,7 +39,6 @@ import { ProjectsModule } from './features/projects/projects.module';
 import { IndicesModule } from './features/indices/indices.module';
 import { ClientsModule } from './admin/modules/clients/clients.module';
 import { NavbarComponent } from './shared/nav/navbar/navbar.component';
-import { NgxEchartsModule } from 'ngx-echarts';
 
 import { APP_BASE_HREF } from '@angular/common';
 import { SparklineComponent } from './custom-charts/sparkline/sparkline.component';
@@ -78,7 +79,7 @@ import { BubbleChartInteractiveModule } from './custom-charts/bubble-chart-inter
     AngularFirestoreModule,
     AngularFireAuthModule,
     AngularFireFunctionsModule,
-    NgxEchartsModule,
+    NgxChartsModule,
     AngularFireStorageModule,
     environment.production ?
       HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { delay: 100 }) : [],
@@ -90,7 +91,6 @@ import { BubbleChartInteractiveModule } from './custom-charts/bubble-chart-inter
     IndicesModule,
     ProjectsModule,
     ClientsModule,
-    NgxChartsModule,
     NgxUIModule,
     BubbleChartInteractiveModule
   ],

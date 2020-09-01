@@ -1,5 +1,5 @@
+import { ChartCommonModule } from './../../../lib/common/chart-common.module';
 import { NgModule } from '@angular/core';
-import { ChartCommonModule } from '@swimlane/ngx-charts//common/chart-common.module';
 import { BubbleChartInteractiveComponent } from './bubble-chart-interactive.component';
 import { BubbleSeriesInteractiveComponent } from './bubble-series-interactive.component';
 
