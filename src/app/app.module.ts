@@ -1,5 +1,3 @@
-
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -43,6 +41,7 @@ import { TimelineFilterBarChartComponent } from './custom-charts/timeline-filter
 import { ComboChartComponent, ComboSeriesVerticalComponent } from './custom-charts/combo-chart';
 import { ChartsComponent } from './pages/charts/charts.component';
 import { NotFoundComponent } from './shared/components/pages/not-found/not-found.component';
+import { NgAisModule } from 'angular-instantsearch';
 
 @NgModule({
   declarations: [
@@ -79,6 +78,7 @@ import { NotFoundComponent } from './shared/components/pages/not-found/not-found
     AngularFireAuthModule,
     AngularFireFunctionsModule,
     AngularFireStorageModule,
+    NgAisModule.forRoot(),
     environment.production ?
       HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { delay: 100 }) : [],
 //    AgmCoreModule.forRoot({ apiKey: 'AIzaSyCYTxkREIgB7sNozUDIhlVNNDwXg9SS3wk' }),
@@ -89,8 +89,6 @@ import { NotFoundComponent } from './shared/components/pages/not-found/not-found
     IndicesModule,
     ProjectsModule,
     ClientsModule,
-
-
   ],
   providers: [
     AuthService,

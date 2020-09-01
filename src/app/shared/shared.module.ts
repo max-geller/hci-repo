@@ -12,7 +12,6 @@ import { NgxChartsModule } from '@swimlane/ngx-charts/ngx-charts.module';
 import { NgxUIModule, SliderModule } from '@swimlane/ngx-ui';
 import { BubbleChartInteractiveModule } from './../custom-charts/bubble-chart-interactive';
 
-
 @NgModule({
   imports: [
     CommonModule,
