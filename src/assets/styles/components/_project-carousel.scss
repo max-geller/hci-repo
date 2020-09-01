@@ -1,4 +1,7 @@
 .project-carousel {
   min-height: 350px;
   background-color: grey;
+  .mat-sidenav-container, .mat-sidenav-content, .mat-tab-body-content {
+    transform: none !important;
+}
 }

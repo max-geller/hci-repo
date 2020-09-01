@@ -6,13 +6,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AgmCoreModule } from '@agm/core';
 import { GoogleChartsModule } from 'angular-google-charts';
 import { ConfirmDeleteComponent } from './components/modals/confirm-delete/confirm-delete.component';
+import { NgxGalleryModule } from 'ngx-gallery';
 
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { NgxPageScrollModule } from 'ngx-page-scroll';
 import { NgxChartsModule } from '@swimlane/ngx-charts/ngx-charts.module';
 import { NgxUIModule, SliderModule } from '@swimlane/ngx-ui';
-
 import { BubbleChartInteractiveModule } from './../custom-charts/bubble-chart-interactive';
+
 
 @NgModule({
   imports: [
@@ -28,7 +29,8 @@ import { BubbleChartInteractiveModule } from './../custom-charts/bubble-chart-in
     NgxChartsModule,
     NgxUIModule,
     BubbleChartInteractiveModule,
-    SliderModule
+    SliderModule,
+    NgxGalleryModule
   ],
   declarations: [
     ConfirmDeleteComponent
@@ -47,7 +49,8 @@ import { BubbleChartInteractiveModule } from './../custom-charts/bubble-chart-in
     NgxChartsModule,
     NgxUIModule,
     BubbleChartInteractiveModule,
-    SliderModule
+    SliderModule,
+    NgxGalleryModule
   ]
 })
 export class SharedModule { }

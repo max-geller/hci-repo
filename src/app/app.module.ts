@@ -44,7 +44,7 @@ import { TimelineFilterBarChartComponent } from './custom-charts/timeline-filter
 import { ComboChartComponent, ComboSeriesVerticalComponent } from './custom-charts/combo-chart';
 import { ChartsComponent } from './pages/charts/charts.component';
 import { NotFoundComponent } from './shared/components/pages/not-found/not-found.component';
-
+import 'hammerjs';
 
 @NgModule({
   declarations: [
