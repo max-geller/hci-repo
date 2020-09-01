@@ -10,6 +10,7 @@ import { environment } from '../environments/environment.dev';
 
 import { AppRoutes } from './app.routes';
 import { AppComponent } from './app.component';
+
 import { SharedModule } from './shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
@@ -40,6 +41,15 @@ import { IndicesModule } from './features/indices/indices.module';
 import { ClientsModule } from './admin/modules/clients/clients.module';
 import { NavbarComponent } from './shared/nav/navbar/navbar.component';
 import { NgxEchartsModule } from 'ngx-echarts';
+
+import { APP_BASE_HREF } from '@angular/common';
+
+import { SparklineComponent } from './custom-charts/sparkline/sparkline.component';
+import { TimelineFilterBarChartComponent } from './custom-charts/timeline-filter-bar-chart/timeline-filter-bar-chart.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts/ngx-charts.module';
+import { NgxUIModule } from '@swimlane/ngx-ui';
+import { ComboChartComponent, ComboSeriesVerticalComponent } from './custom-charts/combo-chart';
+import { BubbleChartInteractiveModule } from './custom-charts/bubble-chart-interactive';
 
 @NgModule({
   declarations: [
@@ -82,10 +92,19 @@ import { NgxEchartsModule } from 'ngx-echarts';
     ClientsModule
   ],
   providers: [
-    AuthService
+    AuthService,
+    {
+      provide: APP_BASE_HREF,
+      useFactory: getBaseLocation
+    }
   ],
   bootstrap: [
     AppComponent
   ]
 })
 export class AppModule { }
+export function getBaseLocation() {
+  const paths: string[] = location.pathname.split('/').splice(1, 1);
+  const basePath: string = (paths && paths[0]) || '';
+  return '/' + basePath;
+}
