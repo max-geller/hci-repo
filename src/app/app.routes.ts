@@ -74,7 +74,7 @@ const routes: Routes = [
     component: ChartsComponent
   },
   {
-    path: '*',
+    path: '**',
     component: NotFoundComponent,
     pathMatch: 'full'
   }

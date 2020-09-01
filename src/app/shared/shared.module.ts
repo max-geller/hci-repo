@@ -11,10 +11,7 @@ import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { NgxPageScrollModule } from 'ngx-page-scroll';
 import { NgxChartsModule } from '@swimlane/ngx-charts/ngx-charts.module';
 import { NgxUIModule } from '@swimlane/ngx-ui';
-import { SparklineComponent } from './../custom-charts/sparkline/sparkline.component';
-import { TimelineFilterBarChartComponent } from './../custom-charts/timeline-filter-bar-chart/timeline-filter-bar-chart.component';
 
-import { ComboChartComponent, ComboSeriesVerticalComponent } from './../custom-charts/combo-chart';
 import { BubbleChartInteractiveModule } from './../custom-charts/bubble-chart-interactive';
 
 @NgModule({
@@ -34,11 +31,7 @@ import { BubbleChartInteractiveModule } from './../custom-charts/bubble-chart-in
 
   ],
   declarations: [
-    ConfirmDeleteComponent,
-    SparklineComponent,
-    TimelineFilterBarChartComponent,
-    ComboChartComponent,
-    ComboSeriesVerticalComponent,
+    ConfirmDeleteComponent
 
   ],
   exports: [
