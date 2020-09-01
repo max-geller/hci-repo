@@ -20,6 +20,7 @@ export class ProjectDetailComponent implements OnInit {
     const idProject = this.route.snapshot.params['id'];
     this.getDetails(idProject);
     console.log(idProject);
+    
 
   }
 
@@ -29,5 +30,6 @@ export class ProjectDetailComponent implements OnInit {
 
     });
   }
+
 
 }

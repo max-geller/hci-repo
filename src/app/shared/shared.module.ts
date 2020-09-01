@@ -6,9 +6,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AgmCoreModule } from '@agm/core';
 import { GoogleChartsModule } from 'angular-google-charts';
 import { ConfirmDeleteComponent } from './components/modals/confirm-delete/confirm-delete.component';
-import { NgxEchartsModule } from 'ngx-echarts';
+
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { NgxPageScrollModule } from 'ngx-page-scroll';
+import * as echarts from 'echarts';
 
 @NgModule({
   imports: [
@@ -32,7 +33,6 @@ import { NgxPageScrollModule } from 'ngx-page-scroll';
     FormsModule,
     ReactiveFormsModule,
     GoogleChartsModule,
-    NgxEchartsModule,
     AgmCoreModule,
     NgxPageScrollCoreModule,
     NgxPageScrollModule
