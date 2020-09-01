@@ -16,7 +16,6 @@ import { TimelineFilterBarChartComponent } from './../custom-charts/timeline-fil
 
 import { ComboChartComponent, ComboSeriesVerticalComponent } from './../custom-charts/combo-chart';
 import { BubbleChartInteractiveModule } from './../custom-charts/bubble-chart-interactive';
-import { ChartsComponent } from './../pages/charts/charts.component';
 
 @NgModule({
   imports: [
@@ -40,7 +39,6 @@ import { ChartsComponent } from './../pages/charts/charts.component';
     TimelineFilterBarChartComponent,
     ComboChartComponent,
     ComboSeriesVerticalComponent,
-    ChartsComponent
 
   ],
   exports: [

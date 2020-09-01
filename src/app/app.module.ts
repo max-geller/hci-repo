@@ -40,7 +40,8 @@ import { IndicesModule } from './features/indices/indices.module';
 import { ClientsModule } from './admin/modules/clients/clients.module';
 import { NavbarComponent } from './shared/nav/navbar/navbar.component';
 
-import { APP_BASE_HREF } from '@angular/common';
+
+import { ChartsComponent } from './pages/charts/charts.component';
 
 
 @NgModule({
@@ -57,6 +58,7 @@ import { APP_BASE_HREF } from '@angular/common';
     TermsComponent,
     ProfileComponent,
     ParallaxDirective,
+    ChartsComponent
 
   ],
   imports: [
@@ -86,18 +88,11 @@ import { APP_BASE_HREF } from '@angular/common';
   ],
   providers: [
     AuthService,
-    {
-      provide: APP_BASE_HREF,
-      useFactory: getBaseLocation
-    }
+
   ],
   bootstrap: [
     AppComponent
   ]
 })
+
 export class AppModule { }
-export function getBaseLocation() {
-  const paths: string[] = location.pathname.split('/').splice(1, 1);
-  const basePath: string = (paths && paths[0]) || '';
-  return '/' + basePath;
-}

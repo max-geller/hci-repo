@@ -5,14 +5,13 @@ import { NgxSpinnerService } from 'ngx-spinner';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['../../node_modules/@swimlane/ngx-ui/index.css',]
 })
 
 export class AppComponent implements OnInit {
   constructor(public authService: AuthService, private spinner: NgxSpinnerService,) {
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.spinner.show();
     setTimeout(() => { this.spinner.hide(); }, 2000);
   }
@@ -21,7 +20,7 @@ export class AppComponent implements OnInit {
     return this.authService.isAuthenticated;
   }
 
-  showSpinner() {
+  showSpinner(): void {
     this.spinner.show();
     setTimeout(() => {
       this.spinner.hide();

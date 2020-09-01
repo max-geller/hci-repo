@@ -181,6 +181,7 @@ export class ChartsComponent implements OnInit {
   marginLeft: number = 40;
 
   // gauge
+  // tslint:disable: no-inferrable-types
   gaugeMin: number = 0;
   gaugeMax: number = 100;
   gaugeLargeSegments: number = 10;
@@ -246,6 +247,7 @@ export class ChartsComponent implements OnInit {
 
   // data
   plotData: any;
+
 
   // Sidebar Controls:
   colorVisible: boolean = true;
