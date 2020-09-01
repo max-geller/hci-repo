@@ -1,95 +1,97 @@
-<div class="page-layout" fxLayout="column" *ngIf="project" fxLayoutAlign="start center">
-  <h1 style=" text-transform: uppercase;">{{project.name}}</h1>
+<div class="wrapper">
+  <div class="page-layout" fxLayout="column" *ngIf="project" fxLayoutAlign="start center">
+    <h1 style=" text-transform: uppercase;">{{project.name}}</h1>
 
-  <div fxLayout="row" style="width: 100%" fxLayoutAlign="space-evenly center">
-    <h5>{{project.status}}</h5>
-    <h5>SIZE: {{project.squareFeet}}</h5>
-    <h5>TYPE: {{project.type}}</h5>
-    <h5>CLIENT: {{project.client}}</h5>
+    <div fxLayout="row" style="width: 100%" fxLayoutAlign="space-evenly center">
+      <h5>{{project.status}}</h5>
+      <h5>SIZE: {{project.squareFeet}}</h5>
+      <h5>TYPE: {{project.type}}</h5>
+      <h5>CLIENT: {{project.client}}</h5>
+    </div>
+
+    <app-project-carousel></app-project-carousel>
+
+
+    <h2>COST TREND:</h2>
+
+
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          COST SOURCES
+        </mat-expansion-panel-header>
+        <app-project-table></app-project-table>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          DESIGN PACKAGES
+        </mat-expansion-panel-header>
+        <app-project-table></app-project-table>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          DESCRIPTION
+        </mat-expansion-panel-header>
+        <h3>Owner</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est
+          laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est
+          laborum.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          PROJECT INFORMATION
+        </mat-expansion-panel-header>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          CONTRACTS
+        </mat-expansion-panel-header>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          DOCUMENTATION
+        </mat-expansion-panel-header>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          PROJECT MEDIA
+        </mat-expansion-panel-header>
+      </mat-expansion-panel>
+      <mat-nav-list class="module-image" fxLayout="row">
+        <mat-list-item>
+          <img src="https://logowiki.net/wp-content/uploads/imgp/REVIT-Logo-1-8418.png" class="responsive" height="30px"
+            width="30px" style="margin: 8px;">VIEW REVIT MODEL
+        </mat-list-item>
+        <mat-list-item>
+          <img
+            src="https://img2.pngio.com/dynamics-365-logo-png-download-15041490-free-transparent-power-bi-png-900_900.jpg"
+            class="responsive" height="30px" width="30px" style="margin: 8px;"> VIEW POWER BI DASHBOARD
+        </mat-list-item>
+
+        <mat-list-item>
+          <img
+            src="https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_4cf1afcba79428d399cada0516f7f0d5/procore.jpg"
+            class="responsive" height="30px" width="30px" style="margin: 8px;"> ACCESS PROCORE
+        </mat-list-item>
+
+      </mat-nav-list>
+    </mat-accordion>
   </div>
 
-  <app-project-carousel></app-project-carousel>
-
-
-  <h2>COST TREND:</h2>
-
-  
-  <mat-accordion>
-    <mat-expansion-panel>
-      <mat-expansion-panel-header>
-        COST SOURCES
-      </mat-expansion-panel-header>
-      <app-project-table></app-project-table>
-    </mat-expansion-panel>
-
-    <mat-expansion-panel>
-      <mat-expansion-panel-header>
-        DESIGN PACKAGES
-      </mat-expansion-panel-header>
-      <app-project-table></app-project-table>
-    </mat-expansion-panel>
-
-    <mat-expansion-panel>
-      <mat-expansion-panel-header>
-        DESCRIPTION
-      </mat-expansion-panel-header>
-      <h3>Owner</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-        est
-        laborum.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-        est
-        laborum.</p>
-    </mat-expansion-panel>
-    <mat-expansion-panel>
-      <mat-expansion-panel-header>
-        PROJECT INFORMATION
-      </mat-expansion-panel-header>
-    </mat-expansion-panel>
-
-    <mat-expansion-panel>
-      <mat-expansion-panel-header>
-        CONTRACTS
-      </mat-expansion-panel-header>
-    </mat-expansion-panel>
-
-    <mat-expansion-panel>
-      <mat-expansion-panel-header>
-        DOCUMENTATION
-      </mat-expansion-panel-header>
-    </mat-expansion-panel>
-    <mat-expansion-panel>
-      <mat-expansion-panel-header>
-        PROJECT MEDIA
-      </mat-expansion-panel-header>
-    </mat-expansion-panel>
-    <mat-nav-list class="module-image" fxLayout="row">
-      <mat-list-item>
-        <img src="https://logowiki.net/wp-content/uploads/imgp/REVIT-Logo-1-8418.png" class="responsive" height="30px"
-          width="30px" style="margin: 8px;">VIEW REVIT MODEL
-      </mat-list-item>
-      <mat-list-item>
-        <img
-          src="https://img2.pngio.com/dynamics-365-logo-png-download-15041490-free-transparent-power-bi-png-900_900.jpg"
-          class="responsive" height="30px" width="30px" style="margin: 8px;"> VIEW POWER BI DASHBOARD
-      </mat-list-item>
-
-      <mat-list-item>
-        <img
-          src="https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_4cf1afcba79428d399cada0516f7f0d5/procore.jpg"
-          class="responsive" height="30px" width="30px" style="margin: 8px;"> ACCESS PROCORE
-      </mat-list-item>
-
-    </mat-nav-list>
-  </mat-accordion>
-</div>
-
-<div fxLayout="row">
-  <button mat-stroked-button style="color: white; border-color: white">Enroll</button>
+  <div fxLayout="row">
+    <button mat-stroked-button style="color: white; border-color: white">Enroll</button>
+  </div>
 </div>
