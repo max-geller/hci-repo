@@ -1,8 +1,16 @@
+body {
+  background-color: white;
+}
+
 .page-layout {
   display: flex;
   flex-grow: 1;
   margin: 25px;
   padding: 0px;
+}
+
+.section-container {
+  background-color: white;
 }
 
 @media screen and (min-width: 600px) {
