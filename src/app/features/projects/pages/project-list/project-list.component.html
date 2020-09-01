@@ -15,7 +15,7 @@
             <mat-button-toggle value="trending">Trending</mat-button-toggle>
           </mat-button-toggle-group>
 
-          <app-project-table></app-project-table>
+
           <div id="preload" class="module-item" fxlayout="row" style="display: flex; margin:20px;;"
             routerLink="/projects/project/{{project.id}}" *ngFor="let project of projects$ | async">
             <div class="module-image" fxLayout="column">

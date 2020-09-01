@@ -6,6 +6,7 @@
     <h3>{{project.type}}</h3>
     <h3>{{project.client}}</h3>
   </mat-list>
+  <h2>ESTIMATES:</h2>
 
   <mat-nav-list class="module-image" fxLayout="row">
     <mat-list-item>
@@ -33,6 +34,14 @@
 
 
   <mat-accordion>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        ESTIMATES
+      </mat-expansion-panel-header>
+      <app-project-table></app-project-table>
+    </mat-expansion-panel>
+    
     <mat-expansion-panel>
       <mat-expansion-panel-header>
         DESCRIPTION
