@@ -10,7 +10,7 @@ import { ConfirmDeleteComponent } from './components/modals/confirm-delete/confi
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { NgxPageScrollModule } from 'ngx-page-scroll';
 import { NgxChartsModule } from '@swimlane/ngx-charts/ngx-charts.module';
-import { NgxUIModule } from '@swimlane/ngx-ui';
+import { NgxUIModule, SliderModule } from '@swimlane/ngx-ui';
 
 import { BubbleChartInteractiveModule } from './../custom-charts/bubble-chart-interactive';
 
@@ -27,8 +27,8 @@ import { BubbleChartInteractiveModule } from './../custom-charts/bubble-chart-in
     NgxPageScrollModule,
     NgxChartsModule,
     NgxUIModule,
-    BubbleChartInteractiveModule
-
+    BubbleChartInteractiveModule,
+    SliderModule
   ],
   declarations: [
     ConfirmDeleteComponent
@@ -46,7 +46,8 @@ import { BubbleChartInteractiveModule } from './../custom-charts/bubble-chart-in
     NgxPageScrollModule,
     NgxChartsModule,
     NgxUIModule,
-    BubbleChartInteractiveModule
+    BubbleChartInteractiveModule,
+    SliderModule
   ]
 })
 export class SharedModule { }
