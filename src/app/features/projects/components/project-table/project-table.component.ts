@@ -20,11 +20,11 @@ import { AddProjectComponent } from './../add-project/add-project.component';
 export class ProjectTableComponent implements OnInit {
   projects: MatTableDataSource<any>;
   displayedColumns = [
-    'displayName',
-    'tenant',
-    'role',
-    'email',
-    'uid',
+    'id',
+    'name',
+    'status',
+    'cost',
+    'client',
     'edit',
     'delete',
   ];
@@ -52,7 +52,7 @@ export class ProjectTableComponent implements OnInit {
       data => this.service.createProject(data));
   }
 
-  editProject(project: Project): void {
+  editProject(project: ProjectInterface): void {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = true;
     dialogConfig.maxHeight = '95vh';
@@ -60,7 +60,7 @@ export class ProjectTableComponent implements OnInit {
     const dialogRef = this.dialog.open(EditProjectComponent, dialogConfig);
   }
 
-  deleteProject(project: Project): void {
+  deleteProject(project: ProjectInterface): void {
     this.afs.doc('projects/' + project).delete();
   }
 

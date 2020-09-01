@@ -1,47 +1,29 @@
-<div class="page-layout" fxLayout="column" *ngIf="project">
+<div class="page-layout" fxLayout="column" *ngIf="project" fxLayoutAlign="start center">
   <h1 style=" text-transform: uppercase;">{{project.name}}</h1>
-  <mat-list>
-    <mat-list-item>{{project.status}}</mat-list-item>
-    <h3>{{project.squareFeet}}</h3>
-    <h3>{{project.type}}</h3>
-    <h3>{{project.client}}</h3>
-  </mat-list>
-  <h2>ESTIMATES:</h2>
 
-  <mat-nav-list class="module-image" fxLayout="row">
-    <mat-list-item>
-      <img src="https://logowiki.net/wp-content/uploads/imgp/REVIT-Logo-1-8418.png" class="responsive" height="30px"
-        width="30px" style="margin: 8px;">VIEW REVIT MODEL
-    </mat-list-item>
-    <mat-list-item>
-      <img
-        src="https://img2.pngio.com/dynamics-365-logo-png-download-15041490-free-transparent-power-bi-png-900_900.jpg"
-        class="responsive" height="30px" width="30px" style="margin: 8px;"> VIEW POWER BI DASHBOARD
-    </mat-list-item>
+  <div fxLayout="row" style="width: 100%" fxLayoutAlign="space-evenly center">
+    <h5>{{project.status}}</h5>
+    <h5>SIZE: {{project.squareFeet}}</h5>
+    <h5>TYPE: {{project.type}}</h5>
+    <h5>CLIENT: {{project.client}}</h5>
+  </div>
 
-    <mat-list-item>
-      <img
-        src="https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_4cf1afcba79428d399cada0516f7f0d5/procore.jpg"
-        class="responsive" height="30px" width="30px" style="margin: 8px;"> ACCESS PROCORE
-    </mat-list-item>
-
-  </mat-nav-list>
-
-  <h2>COST TRENDS</h2>
-
-
-  <h2>ACTIVE ESTIMATES</h2>
-
-
+  <app-project-carousel></app-project-carousel>
   <mat-accordion>
-
     <mat-expansion-panel>
       <mat-expansion-panel-header>
-        ESTIMATES
+        COST SOURCES
       </mat-expansion-panel-header>
       <app-project-table></app-project-table>
     </mat-expansion-panel>
-    
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        DESIGN PACKAGES
+      </mat-expansion-panel-header>
+      <app-project-table></app-project-table>
+    </mat-expansion-panel>
+
     <mat-expansion-panel>
       <mat-expansion-panel-header>
         DESCRIPTION
@@ -74,11 +56,6 @@
 
     <mat-expansion-panel>
       <mat-expansion-panel-header>
-        COST SOURCES
-      </mat-expansion-panel-header>
-    </mat-expansion-panel>
-    <mat-expansion-panel>
-      <mat-expansion-panel-header>
         DOCUMENTATION
       </mat-expansion-panel-header>
     </mat-expansion-panel>
@@ -87,6 +64,24 @@
         PROJECT MEDIA
       </mat-expansion-panel-header>
     </mat-expansion-panel>
+    <mat-nav-list class="module-image" fxLayout="row">
+      <mat-list-item>
+        <img src="https://logowiki.net/wp-content/uploads/imgp/REVIT-Logo-1-8418.png" class="responsive" height="30px"
+          width="30px" style="margin: 8px;">VIEW REVIT MODEL
+      </mat-list-item>
+      <mat-list-item>
+        <img
+          src="https://img2.pngio.com/dynamics-365-logo-png-download-15041490-free-transparent-power-bi-png-900_900.jpg"
+          class="responsive" height="30px" width="30px" style="margin: 8px;"> VIEW POWER BI DASHBOARD
+      </mat-list-item>
+
+      <mat-list-item>
+        <img
+          src="https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_4cf1afcba79428d399cada0516f7f0d5/procore.jpg"
+          class="responsive" height="30px" width="30px" style="margin: 8px;"> ACCESS PROCORE
+      </mat-list-item>
+
+    </mat-nav-list>
   </mat-accordion>
 </div>
 

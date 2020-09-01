@@ -11,6 +11,7 @@ import { ProjectFilterComponent } from './components/project-filter/project-filt
 import { ProjectTableComponent } from './components/project-table/project-table.component';
 import { AddProjectComponent } from './components/add-project/add-project.component';
 import { EditProjectComponent } from './components/edit-project/edit-project.component';
+import { ProjectCarouselComponent } from './components/project-carousel/project-carousel.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { EditProjectComponent } from './components/edit-project/edit-project.com
     ProjectFilterComponent,
     ProjectTableComponent,
     AddProjectComponent,
-    EditProjectComponent
+    EditProjectComponent,
+    ProjectCarouselComponent
   ],
   imports: [
     CommonModule,
