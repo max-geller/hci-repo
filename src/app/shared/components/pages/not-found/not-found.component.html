@@ -1,32 +1,27 @@
 <div class="not-found-layout" style="height:80vh;" fxLayout="column" fxLayoutAlign="start center">
-  <img src="./../../../../../assets/images/white-logo.png" height="70px" style="padding:75px;margin:0px;" />
+  <img src="./../../../../../assets/images/white-logo.png" height="70px" style="padding:50px;margin:0px;" />
   <div class="not-found-content" fxLayout="column" fxLayoutAlign="space-evenly center">
-    <h1>404 </h1>
+    <h1 style="padding: 55px;">404 </h1>
     <h2>Whoa. This is super weird. </h2>
     <p style="color: white;">We can't find your page... </p>
     <br>
     <div class="download-container" fxLayout="column" fxLayoutAlign="center center" fxShow fxHide.lt-sm>
-      <h3>But have you downloaded the app yet?</h3>
+      <h4 style="color: white">But have you downloaded the app yet?</h4>
       <div class="action-container" fxLayout="row">
         <button mat-raised-button routerLink="/download">
           <i class="fab fa-windows"></i> &nbsp; Download for Desktop
         </button>
         <span style="width: 20px;"></span>
-        <button mat-raised-button color="accent" routerLink="/team">
+        <button mat-raised-button color="accent" routerLink="/home" (click)="refreshPage">
           Back
         </button>
       </div>
     </div>
-    <div class="giphy-logo" style="color: white; position: absolute; bottom: 0; margin-bottom: 15px; font-size: 9px;"
-      fxLayout="row" fxLayoutAlign="center center">
+
+    <div class="giphy-logo" style="color: white; position: relative; margin-top: 45px; font-size: 9px;" fxLayout="row"
+      fxLayoutAlign="center center">
       Media provided by&nbsp;&nbsp;&nbsp;<img class="giphy-image" src="assets/images/partners/giphy-logo.png"
         height="12px" />
     </div>
-    <div class="contact-icon"
-      style="border-radius: 50%; height: 60px; width: 60px;background: #FFC107; position: absolute; bottom: 30px;right: 30px;cursor: pointer;"
-      routerLink='/sessions/support' fxLayout="column" fxLayoutAlign="center center">
-      <i class="fas fa-phone" style="font-size: 25px !important;color:white"></i>
-    </div>
-
   </div>
 </div>

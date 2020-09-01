@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 declare var $: any;
 
@@ -7,7 +8,7 @@ declare var $: any;
 })
 export class NotFoundComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): any {
     const gif = [
@@ -55,9 +56,18 @@ export class NotFoundComponent implements OnInit {
       'wtf-42.gif',
 
     ];
+
     $('body').css({ 'background': 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assets/images/404/' + gif[Math.floor(Math.random() * gif.length)] + ')' });
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundSize = "cover";
     document.body.style.backgroundPosition = "center";
+  }
+
+  refreshPage(): void {
+    this.router.navigate(['/home'])
+    .then(() => {
+      window.location.reload();
+    });
+
   }
 }
