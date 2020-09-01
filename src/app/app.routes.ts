@@ -8,6 +8,7 @@ import { NotFoundComponent } from './shared/components/pages/not-found/not-found
 import { PrivacyComponent } from './pages/privacy/privacy.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { TermsComponent } from './pages/terms/terms.component';
+import { ChartsComponent } from './pages/charts/charts.component';
 
 
 const routes: Routes = [
@@ -67,6 +68,10 @@ const routes: Routes = [
   {
     path: 'terms',
     component: TermsComponent
+  },
+  {
+    path: 'charts',
+    component: ChartsComponent
   },
   {
     path: '*',

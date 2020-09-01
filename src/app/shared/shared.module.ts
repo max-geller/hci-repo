@@ -9,7 +9,14 @@ import { ConfirmDeleteComponent } from './components/modals/confirm-delete/confi
 
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { NgxPageScrollModule } from 'ngx-page-scroll';
-import * as echarts from 'echarts';
+import { NgxChartsModule } from '@swimlane/ngx-charts/ngx-charts.module';
+import { NgxUIModule } from '@swimlane/ngx-ui';
+import { SparklineComponent } from './../custom-charts/sparkline/sparkline.component';
+import { TimelineFilterBarChartComponent } from './../custom-charts/timeline-filter-bar-chart/timeline-filter-bar-chart.component';
+
+import { ComboChartComponent, ComboSeriesVerticalComponent } from './../custom-charts/combo-chart';
+import { BubbleChartInteractiveModule } from './../custom-charts/bubble-chart-interactive';
+import { ChartsComponent } from './../pages/charts/charts.component';
 
 @NgModule({
   imports: [
@@ -21,10 +28,20 @@ import * as echarts from 'echarts';
     GoogleChartsModule,
     AgmCoreModule.forRoot({ apiKey: 'AIzaSyCYTxkREIgB7sNozUDIhlVNNDwXg9SS3wk' }),
     NgxPageScrollCoreModule.forRoot({ duration: 800 }),
-    NgxPageScrollModule
+    NgxPageScrollModule,
+    NgxChartsModule,
+    NgxUIModule,
+    BubbleChartInteractiveModule
+
   ],
   declarations: [
     ConfirmDeleteComponent,
+    SparklineComponent,
+    TimelineFilterBarChartComponent,
+    ComboChartComponent,
+    ComboSeriesVerticalComponent,
+    ChartsComponent
+
   ],
   exports: [
     CommonModule,
@@ -35,7 +52,10 @@ import * as echarts from 'echarts';
     GoogleChartsModule,
     AgmCoreModule,
     NgxPageScrollCoreModule,
-    NgxPageScrollModule
+    NgxPageScrollModule,
+    NgxChartsModule,
+    NgxUIModule,
+    BubbleChartInteractiveModule
   ]
 })
 export class SharedModule { }

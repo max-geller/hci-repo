@@ -41,12 +41,7 @@ import { ClientsModule } from './admin/modules/clients/clients.module';
 import { NavbarComponent } from './shared/nav/navbar/navbar.component';
 
 import { APP_BASE_HREF } from '@angular/common';
-import { SparklineComponent } from './custom-charts/sparkline/sparkline.component';
-import { TimelineFilterBarChartComponent } from './custom-charts/timeline-filter-bar-chart/timeline-filter-bar-chart.component';
-import { NgxChartsModule } from '@swimlane/ngx-charts/ngx-charts.module';
-import { NgxUIModule } from '@swimlane/ngx-ui';
-import { ComboChartComponent, ComboSeriesVerticalComponent } from './custom-charts/combo-chart';
-import { BubbleChartInteractiveModule } from './custom-charts/bubble-chart-interactive';
+
 
 @NgModule({
   declarations: [
@@ -62,10 +57,7 @@ import { BubbleChartInteractiveModule } from './custom-charts/bubble-chart-inter
     TermsComponent,
     ProfileComponent,
     ParallaxDirective,
-    SparklineComponent,
-    TimelineFilterBarChartComponent,
-    ComboChartComponent,
-    ComboSeriesVerticalComponent
+
   ],
   imports: [
     BrowserModule,
@@ -79,7 +71,6 @@ import { BubbleChartInteractiveModule } from './custom-charts/bubble-chart-inter
     AngularFirestoreModule,
     AngularFireAuthModule,
     AngularFireFunctionsModule,
-    NgxChartsModule,
     AngularFireStorageModule,
     environment.production ?
       HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { delay: 100 }) : [],
@@ -91,8 +82,7 @@ import { BubbleChartInteractiveModule } from './custom-charts/bubble-chart-inter
     IndicesModule,
     ProjectsModule,
     ClientsModule,
-    NgxUIModule,
-    BubbleChartInteractiveModule
+
   ],
   providers: [
     AuthService,
