@@ -1,4 +1,4 @@
-export interface Project {
+export interface ProjectInterface {
     id?: string;
     isActive?: boolean;
     name?: string;
