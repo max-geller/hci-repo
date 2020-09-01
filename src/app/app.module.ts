@@ -36,10 +36,6 @@ import { ProjectsModule } from './features/projects/projects.module';
 import { IndicesModule } from './features/indices/indices.module';
 import { ClientsModule } from './admin/modules/clients/clients.module';
 import { NavbarComponent } from './shared/nav/navbar/navbar.component';
-import { SparklineComponent } from './custom-charts/sparkline/sparkline.component';
-import { TimelineFilterBarChartComponent } from './custom-charts/timeline-filter-bar-chart/timeline-filter-bar-chart.component';
-import { ComboChartComponent, ComboSeriesVerticalComponent } from './custom-charts/combo-chart';
-import { ChartsComponent } from './pages/charts/charts.component';
 import { NotFoundComponent } from './shared/components/pages/not-found/not-found.component';
 import { NgAisModule } from 'angular-instantsearch';
 
@@ -59,10 +55,6 @@ import { NgAisModule } from 'angular-instantsearch';
     ParallaxDirective,
     NotFoundComponent,
     ChartsComponent,
-    SparklineComponent,
-    TimelineFilterBarChartComponent,
-    ComboChartComponent,
-    ComboSeriesVerticalComponent,
 
   ],
   imports: [
