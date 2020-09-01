@@ -1,5 +1,7 @@
 {
+  "compileOnSave": true,
   "compilerOptions": {
+    
     "module": "commonjs",
     "noImplicitReturns": true,
     "noUnusedLocals": true,
@@ -8,8 +10,11 @@
     "strict": true,
     "target": "es2017"
   },
-  "compileOnSave": true,
   "include": [
     "src"
+  ],
+  "lib": [
+    "es2017",
+    "dom"
   ]
 }

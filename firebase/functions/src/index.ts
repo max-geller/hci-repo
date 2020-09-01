@@ -1,7 +1,6 @@
 import * as functions from 'firebase-functions';
-import { https } from 'firebase-functions'
 import * as admin from 'firebase-admin';
-import * as algoliasearch from 'algoliasearch';
+import algoliasearch from 'algoliasearch';
 admin.initializeApp();
 const env = functions.config();
 
@@ -16,7 +15,7 @@ exports.indexProject = functions.firestore
         const data = snap.data();
         const objectId = snap.id;
 
-        return index.addObject({
+        return index.saveObject({
             objectId,
             ...data
         });

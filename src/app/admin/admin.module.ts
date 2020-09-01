@@ -13,7 +13,6 @@ import { ReportsModule } from './modules/reports/reports.module';
 import { SubscriptionsModule } from './modules/subscriptions/subscriptions.module';
 import { AdminLayoutModule } from './layout/admin-layout/admin-layout.module';
 
-import { FakerService } from './../shared/services/faker.service';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { UserActivityComponent } from './components/widgets/user-activity/user-activity.component';
 import { EngagementSummaryComponent } from './components/widgets/engagement-summary/engagement-summary.component';
