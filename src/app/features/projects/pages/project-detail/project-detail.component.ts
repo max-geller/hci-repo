@@ -15,21 +15,15 @@ export class ProjectDetailComponent implements OnInit {
 
   constructor(private dataApi: FirestoreService, public afs: AngularFirestore, private route: ActivatedRoute) { }
 
-
   ngOnInit() {
     const idProject = this.route.snapshot.params['id'];
     this.getDetails(idProject);
     console.log(idProject);
-    
-
   }
 
   getDetails(idProject: string): void {
     this.dataApi.getOneProject(idProject).subscribe(project => {
       this.project = project;
-
     });
   }
-
-
 }
