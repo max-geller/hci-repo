@@ -15,7 +15,6 @@ import { SharedModule } from './shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeModule } from './pages/home/home.module';
-//import { AgmCoreModule } from '@agm/core';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { InMemoryDataService } from './shared/in-memory-db/inmemory-db.service';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
@@ -44,7 +43,6 @@ import { TimelineFilterBarChartComponent } from './custom-charts/timeline-filter
 import { ComboChartComponent, ComboSeriesVerticalComponent } from './custom-charts/combo-chart';
 import { ChartsComponent } from './pages/charts/charts.component';
 import { NotFoundComponent } from './shared/components/pages/not-found/not-found.component';
-import 'hammerjs';
 
 @NgModule({
   declarations: [
