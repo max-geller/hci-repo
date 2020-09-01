@@ -8,12 +8,18 @@ import { ProjectsRoutes } from './projects.routes';
 import { ProjectListComponent } from './pages/project-list/project-list.component';
 import { ProjectDetailComponent } from './pages/project-detail/project-detail.component';
 import { ProjectFilterComponent } from './components/project-filter/project-filter.component';
+import { ProjectTableComponent } from './components/project-table/project-table.component';
+import { AddProjectComponent } from './components/add-project/add-project.component';
+import { EditProjectComponent } from './components/edit-project/edit-project.component';
 
 @NgModule({
   declarations: [
     ProjectListComponent,
     ProjectDetailComponent,
-    ProjectFilterComponent
+    ProjectFilterComponent,
+    ProjectTableComponent,
+    AddProjectComponent,
+    EditProjectComponent
   ],
   imports: [
     CommonModule,
