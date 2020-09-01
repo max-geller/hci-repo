@@ -54,7 +54,6 @@ import { AnalyticsComponent } from './pages/analytics/analytics.component';
     AnalyticsComponent,
   ],
   providers: [
-    FakerService
   ],
   entryComponents: [
     // Put Modals Here

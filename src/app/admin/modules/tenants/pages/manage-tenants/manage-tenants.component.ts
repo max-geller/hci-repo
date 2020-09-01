@@ -2,7 +2,6 @@ import { MatSort } from '@angular/material/sort';
 import { Tenant } from './../../../../../core/models/tenant.model';
 import { TenantService } from './../../../../../core/services/tenant.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
-import * as faker from 'faker';
 import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({

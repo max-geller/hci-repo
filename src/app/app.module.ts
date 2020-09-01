@@ -54,8 +54,6 @@ import { NgAisModule } from 'angular-instantsearch';
     ProfileComponent,
     ParallaxDirective,
     NotFoundComponent,
-    ChartsComponent,
-
   ],
   imports: [
     BrowserModule,
