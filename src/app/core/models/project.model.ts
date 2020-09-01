@@ -3,4 +3,7 @@ export interface ProjectInterface {
     isActive?: boolean;
     name?: string;
     status?: string;
+    squareFeet?: string;
+    type?: string;
+    client?: string;
 }

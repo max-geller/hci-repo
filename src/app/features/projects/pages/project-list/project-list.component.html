@@ -20,20 +20,8 @@
             routerLink="/projects/project/{{project.id}}" *ngFor="let project of projects$ | async">
             <div class="module-image" fxLayout="column">
               <img src="{{project.previewURL}}" class="responsive" height="160px" width="260px">
-              <div fxLayout="row" fxLayoutAlign="center center">
-                {{project.id}}
-              </div>
-              <div fxLayout="row" fxLayoutAlign="center center">
-                <p style="font-style:italic;">26hrs, 13 Sections </p>
-              </div>
-              <div class="instructor-container" fxLayout="row" fxLayoutAlign="start start" style="padding:20px;">
-                <button mat-icon-button>
-                  <img class="team-avatar" src="{{project.instructorAvatar}}" min-width="36px" height="36px">
-                </button>
-                <span style="width:15px;"></span>
-                <p style="font-style:italic;line-height: 36px;margin:0px;">{{project.instructor}} </p>
-              </div>
             </div>
+
             <div class="module-description" fxLayout="column" fxFlex>
               <h3>{{project.name}}</h3>
               <h4>{{project.status}}</h4>
