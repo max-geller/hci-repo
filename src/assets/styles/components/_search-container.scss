@@ -1,10 +1,17 @@
-#search-container {
-    display: block;
-    position: absolute;
-    background-color: white;
-    top: 55px;
-    left:0;
-    right:0;
-    height: 250px;
-    width: 100vw;
+.search-container {
+  display: block;
+  border-style: solid;
+  position: relative;
+  background-color: white;
+  transition: all .5s;
+  overflow: hidden;
+  height: 100px;
+  width: 100vw;
+}
+
+.fade {
+  opacity: 0;
+  height: 10;
+  transition: all 2s;
+
 }

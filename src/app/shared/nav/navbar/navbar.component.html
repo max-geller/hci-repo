@@ -1,4 +1,4 @@
-<div class="app-navbar" fxLayout="row" style="padding-left: 20px;padding-right:20px;">
+<div class="app-navbar" fxLayout="row" style="padding-left: 20px;padding-right:20px;width:100vw;overflow: hidden;">
   <div fxLayout="row" fxLayoutAlign="start center" fxFlex>
     <button mat-icon-button fxShow="true" fxHide fxShow.lt-md>
       <i class="fal fa-bars" style="color:white;margin-top:0px;"></i>
@@ -29,12 +29,24 @@
         COST INDICES
       </mat-list-item>
 
-      <button mat-icon-button>
+      <button mat-icon-button (click)="toggleSearch()">
         <i class="fal fa-search" style="margin-top: 6px;"></i>
       </button>
     </mat-nav-list>
   </div>
   <div fxLayout="column" fxLayoutAlign="center end" fxFlex>
+
     <app-icon-menu></app-icon-menu>
+  </div>
+</div>
+
+<div id="searchNav" fxLayout="row" fxLayoutAlign="center center" *ngIf="show" class="fade" [@state]="state"
+  (@state.done)="animationDone($event)">
+  <div class="search-container">
+    <ng-content #fadeableContent></ng-content>
+    <mat-form-field style="width:90%;padding-right:5vw;padding-left:5vw;margin: 20px;">
+      <mat-label style="font-size: 35px; margin-bottom: 15px;line-height: 26px;">Search</mat-label>
+      <input matInput type="text" style="font-size: 55px;font-weight: 800;color: #23548b">
+    </mat-form-field>
   </div>
 </div>
