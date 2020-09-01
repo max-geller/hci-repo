@@ -11,7 +11,6 @@
   },
   "private": true,
   "dependencies": {
-    "@agm/core": "^1.1.0",
     "@angular/animations": "9.1.0",
     "@angular/cdk": "^9.2.0",
     "@angular/common": "9.1.0",
@@ -83,7 +82,6 @@
     "ngx-owl-carousel": "^2.0.7",
     "ngx-page-scroll": "^7.0.3",
     "ngx-page-scroll-core": "^7.0.3",
-    "ngx-slider": "0.0.5",
     "ngx-spinner": "^9.0.2",
     "ngx-toastr": "^12.0.0",
     "particles.js": "^2.0.0",
