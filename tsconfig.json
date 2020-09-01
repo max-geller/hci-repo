@@ -11,12 +11,7 @@
     },
     {
       "path": "./tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/swimlane/ngx-charts/tsconfig.lib.json"
-    },
-    {
-      "path": "./projects/swimlane/ngx-charts/tsconfig.spec.json"
     }
-  ],
+
+  ]
 }
