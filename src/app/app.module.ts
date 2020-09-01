@@ -7,14 +7,11 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { environment } from '../environments/environment.dev';
-
 import { AppRoutes } from './app.routes';
 import { AppComponent } from './app.component';
-
 import { SharedModule } from './shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
-
 import { HomeModule } from './pages/home/home.module';
 import { AgmCoreModule } from '@agm/core';
 import { NgxSpinnerModule } from 'ngx-spinner';
@@ -43,7 +40,6 @@ import { NavbarComponent } from './shared/nav/navbar/navbar.component';
 import { NgxEchartsModule } from 'ngx-echarts';
 
 import { APP_BASE_HREF } from '@angular/common';
-
 import { SparklineComponent } from './custom-charts/sparkline/sparkline.component';
 import { TimelineFilterBarChartComponent } from './custom-charts/timeline-filter-bar-chart/timeline-filter-bar-chart.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts/ngx-charts.module';
@@ -64,7 +60,11 @@ import { BubbleChartInteractiveModule } from './custom-charts/bubble-chart-inter
     PrivacyComponent,
     TermsComponent,
     ProfileComponent,
-    ParallaxDirective
+    ParallaxDirective,
+    SparklineComponent,
+    TimelineFilterBarChartComponent,
+    ComboChartComponent,
+    ComboSeriesVerticalComponent
   ],
   imports: [
     BrowserModule,
@@ -89,7 +89,10 @@ import { BubbleChartInteractiveModule } from './custom-charts/bubble-chart-inter
     RatesModule,
     IndicesModule,
     ProjectsModule,
-    ClientsModule
+    ClientsModule,
+    NgxChartsModule,
+    NgxUIModule,
+    BubbleChartInteractiveModule
   ],
   providers: [
     AuthService,
