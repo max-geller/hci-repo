@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Inject } from '@angular/core';
 import {
   animate,
   AnimationEvent,
@@ -7,6 +7,9 @@ import {
   transition,
   trigger
 } from '@angular/animations';
+import { AuthService } from './../../../core/services/auth.service';
+import { Observable, of } from 'rxjs';
+import { DOCUMENT } from '@angular/common';
 
 export type FadeState = 'visible' | 'hidden';
 
@@ -36,7 +39,8 @@ export type FadeState = 'visible' | 'hidden';
 
 
 export class NavbarComponent {
-
+  user$: Observable<firebase.User>;
+  isAuthenticated: boolean;
   state: FadeState;
   // tslint:disable-next-line: variable-name
   private _show: boolean;
@@ -61,7 +65,12 @@ export class NavbarComponent {
 
   public buttonName: any = 'Show';
 
-  constructor() { }
+  constructor(
+    @Inject(DOCUMENT) private document: Document,
+    public auth: AuthService,
+  ) {
+    this.user$ = this.auth.userStatus();
+  }
 
 
 
