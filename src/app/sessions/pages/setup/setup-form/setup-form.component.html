@@ -1,25 +1,33 @@
-<div fxLayout="column" fxLayoutAlign="start center">
-  <img id="preload" src="assets/images/white-logo.png" style="padding: 50px;" height="60px" />
-  <form fxLayout="column" fxLayoutAlign="start center">
-    <h2>You're almost done!</h2>
-    <h4>Finish creating your account by providing some basic information.</h4>
-    <mat-form-field class="lg-field">
-      <mat-label>First Name</mat-label>
-      <input matInput>
-    </mat-form-field>
-    <mat-form-field class="lg-field">
-      <mat-label>Last Name</mat-label>
-      <input matInput>
-    </mat-form-field>
-    <mat-form-field class="lg-field">
-      <mat-label>Company</mat-label>
-      <input matInput>
-    </mat-form-field>
-    <mat-form-field class="lg-field">
-      <mat-label>Phone</mat-label>
-      <input matInput>
-    </mat-form-field>
-    <h3 style="color: white">PROFILE PHOTO:</h3>
+<div fxLayout="row wrap">
+  <div fxLayout="column" fxLayoutAlign="start center" fxFlex>
+    <img id="preload" src="assets/images/white-logo.png" style="padding: 50px;" height="60px" />
+    <form fxLayout="column" fxLayoutAlign="start center">
+      <h2>You're almost done!</h2>
+      <h4>Finish creating your account by providing some basic information.</h4>
+      <mat-form-field class="lg-field">
+        <mat-label>First Name</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <mat-form-field class="lg-field">
+        <mat-label>Last Name</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <mat-form-field class="lg-field">
+        <mat-label>Company</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <mat-form-field class="lg-field">
+        <mat-label>Phone</mat-label>
+        <input matInput>
+      </mat-form-field>
+
+    </form>
+  </div>
+</div>
+
+<div class="avatar-container" fxLayout="column" fxFlex>
+  <h3 style="color: white">PROFILE PHOTO:</h3>
+  <ngx-avatar name="max geller" size="70">
     <button mat-stroked-button style="color: white;border-color: white;">Upload Photo</button>
-  </form>
+  </ngx-avatar>
 </div>

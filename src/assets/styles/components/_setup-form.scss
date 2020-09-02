@@ -1,9 +1,15 @@
 .setup-form {
   color: white !important;
+  min-height: 80vh;
+  background-image: linear-gradient(135deg,
+      rgb(0, 0, 0) 0%,
+      rgb(43, 60, 85) 89%);
+
   .md-field,
   .mat-form-field,
   .mat-label,
-  .mat-form-field-empty, .mat-form-field-label {
+  .mat-form-field-empty,
+  .mat-form-field-label {
     color: white !important;
   }
 

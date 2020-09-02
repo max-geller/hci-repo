@@ -11,6 +11,7 @@ import { CoreModule } from '../core/core.module';
 import { SharedModule } from '../shared/shared.module';
 import { SetupFormComponent } from './pages/setup/setup-form/setup-form.component';
 import { SetupStepperComponent } from './pages/setup/setup-stepper/setup-stepper.component';
+import { AvatarModule } from 'ngx-avatar';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { SetupStepperComponent } from './pages/setup/setup-stepper/setup-stepper
     SessionsRoutes,
     RouterModule,
     CoreModule,
-    SharedModule
+    SharedModule,
+    AvatarModule
   ]
 })
 export class SessionsModule { }
