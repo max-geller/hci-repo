@@ -42,6 +42,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { FavoritesComponent } from './pages/favorites/favorites.component';
 import { NotificationsComponent } from './pages/notifications/notifications.component';
 import { TasksModule } from './features/tasks/tasks.module';
+import { AvatarModule } from 'ngx-avatar';
 
 @NgModule({
   declarations: [
@@ -87,6 +88,7 @@ import { TasksModule } from './features/tasks/tasks.module';
     ProjectsModule,
     ClientsModule,
     TasksModule,
+    AvatarModule
   ],
   providers: [
     AuthService,
