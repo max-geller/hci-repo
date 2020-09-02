@@ -1,7 +1,6 @@
 import { Component, OnInit, Input, Inject } from '@angular/core';
 import {
-  animate,
-  AnimationEvent,
+  animate, AnimationEvent,
   state,
   style,
   transition,
@@ -11,7 +10,13 @@ import { AuthService } from './../../../core/services/auth.service';
 import { Observable, of } from 'rxjs';
 import { DOCUMENT } from '@angular/common';
 import algoliasearch from 'algoliasearch/lite';
+
 export type FadeState = 'visible' | 'hidden';
+
+const searchClient = algoliasearch(
+  'B1G2GM9NG0',
+  'aadef574be1f9252bb48d4ea09b5cfe5'
+);
 
 @Component({
   selector: 'app-navbar',
@@ -42,7 +47,8 @@ export class NavbarComponent {
   config = {
     indexName: 'instant_search',
     searchClient: algoliasearch('latency', '6be0576ff61c053d5f9a3225e2a90f76'),
-  }
+  };
+  
 
   user$: Observable<firebase.User>;
   isAuthenticated: boolean;

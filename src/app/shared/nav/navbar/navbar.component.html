@@ -40,14 +40,17 @@
   (@state.done)="animationDone($event)">
   <div class="search-container">
     <ng-content #fadeableContent></ng-content>
-    <ais-instantsearch [config]="{
-      apiKey: 'f4c1889dd27c98bebcaf99eb1e3c5fc2',
-      appId: '8K7V4TARGD',
-      indexName: 'PROJECTS',
-      routing: true
-    }">
+    <ais-instantsearch [config]="config">
       <ais-search-box></ais-search-box>
-      <ais-hits></ais-hits>
+      <ais-hits>
+        <ng-template let-hits="hits">
+          <ol class="ais-Hits-list">
+            <li *ngFor="let hit of hits" class="ais-Hits-item">
+             {{hit.name}}
+            </li>
+          </ol>
+        </ng-template>
+      </ais-hits>
     </ais-instantsearch>
   </div>
 </div>
