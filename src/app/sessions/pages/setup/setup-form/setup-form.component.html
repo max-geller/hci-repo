@@ -1,4 +1,4 @@
-<form formGroup="this.userService.form" (ngSubmit)="onSubmit()" fxLayout="row wrap" fxLayoutAlign="center center"
+<form formGroup="this.userService.form" (ngSubmit)="onSubmit(form)" fxLayout="row wrap" fxLayoutAlign="center center"
   style="width: 100%;">
   <div fxLayout="column" fxLayoutAlign="center end" style="padding: 20px;">
     <div fxLayout="column" fxLayoutAlign="center center">
@@ -7,22 +7,22 @@
       <h4>Finish creating your account by providing some basic information.</h4>
       <mat-form-field class="lg-field">
         <mat-label>First Name</mat-label>
-        <input matInput type="text"  formControlName="firstName">
+        <input matInput type="text" formControlName="firstName">
       </mat-form-field>
       <mat-form-field class="lg-field">
         <mat-label>Last Name</mat-label>
-        <input matInput type="text"  formControlName="lastName">
+        <input matInput type="text" formControlName="lastName">
       </mat-form-field>
       <mat-form-field class="lg-field">
         <mat-label>Company</mat-label>
-        <input matInput type="text"  formControlName="company">
+        <input matInput type="text" formControlName="company">
       </mat-form-field>
       <mat-form-field class="lg-field">
         <mat-label>Phone</mat-label>
-        <input matInput type="text"  formControlName="phone">
+        <input matInput type="text" formControlName="phone">
       </mat-form-field>
 
-      <button mat-stroked-button (click)="onSubmit()" style="color: white;border-color: white;">Submit</button>
+      <button mat-stroked-button style="color: white;border-color: white;">Submit</button>
 
     </div>
   </div>

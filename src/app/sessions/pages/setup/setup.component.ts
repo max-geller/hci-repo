@@ -9,7 +9,6 @@ import { AvatarModule, AvatarSource } from 'ngx-avatar';
 })
 
 export class SetupComponent {
-
   email: string;
   password: string;
   constructor(public auth: AuthService,) { }
@@ -19,5 +18,4 @@ export class SetupComponent {
     this.email = '';
     this.password = '';
   }
-
 }
