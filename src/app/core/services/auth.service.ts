@@ -1,3 +1,4 @@
+
 import { Injectable, Inject } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -7,6 +8,9 @@ import { Observable, of } from 'rxjs';
 import { switchMap, first } from 'rxjs/operators';
 import { User } from '../models/user.model';
 import { DOCUMENT } from '@angular/common';
+
+
+
 
 @Injectable()
 export class AuthService {
@@ -109,7 +113,7 @@ export class AuthService {
     this.afAuth.auth.signOut().then(() => {
 
       this.isAuthenticated = false;
-      this.document.location.href = 'https://www.hcianalytics.com';
+      this.router.navigate(['/home']);
     });
 
 
