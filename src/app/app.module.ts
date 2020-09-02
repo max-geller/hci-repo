@@ -41,6 +41,7 @@ import { NgAisModule } from 'angular-instantsearch';
 import { ToastrModule } from 'ngx-toastr';
 import { FavoritesComponent } from './pages/favorites/favorites.component';
 import { NotificationsComponent } from './pages/notifications/notifications.component';
+import { TasksModule } from './features/tasks/tasks.module';
 
 @NgModule({
   declarations: [
@@ -85,6 +86,7 @@ import { NotificationsComponent } from './pages/notifications/notifications.comp
     IndicesModule,
     ProjectsModule,
     ClientsModule,
+    TasksModule,
   ],
   providers: [
     AuthService,
