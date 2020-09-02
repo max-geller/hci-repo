@@ -1,19 +1,6 @@
 <div id="preload" class="page-layout" fxLayout="column">
 <div>
-  <form class="form-container" fxLayout="column" fxLayoutAlign="center center">
-    <mat-form-field class="ml-field">
-      <mat-label>Email</mat-label>
-      <input matInput type="email" />
-    </mat-form-field>
-    <mat-form-field class="ml-field">
-      <mat-label>Password</mat-label>
-      <input matInput type="password" placeholder="Password" #passwordInput />
-    </mat-form-field>
-    <mat-card-actions>
-      <div fxLayout="row" fxLayoutAlign="space-evenly center">
-        <button mat-raised-button color="primary" type="submit" (click)="emailSignUp()"> Signup </button>
-        <button mat-raised-button> Reset Password </button>
-      </div>
-    </mat-card-actions>
-  </form>
+<app-setup-form></app-setup-form>
+<app-setup-stepper></app-setup-stepper>
+<img src="https://firebasestorage.googleapis.com/v0/b/hci-repo.appspot.com/o/signin.PNG?alt=media&token=38a4c33d-89a5-46d5-8b65-bbb0e3e493bb" height="150px" >
 </div>

@@ -12,8 +12,6 @@ import { SharedModule } from '../shared/shared.module';
 import { SetupFormComponent } from './pages/setup/setup-form/setup-form.component';
 import { SetupStepperComponent } from './pages/setup/setup-stepper/setup-stepper.component';
 
-
-
 @NgModule({
   declarations: [
     LoginComponent,
