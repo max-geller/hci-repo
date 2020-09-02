@@ -10,8 +10,6 @@ import { User } from '../models/user.model';
 import { DOCUMENT } from '@angular/common';
 
 
-
-
 @Injectable()
 export class AuthService {
   // Define an Observable for User's Auth State
@@ -40,11 +38,11 @@ export class AuthService {
 
   }
 
-  getUser() {
+  getUser(): any {
     return this.afAuth.authState.pipe(first()).toPromise();
   }
 
-  isLoggedIn() {
+  isLoggedIn(): any {
     if (this.user$ == null) {
       return false;
     } else {
@@ -52,12 +50,12 @@ export class AuthService {
     }
   }
 
-  userStatus() {
+  userStatus(): any {
     return this.afAuth.authState;
   }
 
   // Update User Data to Firestore Collection after Login*
-  private updateUserData(user) {
+  private updateUserData(user): any {
     const userRef: AngularFirestoreDocument<User> = this.afs.doc(
       `users/${user.uid}`
     );
@@ -73,16 +71,13 @@ export class AuthService {
 
 
   // Email Signin
-  emailSignIn(email: string, password: string) {
+  emailSignIn(email: string, password: string): any {
     this.afAuth.auth
       .signInWithEmailAndPassword(email, password)
-
       .then(res => {
         this.isAuthenticated = true;
         console.log(this.afAuth.auth.currentUser + 'Successfully signed in!');
       })
-
-
       .then(() => {
         // Redirect to Home
         this.router.navigate(['/projects']);
@@ -95,7 +90,7 @@ export class AuthService {
       });
   }
 
-  emailSignUp(email: string, password: string) {
+  emailSignUp(email: string, password: string): any {
     this.afAuth.auth
       .createUserWithEmailAndPassword(email, password)
       .then(res => {
@@ -105,25 +100,21 @@ export class AuthService {
       .then(() => {
         // Redirect to Account Setup
         this.router.navigate(['/sessions/setup']);
-      })
+      });
   }
 
   // Sign Out
-  signOut() {
+  signOut(): any {
     this.afAuth.auth.signOut().then(() => {
 
       this.isAuthenticated = false;
       this.router.navigate(['/home']);
     });
-
-
-
   }
-
   // Verify Email
 
   // Forgot Password
-  ForgotPassword(passwordResetEmail) {
+  ForgotPassword(passwordResetEmail): any {
     return this.afAuth.auth
       .sendPasswordResetEmail(passwordResetEmail)
       .then(() => {
