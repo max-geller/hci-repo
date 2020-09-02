@@ -35,7 +35,6 @@ import { RatesModule } from './features/rates/rates.module';
 import { ProjectsModule } from './features/projects/projects.module';
 import { IndicesModule } from './features/indices/indices.module';
 import { ClientsModule } from './admin/modules/clients/clients.module';
-import { NavbarComponent } from './shared/nav/navbar/navbar.component';
 import { NotFoundComponent } from './shared/components/pages/not-found/not-found.component';
 import { NgAisModule } from 'angular-instantsearch';
 import { ToastrModule } from 'ngx-toastr';
@@ -44,13 +43,14 @@ import { NotificationsComponent } from './pages/notifications/notifications.comp
 import { TasksModule } from './features/tasks/tasks.module';
 import { AvatarModule } from 'ngx-avatar';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     IconMenuComponent,
     SidenavComponent,
-    NavbarComponent,
     AboutComponent,
     TagsComponent,
     ContactComponent,
@@ -79,7 +79,6 @@ import { AvatarModule } from 'ngx-avatar';
     NgAisModule.forRoot(),
     environment.production ?
       HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { delay: 100 }) : [],
-    //    AgmCoreModule.forRoot({ apiKey: 'AIzaSyCYTxkREIgB7sNozUDIhlVNNDwXg9SS3wk' }),
     HomeModule,
     AdminModule,
     SessionsModule,

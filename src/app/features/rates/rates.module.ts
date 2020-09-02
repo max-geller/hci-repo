@@ -6,12 +6,14 @@ import { RouterModule } from '@angular/router';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { CoreModule } from 'src/app/core/core.module';
 import { RateDashboardComponent } from './pages/rate-dashboard/rate-dashboard.component';
+import { ChartComponent } from './components/chart/chart.component';
 
 
 @NgModule({
   declarations: [
-
-  RateDashboardComponent],
+    RateDashboardComponent,
+    ChartComponent,
+  ],
   imports: [
     CommonModule,
     RatesRoutes,

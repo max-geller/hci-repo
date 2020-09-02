@@ -4,7 +4,8 @@ import { MaterialModule } from './vendors/material/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ConfirmDeleteComponent } from './components/modals/confirm-delete/confirm-delete.component';
-
+import { AgmCoreModule } from '@agm/core';
+import { GoogleChartsModule } from 'angular-google-charts';
 @NgModule({
   imports: [
     CommonModule,
@@ -12,6 +13,9 @@ import { ConfirmDeleteComponent } from './components/modals/confirm-delete/confi
     FlexLayoutModule,
     FormsModule,
     ReactiveFormsModule,
+    AgmCoreModule.forRoot({ apiKey: 'AIzaSyCYTxkREIgB7sNozUDIhlVNNDwXg9SS3wk' }),
+    GoogleChartsModule
+
   ],
   declarations: [
     ConfirmDeleteComponent
@@ -23,6 +27,8 @@ import { ConfirmDeleteComponent } from './components/modals/confirm-delete/confi
     FlexLayoutModule,
     FormsModule,
     ReactiveFormsModule,
+    AgmCoreModule,
+    GoogleChartsModule
   ]
 })
 export class SharedModule { }
