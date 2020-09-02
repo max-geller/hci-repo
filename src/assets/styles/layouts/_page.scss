@@ -9,16 +9,11 @@
   flex-grow: 1;
   padding: 20px;
   max-width: 100vw;
+  padding-left: 5%;
+  padding-right: 5%;
 
 }
 
 .section-container {
   background-color: white;
-}
-
-@media screen and (min-width: 600px) {
-  .page-layout {
-    margin-left: 10%;
-    margin-right: 10%;
-  }
 }
