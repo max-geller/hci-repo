@@ -1,10 +1,8 @@
-import * as functions from 'firebase-functions';
-import * as admin from 'firebase-admin';
+import functions from 'firebase-functions';
+import  admin from 'firebase-admin';
 import algoliasearch from 'algoliasearch';
 admin.initializeApp();
 const env = functions.config();
-
-
 
 const client = algoliasearch(env.algolia.appid, env.algolia.apikey);
 const index = client.initIndex('project');

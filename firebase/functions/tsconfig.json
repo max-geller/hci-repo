@@ -1,7 +1,6 @@
 {
   "compileOnSave": true,
   "compilerOptions": {
-    
     "module": "commonjs",
     "noImplicitReturns": true,
     "noUnusedLocals": true,
@@ -11,10 +10,16 @@
     "target": "es2017"
   },
   "include": [
-    "src"
+    "src",
+    "src/index.ts",
+    "../src/**/*"
   ],
   "lib": [
     "es2017",
     "dom"
+  ],
+  "files": [
+    "src/index.ts"
   ]
+
 }

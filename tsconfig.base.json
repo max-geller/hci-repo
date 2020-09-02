@@ -18,11 +18,6 @@
       "es2018",
       "dom"
     ],
-
-    "paths": {
-      "@swimlane/ngx-charts": ["projects/swimlane/ngx-charts/src/public_api"],
-      "@swimlane/ngx-charts/*": ["projects/swimlane/ngx-charts/src/lib/*"]
-    },
     "resolveJsonModule": true
   },
   "angularCompilerOptions": {
