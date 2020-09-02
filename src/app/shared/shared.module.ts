@@ -6,6 +6,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ConfirmDeleteComponent } from './components/modals/confirm-delete/confirm-delete.component';
 import { AgmCoreModule } from '@agm/core';
 import { GoogleChartsModule } from 'angular-google-charts';
+import * as echarts from 'echarts';
+import { NgxEchartsModule } from 'ngx-echarts';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -13,6 +16,9 @@ import { GoogleChartsModule } from 'angular-google-charts';
     FlexLayoutModule,
     FormsModule,
     ReactiveFormsModule,
+    NgxEchartsModule.forRoot({
+      echarts,
+    }),
     AgmCoreModule.forRoot({ apiKey: 'AIzaSyCYTxkREIgB7sNozUDIhlVNNDwXg9SS3wk' }),
     GoogleChartsModule
 
@@ -28,7 +34,8 @@ import { GoogleChartsModule } from 'angular-google-charts';
     FormsModule,
     ReactiveFormsModule,
     AgmCoreModule,
-    GoogleChartsModule
+    GoogleChartsModule,
+    NgxEchartsModule
   ]
 })
 export class SharedModule { }

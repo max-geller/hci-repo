@@ -10,7 +10,6 @@ import { echartStyles } from './../../../../shared/vendors/echart/echart-styles'
 })
 export class ChartComponent implements OnInit {
 
-  @ViewChild(MatSort, { static: false }) sort: MatSort;
   constructor(private afs: AngularFirestore) { }
   lat: -23.8779431;
   lng: -49.8046873;
