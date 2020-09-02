@@ -38,6 +38,7 @@ import { ClientsModule } from './admin/modules/clients/clients.module';
 import { NavbarComponent } from './shared/nav/navbar/navbar.component';
 import { NotFoundComponent } from './shared/components/pages/not-found/not-found.component';
 import { NgAisModule } from 'angular-instantsearch';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -68,6 +69,7 @@ import { NgAisModule } from 'angular-instantsearch';
     AngularFireAuthModule,
     AngularFireFunctionsModule,
     AngularFireStorageModule,
+    ToastrModule.forRoot(), 
     NgAisModule.forRoot(),
     environment.production ?
       HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { delay: 100 }) : [],

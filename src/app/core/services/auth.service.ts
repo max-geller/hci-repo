@@ -8,6 +8,7 @@ import { Observable, of } from 'rxjs';
 import { switchMap, first } from 'rxjs/operators';
 import { User } from '../models/user.model';
 import { DOCUMENT } from '@angular/common';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Injectable()
@@ -20,7 +21,8 @@ export class AuthService {
     @Inject(DOCUMENT) private document: Document,
     private afAuth: AngularFireAuth,
     private afs: AngularFirestore,
-    private router: Router
+    private router: Router,
+    private toastr: ToastrService
   ) {
 
     // Return User's Auth State:
@@ -82,6 +84,10 @@ export class AuthService {
         // Redirect to Home
         this.router.navigate(['/projects']);
       })
+      .then(() => {
+        this.toastr.success('Hello world!', 'Toastr fun!');
+
+      })
       .then(res => {
         console.log(this.afAuth.authState);
       })
@@ -93,6 +99,10 @@ export class AuthService {
   emailSignUp(email: string, password: string): any {
     this.afAuth.auth
       .createUserWithEmailAndPassword(email, password)
+      .then(() => {
+        this.toastr.success('Hello world!', 'Toastr fun!');
+
+      })
       .then(res => {
         this.isAuthenticated = true;
       })
@@ -106,9 +116,11 @@ export class AuthService {
   // Sign Out
   signOut(): any {
     this.afAuth.auth.signOut().then(() => {
-
       this.isAuthenticated = false;
-      this.router.navigate(['/home']);
+      this.router.navigate(['/home'])
+        .then(() => {
+          this.toastr.success('Signed out!', 'Toastr fun!');
+        });
     });
   }
   // Verify Email

@@ -53,13 +53,13 @@
               "src/favicon.ico",
               "src/assets",
               "src/_redirects"
-
             ],
             "styles": [
               "src/assets/styles/app.scss",
               "./node_modules/font-awesome/css/font-awesome.min.css",
               "node_modules/angular-instantsearch/bundles/instantsearch.min.css",
-              "node_modules/angular-instantsearch/bundles/instantsearch-theme-algolia.min.css"
+              "node_modules/angular-instantsearch/bundles/instantsearch-theme-algolia.min.css",
+              "src/assets/styles/vendor/toastr.scss"
             ],
             "scripts": []
           },
