@@ -10,6 +10,7 @@ import { RouterModule } from '@angular/router';
 import { CoreModule } from '../core/core.module';
 import { SharedModule } from '../shared/shared.module';
 import { SetupFormComponent } from './pages/setup/setup-form/setup-form.component';
+import { SetupStepperComponent } from './pages/setup/setup-stepper/setup-stepper.component';
 
 
 
@@ -20,7 +21,8 @@ import { SetupFormComponent } from './pages/setup/setup-form/setup-form.componen
     ResetPassComponent,
     VerifyComponent,
     SetupComponent,
-    SetupFormComponent
+    SetupFormComponent,
+    SetupStepperComponent,
   ],
   imports: [
     CommonModule,
