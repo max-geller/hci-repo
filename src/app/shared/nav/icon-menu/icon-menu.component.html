@@ -3,10 +3,10 @@
     <button mat-icon-button routerLink="/admin" *ngIf="auth.user$ | async as user">
       <i class="fal fa-cog" *ngIf="user.role == 'admin'"></i>
     </button>
-    <button mat-icon-button *ngIf="(user$ | async)?.uid">
+    <button mat-icon-button *ngIf="(user$ | async)?.uid" routerLink="/favorites">
       <i class="fal fa-heart"></i>
     </button>
-    <button mat-icon-button *ngIf="(user$ | async)?.uid">
+    <button mat-icon-button *ngIf="(user$ | async)?.uid" routerLink="/notifications">
       <i class="fal fa-bell"></i><span class="icon-badge">8</span>
     </button>
     <button mat-icon-button *ngIf="(user$ | async)?.uid">

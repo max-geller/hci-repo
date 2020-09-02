@@ -39,6 +39,8 @@ import { NavbarComponent } from './shared/nav/navbar/navbar.component';
 import { NotFoundComponent } from './shared/components/pages/not-found/not-found.component';
 import { NgAisModule } from 'angular-instantsearch';
 import { ToastrModule } from 'ngx-toastr';
+import { FavoritesComponent } from './pages/favorites/favorites.component';
+import { NotificationsComponent } from './pages/notifications/notifications.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +57,8 @@ import { ToastrModule } from 'ngx-toastr';
     ProfileComponent,
     ParallaxDirective,
     NotFoundComponent,
+    FavoritesComponent,
+    NotificationsComponent,
   ],
   imports: [
     BrowserModule,

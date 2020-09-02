@@ -9,6 +9,7 @@ import { SessionsRoutes } from './sessions.routes';
 import { RouterModule } from '@angular/router';
 import { CoreModule } from '../core/core.module';
 import { SharedModule } from '../shared/shared.module';
+import { SetupFormComponent } from './pages/setup/setup-form/setup-form.component';
 
 
 
@@ -18,7 +19,8 @@ import { SharedModule } from '../shared/shared.module';
     SignupComponent,
     ResetPassComponent,
     VerifyComponent,
-    SetupComponent
+    SetupComponent,
+    SetupFormComponent
   ],
   imports: [
     CommonModule,
