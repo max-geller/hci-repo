@@ -2,14 +2,84 @@
   <p style="color: white;">LOADING...</p>
 </ngx-spinner>
 
+
+<div id='preload'>
+  <div class="app-navbar" fxLayout="row" style="padding-left: 20px;padding-right:20px;">
+    <div fxLayout="row" fxLayoutAlign="start center" fxFlex>
+      <button mat-icon-button fxShow="true" fxHide fxShow.lt-sm (click)="snav.toggle()">
+        <i class="fal fa-bars" style="color:white;margin-top:0px;"></i>
+      </button>
+
+      <mat-nav-list fxLayout="row" fxLayoutAlign="center center" style="white-space:nowrap">
+        <mat-list-item routerLink="/home">
+          <img src="assets/images/white-logo.png" height="22px" style="margin-bottom: 5px;" fxShow fxHide.lt-xs />
+          <h1
+            style="color: white;margin-top: 12px; margin-left: 16px;margin-right: 10px; font-size: 20px !important; font-weight: 400;"
+            fxShow fxHide.lt-md>
+            COST REPOSITORY
+          </h1>
+        </mat-list-item>
+      </mat-nav-list>
+
+      <mat-nav-list fxLayout="row" style="color: white; font-size: 12px;" fxShow="true" fxShow fxHide.lt-sm
+        *ngIf="auth.user$ | async as user">
+        <mat-list-item routerLink="/projects" style="font-size: 12px !important;">
+          PROJECTS
+        </mat-list-item>
+        <mat-list-item routerLink="/rates" style="font-size: 12px !important;white-space: nowrap;">
+          LABOR RATES
+        </mat-list-item>
+        <mat-list-item routerLink="/indices" style="font-size: 12px !important;white-space: nowrap;">
+          COST INDICES
+        </mat-list-item>
+
+        <button mat-icon-button (click)="toggleSearch()">
+          <i class="fal fa-search" style="margin-top: 6px;"></i>
+        </button>
+      </mat-nav-list>
+    </div>
+    <div fxLayout="column" fxLayoutAlign="center end" fxFlex>
+      <app-icon-menu></app-icon-menu>
+    </div>
+  </div>
+
+  <div id="searchNav" fxLayout="row" fxLayoutAlign="center center" *ngIf="show" class="fade" [@state]="state"
+    (@state.done)="animationDone($event)">
+    <div class="search-container">
+      <ng-content #fadeableContent></ng-content>
+      <ais-instantsearch [config]="config">
+        <ais-search-box></ais-search-box>
+        <ais-hits>
+          <ng-template let-hits="hits">
+            <ol class="ais-Hits-list">
+              <li *ngFor="let hit of hits" class="ais-Hits-item">
+                {{hit.name}}
+              </li>
+            </ol>
+          </ng-template>
+        </ais-hits>
+      </ais-instantsearch>
+    </div>
+  </div>
+
+</div>
+
+<mat-sidenav-container class="example-sidenav-container">
+  <mat-sidenav #snav>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/projects" (click)="snav.toggle()">PROJECTS</a>
+      <a mat-list-item routerLink="/rates">LABOR RATES</a>
+      <a mat-list-item routerLink="/indices">COST INDICES</a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div id="preload" class="main-container" fxLayout="column" style="max-width: 100vw; ">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
 <div style="max-width: 100vw;">
-  <div id='preload'>
-    <app-navbar></app-navbar>
-  </div>
-
-  <div id="preload" class="main-container" fxLayout="column" style="max-width: 100vw; ">
-    <router-outlet></router-outlet>
-  </div>
-
   <app-footer></app-footer>
 </div>

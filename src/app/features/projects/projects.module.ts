@@ -12,6 +12,7 @@ import { ProjectTableComponent } from './components/project-table/project-table.
 import { AddProjectComponent } from './components/add-project/add-project.component';
 import { EditProjectComponent } from './components/edit-project/edit-project.component';
 import { ProjectCarouselComponent } from './components/project-carousel/project-carousel.component';
+import { ProjectMapComponent } from './components/project-map/project-map.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ProjectCarouselComponent } from './components/project-carousel/project-
     ProjectTableComponent,
     AddProjectComponent,
     EditProjectComponent,
-    ProjectCarouselComponent
+    ProjectCarouselComponent,
+    ProjectMapComponent
   ],
   imports: [
     CommonModule,
