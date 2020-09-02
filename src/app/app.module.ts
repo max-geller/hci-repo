@@ -75,11 +75,11 @@ import { AvatarModule } from 'ngx-avatar';
     AngularFireAuthModule,
     AngularFireFunctionsModule,
     AngularFireStorageModule,
-    ToastrModule.forRoot(), 
+    ToastrModule.forRoot(),
     NgAisModule.forRoot(),
     environment.production ?
       HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { delay: 100 }) : [],
-//    AgmCoreModule.forRoot({ apiKey: 'AIzaSyCYTxkREIgB7sNozUDIhlVNNDwXg9SS3wk' }),
+    //    AgmCoreModule.forRoot({ apiKey: 'AIzaSyCYTxkREIgB7sNozUDIhlVNNDwXg9SS3wk' }),
     HomeModule,
     AdminModule,
     SessionsModule,

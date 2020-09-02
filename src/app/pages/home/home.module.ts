@@ -10,6 +10,7 @@ import { BannerComponent } from './components/banner/banner.component';
 import { RequestAccessComponent } from './components/request-access/request-access.component';
 import { BrowseTagsComponent } from './components/browse-tags/browse-tags.component';
 import { StatsComponent } from './components/stats/stats.component';
+import { HeroComponent } from './components/hero/hero.component';
 
 @NgModule({
     declarations: [
@@ -20,6 +21,7 @@ import { StatsComponent } from './components/stats/stats.component';
         ProjectCarouselComponent,
         BannerComponent,
         RequestAccessComponent,
+        HeroComponent,
     ],
     imports: [
         CommonModule,
