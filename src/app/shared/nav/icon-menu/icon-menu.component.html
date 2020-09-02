@@ -9,7 +9,7 @@
     <button mat-icon-button *ngIf="(user$ | async)?.uid" routerLink="/notifications">
       <i class="fal fa-bell"></i><span class="icon-badge">8</span>
     </button>
-    <button mat-icon-button *ngIf="(user$ | async)?.uid">
+    <button mat-icon-button *ngIf="(user$ | async)?.uid" routerLink="/tasks">
       <i class="fal fa-check"></i><span class="icon-badge">11</span>
     </button>
     <button mat-icon-button [matMenuTriggerFor]="teamMenu" *ngIf="(user$ | async)?.uid">
