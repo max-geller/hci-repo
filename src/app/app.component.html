@@ -6,9 +6,7 @@
 <div id='preload'>
   <div class="app-navbar" fxLayout="row" style="padding-left: 20px;padding-right:20px;">
     <div fxLayout="row" fxLayoutAlign="start center" fxFlex>
-      <button mat-icon-button fxShow="true" fxHide fxShow.lt-sm (click)="snav.toggle()">
-        <i class="fal fa-bars" style="color:white;margin-top:0px;"></i>
-      </button>
+      <i class="fal fa-bars" style="color:white;margin-top:0px;"></i>
 
       <mat-nav-list fxLayout="row" fxLayoutAlign="center center" style="white-space:nowrap">
         <mat-list-item routerLink="/home">
@@ -64,21 +62,11 @@
 
 </div>
 
-<mat-sidenav-container class="example-sidenav-container">
-  <mat-sidenav #snav>
-    <mat-nav-list>
-      <a mat-list-item routerLink="/projects" (click)="snav.toggle()">PROJECTS</a>
-      <a mat-list-item routerLink="/rates">LABOR RATES</a>
-      <a mat-list-item routerLink="/indices">COST INDICES</a>
-    </mat-nav-list>
-  </mat-sidenav>
 
-  <mat-sidenav-content>
-    <div id="preload" class="main-container" fxLayout="column" style="max-width: 100vw; ">
-      <router-outlet></router-outlet>
-    </div>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+<div id="preload" class="main-container" fxLayout="column" style="max-width: 100vw; ">
+  <router-outlet></router-outlet>
+</div>
+
 
 <div style="max-width: 100vw;">
   <app-footer></app-footer>

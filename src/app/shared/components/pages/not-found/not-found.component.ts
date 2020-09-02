@@ -65,9 +65,9 @@ export class NotFoundComponent implements OnInit {
 
   refreshPage(): void {
     this.router.navigate(['/home'])
-    .then(() => {
-      window.location.reload();
-    });
+      .then(() => {
+        window.location.reload();
+      });
 
   }
 }
