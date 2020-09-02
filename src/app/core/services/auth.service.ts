@@ -81,7 +81,7 @@ export class AuthService {
 
       .then(() => {
         // Redirect to Home
-        this.router.navigate(['/home']);
+        this.router.navigate(['/projects']);
       })
       .then(res => {
         console.log(this.afAuth.authState);
