@@ -17,6 +17,32 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "lodash",
+              "firebase",
+              "firebase/app",
+              "lodash/isPlainObject",
+              "angular-instantsearch",
+              "lodash/mapValues",
+              "@firebase/app",
+              "firebase/app",
+              "@firebase/database",
+              "@firebase/firestore",
+              "@firebase/functions",
+              "@firebase/performance",
+              "@firebase/remote-config",
+              "lodash/mapKeys",
+              "lodash/forEach",
+              "lodash/isFunction",
+              "lodash/find",
+              "lodash/isFinite",
+              "lodash/some",
+              "lodash/reduce",
+              "lodash/curry",
+              "hogan.js",
+              "@firebase/auth"
+
+            ],
             "outputPath": "dist/hci-repo",
             "index": "src/index.html",
             "main": "src/main.ts",

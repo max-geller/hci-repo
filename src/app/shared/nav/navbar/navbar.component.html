@@ -15,7 +15,7 @@
       </mat-list-item>
     </mat-nav-list>
 
-    <mat-nav-list fxLayout="row" style="color: white; font-size: 12px;" fxShow="true" fxShow fxHide.lt-md>
+    <mat-nav-list fxLayout="row" style="color: white; font-size: 12px;" fxShow="true" fxShow fxHide.lt-md *ngIf="show">
       <mat-list-item routerLink="/projects" style="font-size: 12px !important;">
         PROJECTS
       </mat-list-item>
