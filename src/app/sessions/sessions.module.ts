@@ -28,7 +28,6 @@ import { SetupStepperComponent } from './pages/setup/setup-stepper/setup-stepper
     RouterModule,
     CoreModule,
     SharedModule
-
   ]
 })
 export class SessionsModule { }
