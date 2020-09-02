@@ -1,0 +1,66 @@
+<div class="wrapper">
+  <div id="preload" class="page-layout" fxLayout="column">
+    <h1>DATABASE:</h1>
+    <mat-divider style="margin-top: 0px !important;"></mat-divider>
+    <div class="module-container" fxLayout="row wrap">
+
+      <div class="module-list" fxFlex>
+        <mat-button-toggle-group style="margin-left:20px">
+          <mat-button-toggle value="recent">Recent</mat-button-toggle>
+          <mat-button-toggle value="popular">Popular</mat-button-toggle>
+          <mat-button-toggle value="trending">Trending</mat-button-toggle>
+        </mat-button-toggle-group>
+
+
+        <div id="preload" class="module-item" fxlayout="row wrap" fxLayout="start center" style="margin:20px;">
+          <div class="module-description" fxLayout="column">
+            <h2>MECHANICAL SYSTEMS</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+              ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+              deserunt mollit anim id est laborum.</p>
+
+            <div fxLayout="row" fxLayoutAlign="start center">
+              <button mat-stroked-button>
+                <i class="fal fa-heart"></i> Save
+              </button>
+
+              <mat-chip-list>
+                <mat-chip style="font-size: 12px;">Power Systems</mat-chip>
+                <mat-chip style="font-size: 12px;">Electrical</mat-chip>
+              </mat-chip-list>
+            </div>
+
+          </div>
+        </div>
+        <div id="preload" class="module-item" fxlayout="row wrap" fxLayout="start center" style="margin:20px;">
+          <div class="module-description" fxLayout="column">
+            <h2>ELECTRICAL SYSTEMS</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+              ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+              deserunt mollit anim id est laborum.</p>
+
+            <div fxLayout="row" fxLayoutAlign="start center">
+              <button mat-stroked-button>
+                <i class="fal fa-heart"></i> Save
+              </button>
+
+              <mat-chip-list>
+                <mat-chip style="font-size: 12px;">Power Systems</mat-chip>
+                <mat-chip style="font-size: 12px;">Electrical</mat-chip>
+              </mat-chip-list>
+            </div>
+
+          </div>
+        </div>
+        <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]" style="border-radius: 25px;">
+        </mat-paginator>
+
+      </div>
+    </div>
+
+  </div>
+</div>

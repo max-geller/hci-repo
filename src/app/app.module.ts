@@ -42,6 +42,8 @@ import { FavoritesComponent } from './pages/favorites/favorites.component';
 import { NotificationsComponent } from './pages/notifications/notifications.component';
 import { TasksModule } from './features/tasks/tasks.module';
 import { AvatarModule } from 'ngx-avatar';
+import { DatabaseModule } from './features/database/database.module';
+import { SystemsModule } from './features/database/modules/systems/systems.module';
 
 
 
@@ -87,7 +89,9 @@ import { AvatarModule } from 'ngx-avatar';
     ProjectsModule,
     ClientsModule,
     TasksModule,
-    AvatarModule
+    AvatarModule,
+    DatabaseModule,
+    SystemsModule
   ],
   providers: [
     AuthService,

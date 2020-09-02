@@ -47,6 +47,10 @@ const routes: Routes = [
     loadChildren: () => import('./features/rates/rates.module').then(m => m.RatesModule),
   },
   {
+    path: 'database',
+    loadChildren: () => import('./features/database/database.module').then(m => m.DatabaseModule),
+  },
+  {
     path: 'admin',
     loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule),
   },

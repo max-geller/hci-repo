@@ -11,6 +11,7 @@ import { RequestAccessComponent } from './components/request-access/request-acce
 import { BrowseTagsComponent } from './components/browse-tags/browse-tags.component';
 import { StatsComponent } from './components/stats/stats.component';
 import { HeroComponent } from './components/hero/hero.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
     declarations: [
@@ -27,6 +28,7 @@ import { HeroComponent } from './components/hero/hero.component';
         CommonModule,
         CoreModule,
         SharedModule,
+        RouterModule
     ],
 
 })
