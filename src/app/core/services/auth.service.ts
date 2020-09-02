@@ -85,7 +85,9 @@ export class AuthService {
         this.router.navigate(['/projects']);
       })
       .then(() => {
-        this.toastr.success('Hello world!', 'Toastr fun!');
+        this.toastr.success('Successfully signed in to your account!', 'LOGGED IN!', {
+          timeOut: 2000,
+        });
 
       })
       .then(res => {
@@ -100,7 +102,9 @@ export class AuthService {
     this.afAuth.auth
       .createUserWithEmailAndPassword(email, password)
       .then(() => {
-        this.toastr.success('Hello world!', 'Toastr fun!');
+        this.toastr.success('Account info saved, please continue with setting up your profile!', 'SAVED', {
+          timeOut: 2000,
+        });
 
       })
       .then(res => {
@@ -119,7 +123,9 @@ export class AuthService {
       this.isAuthenticated = false;
       this.router.navigate(['/home'])
         .then(() => {
-          this.toastr.success('Signed out!', 'Toastr fun!');
+          this.toastr.success('You have been successfully logged out.', 'LOGGED OUT', {
+            timeOut: 2000,
+          });
         });
     });
   }

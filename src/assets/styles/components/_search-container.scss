@@ -1,5 +1,7 @@
 .search-container {
   display: block;
+  position: absolute;
+  z-index: 2;
   border-bottom-style: solid;
   border-color: rgb(165, 165, 165);
   border-width: thin;
@@ -8,7 +10,7 @@
   transition: all .5s;
   overflow: hidden;
   width: 100vw;
-  height:500px;
+  height: 100px;
 }
 
 .fade {
