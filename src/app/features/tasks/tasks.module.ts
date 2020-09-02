@@ -10,7 +10,10 @@ import { CoreModule } from 'src/app/core/core.module';
 
 
 @NgModule({
-  declarations: [TaskListComponent, TaskDetailComponent],
+  declarations: [
+    TaskListComponent,
+    TaskDetailComponent
+  ],
   imports: [
     CommonModule,
     SharedModule,
