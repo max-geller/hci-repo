@@ -8,9 +8,8 @@
   "files": [
     "src/main.ts",
     "src/polyfills.ts",
-      "firebase/functions/src/index.ts"
-    ],
-  
+  ],
+
   "include": [
     "src/**/*.d.ts"
   ]
