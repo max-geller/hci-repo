@@ -24,6 +24,7 @@ import { CoreModule } from '../core/core.module';
 import { RouterModule } from '@angular/router';
 import { SidenavComponent } from '../shared/nav/sidenav/sidenav.component';
 import { AuthRoutes } from './auth.routes';
+import { FavoritesTableComponent } from './pages/favorites/favorites-table/favorites-table.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { AuthRoutes } from './auth.routes';
     FavoritesComponent,
     NotificationsComponent,
     SidenavComponent,
+    FavoritesTableComponent,
   ],
   imports: [
     CommonModule,
