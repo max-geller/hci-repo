@@ -5,7 +5,7 @@ const APP_ID = functions.config().algolia.app;
 const ADMIN_KEY = functions.config().algolio.key;
 
 const client = algoliasearch(APP_ID, ADMIN_KEY);
-const index = client.initIndex('projects');
+const index = client.initIndex('PROJECT');
 
 exports.addToIndex = functions.firestore.document('projects/{projectId}')
 
