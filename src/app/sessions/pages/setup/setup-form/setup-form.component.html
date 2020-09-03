@@ -1,13 +1,14 @@
-<form fxLayout="row wrap" fxLayoutAlign="center center" style="width: 100%;padding:35px;display:flex">
+<form fxLayout="row wrap" fxLayoutAlign="center center" style="width: 100%;padding:35px;display:flex" #regForm='ngForm'
+  (ngSubmit)="Register(regForm)">
   <div class="avatar-container" fxLayout="column" fxLayoutAlign="center center" style="padding: 20px;" fxFlex>
     <div fxLayout="column" fxLayoutAlign="center center">
       <h3 style="color: white">PROFILE PHOTO:</h3>
       <ngx-avatar class="avatar" name="max geller" size="150">
       </ngx-avatar>
       <button mat-stroked-button style="color: white;border-color: white;">Upload Photo</button>
-
     </div>
   </div>
+
   <div class="setup-form-container" fxLayout="column" fxLayoutAlign="center center" style="padding: 20px;" fxFlex>
     <div fxLayout="column" fxLayoutAlign="center center">
       <img id="preload" src="assets/images/white-logo.png" style="padding: 50px;" height="60px" />
@@ -16,22 +17,22 @@
         <h4>Finish creating your account by providing some basic information.</h4>
       </div>
       <mat-form-field class="lg-field">
-        <mat-label>First Name</mat-label>
-        <input matInput type="text" formControlName="firstName">
+        <mat-label for="name">First Name</mat-label>
+        <input matInput type="text" name="firstName" ngModel>
       </mat-form-field>
       <mat-form-field class="lg-field">
-        <mat-label>Last Name</mat-label>
-        <input matInput type="text" formControlName="lastName">
+        <mat-label for="name">Last Name</mat-label>
+        <input matInput type="text" name="lastName" ngModel>
       </mat-form-field>
       <mat-form-field class="lg-field">
-        <mat-label>Company</mat-label>
-        <input matInput type="text" formControlName="company">
+        <mat-label for="name">Company</mat-label>
+        <input matInput type="text" name="company" ngModel>
       </mat-form-field>
       <mat-form-field class="lg-field">
-        <mat-label>Phone</mat-label>
-        <input matInput type="text" formControlName="phone">
+        <mat-label for="name">Phone</mat-label>
+        <input matInput type="text" name="phone" ngModel>
       </mat-form-field>
-      <button mat-stroked-button style="color: white;border-color: white;">Submit</button>
+      <button mat-stroked-button type="submit" style="color: white;border-color: white;" id="register">Submit</button>
     </div>
   </div>
 

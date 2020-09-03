@@ -1,29 +1,27 @@
-import { UserService } from './../../../../core/services/user.service';
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, NgForm } from '@angular/forms';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { UserInterface } from './../../../../core/models/user.model';
+import { UserService } from './../../../../core/services/user.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-setup-form',
   templateUrl: './setup-form.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
+
 export class SetupFormComponent implements OnInit {
-  constructor(private fb: FormBuilder, private userService: UserService, private firestore: AngularFirestore) { }
+  userForm: UserInterface;
 
-
+  constructor(private fb: UserService) { }
   ngOnInit(): any {
-
   }
-  onSubmit(form: NgForm): any {
-    const data = Object.assign({}, form.value);
-    delete data.id;
-    if (form.value.id == null) {
-      this.firestore.collection('users').add(data);
-    }
-    else {
-      this.firestore.doc('users/' + form.value.id).update(data);
-    }
 
-  } 
+  Register(regForm: NgForm): any {
+    this.userForm = regForm.form.value;
+    this.save();
+  }
+
+  save(): any {
+    this.fb.createUser(this.userForm);
+  }
 }
