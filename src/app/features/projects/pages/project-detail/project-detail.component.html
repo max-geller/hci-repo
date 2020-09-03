@@ -5,18 +5,29 @@
     <h5>SIZE: {{project.squareFeet}}</h5>
     <h5>TYPE: {{project.type}}</h5>
     <h5>CLIENT: {{project.client}}</h5>
-    
-    <div fxLayout="row" style="width: 100%" fxLayoutAlign="center  center">
-      <div fxLayout="column" fxLayoutAlign="center center" fxFlex>
+
+    <div fxLayout="row wrap" style="width: 100%" fxLayoutAlign="center  center">
+      <div fxLayout="column" fxLayoutAlign="center center" style="padding:20px" fxFlex>
         <img src={{project.previewURL}} height="350px">
       </div>
-      <div fxLayout="column" fxLayoutAlign="center" fxFlex>
+      <div fxLayout="column" fxLayoutAlign="center" style="padding:20px;" fxFlex>
         <app-project-map></app-project-map>
       </div>
     </div>
 
     <h2>COST TREND:</h2>
-    <app-project-cost-trend></app-project-cost-trend>
+    <div fxLayout="row wrap" fxLayoutAlign="start center" style="width: 90vw; height:360px; ">
+      <div fxLayout="column"  style="padding:30px" fxFlex>
+        <div style="height:350px;" echarts [options]="chartLineOption3">
+        </div>
+      </div>
+      <div fxLayout="column" style="padding:30px" fxFlex>
+        <div style="height:350px;" echarts [options]="salesChartBar " [autoResize]="true">
+        </div>
+      </div>
+    </div>
+
+
     <mat-accordion>
       <mat-expansion-panel>
         <mat-expansion-panel-header>
