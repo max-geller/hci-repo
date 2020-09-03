@@ -1,11 +1,13 @@
 <div class="wrapper">
   <div class="page-layout" fxLayout="column" *ngIf="project" fxLayoutAlign="start center">
     <h1 style=" text-transform: uppercase;">{{project.name}}</h1>
-    <h5>{{project.status}}</h5>
-    <h5>SIZE: {{project.squareFeet}}</h5>
-    <h5>TYPE: {{project.type}}</h5>
-    <h5>CLIENT: {{project.client}}</h5>
+    <div fxLayout="row" fxLayoutAlign="space-evenly center" style="width: 90%;">
 
+      <h5>{{project.status}}</h5>
+      <h5> {{project.squareFeet}} GSF</h5>
+      <h5> {{project.type}}</h5>
+      <h5> {{project.client}}</h5>
+    </div>
     <div fxLayout="row wrap" style="width: 100%" fxLayoutAlign="center  center">
       <div fxLayout="column" fxLayoutAlign="center center" style="padding:20px" fxFlex>
         <img src={{project.previewURL}} height="350px">
