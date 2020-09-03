@@ -57,16 +57,14 @@ export class AuthService {
   }
 
   // Update User Data to Firestore Collection after Login*
-  private updateUserData(user): any {
+
+
+  private updateUserData(user$): any {
     const userRef: AngularFirestoreDocument<UserInterface> = this.afs.doc(
-      `users/${user.uid}`
+      `users/${user$.uid}`
     );
     const data = {
-      uid: user.uid,
-      email: user.email,
-      displayName: user.displayName,
-      photoURL: user.photoURL,
-      roles: user.roles
+      uid: user$.uid,
     };
     return userRef.set(data, { merge: true });
   }
