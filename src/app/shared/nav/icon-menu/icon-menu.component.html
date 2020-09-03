@@ -27,7 +27,7 @@
 </div>
 
 <mat-menu #teamMenu="matMenu" xPosition="before">
-  <button mat-menu-item routerLink="/profile">
+  <button mat-menu-item routerLink="/auth/profile">
     <i class="fal fa-user"></i>&nbsp; &nbsp; Profile</button>
   <button mat-menu-item (click)="openSlack()">
     <i class="fab fa-slack-hash"></i>&nbsp; &nbsp; Slack Channel</button>
@@ -35,15 +35,4 @@
     <i class="fal fa-books"></i>&nbsp; &nbsp; Documentation</button>
   <button mat-menu-item (click)="signOut()">
     <i class="fal fa-sign-out"></i>&nbsp; &nbsp; Logout</button>
-</mat-menu>
-
-<mat-menu #tenantMenu="matMenu" xPosition="before">
-  <button mat-menu-item routerLink="tenants/billing" routerLinkActive="active" class="pointer">
-    <i class="far fa-users"></i>&nbsp; &nbsp; Manage Users</button>
-  <button mat-menu-item routerLink="tenants/teams" routerLinkActive="active" class="pointer">
-    <i class="far fa-credit-card"></i>&nbsp; &nbsp; Subscriptions</button>
-  <button mat-menu-item routerLink="tenants/settings" routerLinkActive="active" class="pointer">
-    <i class="far fa-cogs"></i>&nbsp; &nbsp; Tenant Settings</button>
-  <button mat-menu-item routerLink="tenants/billing" routerLinkActive="active" class="pointer">
-    <i class="far fa-credit-card"></i>&nbsp; &nbsp; Payments & Billing</button>
 </mat-menu>
