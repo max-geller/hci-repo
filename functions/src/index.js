@@ -12,10 +12,7 @@ exports.addToIndex = functions.firestore.document('projects/{projectId}')
   .onCreate(snapshot => {
     const data = snapshot.data();
     const objectID = snapshot.id;
-    return index.addObject({
-      ...data,
-      objectID
-    });
+    return index.addObject({ ...data, objectID });
   });
 
 exports.updateIndex = functions.firestore.document('projects/{projectId}')
