@@ -13,6 +13,9 @@ import { AddProjectComponent } from './components/add-project/add-project.compon
 import { EditProjectComponent } from './components/edit-project/edit-project.component';
 import { ProjectCarouselComponent } from './components/project-carousel/project-carousel.component';
 import { ProjectMapComponent } from './components/project-map/project-map.component';
+import { ProjectCostTrendComponent } from './components/project-cost-trend/project-cost-trend.component';
+import { ProjectCostSourcesComponent } from './components/project-cost-sources/project-cost-sources.component';
+import { ProjectDesignPackagesComponent } from './components/project-design-packages/project-design-packages.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { ProjectMapComponent } from './components/project-map/project-map.compon
     AddProjectComponent,
     EditProjectComponent,
     ProjectCarouselComponent,
-    ProjectMapComponent
+    ProjectMapComponent,
+    ProjectCostTrendComponent,
+    ProjectCostSourcesComponent,
+    ProjectDesignPackagesComponent
   ],
   imports: [
     CommonModule,

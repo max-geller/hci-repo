@@ -6,4 +6,5 @@ export interface ProjectInterface {
     squareFeet?: string;
     type?: string;
     client?: string;
+    description?: string;
 }
