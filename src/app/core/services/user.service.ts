@@ -38,7 +38,7 @@ export class UserService {
   createUser(user: UserInterface): any {
     return this.afs.collection('users').add(user)
       .then(res => {
-        console.log(this.afAuth.auth.currentUser + 'Account creation successful!');
+        console.log(this.afAuth.auth.currentUser.uid + 'Account creation successful!');
       })
       .then(() => {
         this.toastr.success('Successfully created your account!', 'ACCOUNT CREATED!', {

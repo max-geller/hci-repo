@@ -7,4 +7,5 @@ export interface ProjectInterface {
     type?: string;
     client?: string;
     description?: string;
+    previewURL?: string;
 }
