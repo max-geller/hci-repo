@@ -10,6 +10,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { TagsComponent } from './pages/tags/tags.component';
 import { AuthGuard } from '../core/guards/auth.guard';
+import { ContactComponent } from './pages/contact/contact.component';
+import { SupportComponent } from './pages/support/support.component';
+import { DocsComponent } from './pages/docs/docs.component';
 
 const routes: Routes = [
     {
@@ -80,6 +83,20 @@ const routes: Routes = [
     {
         path: 'profile',
         component: ProfileComponent,
+        canActivate: [AuthGuard]
+    },
+    {
+        path: 'docs',
+        component: DocsComponent,
+        canActivate: [AuthGuard]
+    },
+    {
+        path: 'contact',
+        component: ContactComponent,
+    },
+    {
+        path: 'support',
+        component: SupportComponent,
         canActivate: [AuthGuard]
     },
     {

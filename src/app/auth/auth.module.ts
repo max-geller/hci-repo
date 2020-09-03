@@ -25,6 +25,10 @@ import { RouterModule } from '@angular/router';
 import { SidenavComponent } from '../shared/nav/sidenav/sidenav.component';
 import { AuthRoutes } from './auth.routes';
 import { FavoritesTableComponent } from './pages/favorites/favorites-table/favorites-table.component';
+import { SupportComponent } from './pages/support/support.component';
+import { DocsComponent } from './pages/docs/docs.component';
+import { AuthGuard } from '../core/guards/auth.guard';
+import { AuthService } from '../core/services/auth.service';
 
 @NgModule({
   declarations: [
@@ -38,6 +42,8 @@ import { FavoritesTableComponent } from './pages/favorites/favorites-table/favor
     NotificationsComponent,
     SidenavComponent,
     FavoritesTableComponent,
+    SupportComponent,
+    DocsComponent,
   ],
   imports: [
     CommonModule,
@@ -55,6 +61,7 @@ import { FavoritesTableComponent } from './pages/favorites/favorites-table/favor
     TasksModule,
     DatabaseModule,
     SystemsModule,
-  ]
+  ],
+  providers: [AuthService, AuthGuard]
 })
 export class AuthModule { }

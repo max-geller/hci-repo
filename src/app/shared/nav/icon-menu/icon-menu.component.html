@@ -1,6 +1,6 @@
 <div class="icon-menu" fxLayout="row" fxLayoutAlign="end center">
   <mat-nav-list fxLayout="row">
-    <button mat-icon-button routerLink="/admin" *ngIf="auth.user$ | async as user" fxShow fxHide.lt-xs>
+    <button mat-icon-button routerLink="/auth/admin" *ngIf="auth.user$ | async as user" fxShow fxHide.lt-xs>
       <i class="fal fa-cog" *ngIf="user.role == 'admin'"></i>
     </button>
     <button mat-icon-button *ngIf="(user$ | async)?.uid" routerLink="/auth/favorites" fxShow fxHide.lt-xs>
