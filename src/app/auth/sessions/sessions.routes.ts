@@ -5,6 +5,7 @@ import { ResetPassComponent } from './pages/reset-pass/reset-pass.component';
 import { SetupComponent } from './pages/setup/setup.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { VerifyComponent } from './pages/verify/verify.component';
+import { CheckEmailComponent } from './pages/check-email/check-email.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'verify',
     component: VerifyComponent
+  },
+  {
+    path: 'confirm',
+    component: CheckEmailComponent
   },
 
 ];

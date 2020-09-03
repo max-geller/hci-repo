@@ -12,6 +12,7 @@ import { SharedModule } from '../../shared/shared.module';
 import { SetupFormComponent } from './pages/setup/setup-form/setup-form.component';
 import { SetupStepperComponent } from './pages/setup/setup-stepper/setup-stepper.component';
 import { AvatarModule } from 'ngx-avatar';
+import { CheckEmailComponent } from './pages/check-email/check-email.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { AvatarModule } from 'ngx-avatar';
     SetupComponent,
     SetupFormComponent,
     SetupStepperComponent,
+    CheckEmailComponent,
   ],
   imports: [
     CommonModule,

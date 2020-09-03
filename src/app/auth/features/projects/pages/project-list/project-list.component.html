@@ -8,12 +8,24 @@
           <app-project-filter></app-project-filter>
         </div>
         <div fxFlex>
-          <mat-button-toggle-group name="fontStyle" aria-label="Font Style" style="margin-left:20px">
-            <mat-button-toggle value="recent">Recent</mat-button-toggle>
+
+          <mat-button-toggle-group name="fontStyle" style="padding:0px" aria-label="Font Style"
+            style="margin-left:20px">
+            <mat-button-toggle style="padding:0px" value="recent">Recent</mat-button-toggle>
             <mat-button-toggle value="popular">Popular</mat-button-toggle>
             <mat-button-toggle value="trending">Trending</mat-button-toggle>
           </mat-button-toggle-group>
 
+          <mat-form-field class="lg-field" style="margin-left: 15px;">
+            <mat-label>Net Present Value Method</mat-label>
+            <mat-select>
+              <mat-option>Turner Building Cost Index (TBCI)</mat-option>
+              <mat-option>ENR Building Index</mat-option>
+              <mat-option>Rider-Levitt Bucknall</mat-option>
+              <mat-option>US Consumer Basket Index</mat-option>
+              <mat-option>US Gross Domestic Product</mat-option>
+            </mat-select>
+          </mat-form-field>
           <div class="dashboard-container" style="padding:20px;">
 
             <mat-card id="preload" class="project-card" routerLink="/auth/projects/project/{{project.id}}"
