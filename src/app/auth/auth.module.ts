@@ -23,6 +23,7 @@ import { SharedModule } from '../shared/shared.module';
 import { CoreModule } from '../core/core.module';
 import { RouterModule } from '@angular/router';
 import { SidenavComponent } from '../shared/nav/sidenav/sidenav.component';
+import { AuthRoutes } from './auth.routes';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { SidenavComponent } from '../shared/nav/sidenav/sidenav.component';
     SharedModule,
     CoreModule,
     RouterModule,
+    AuthRoutes,
     HomeModule,
     AdminModule,
     SessionsModule,

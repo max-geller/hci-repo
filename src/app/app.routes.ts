@@ -8,7 +8,7 @@ import { AuthLayoutComponent } from './shared/components/layouts/auth-layout/aut
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'auth',
+    redirectTo: 'auth/home',
     pathMatch: 'full'
   },
   {

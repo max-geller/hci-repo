@@ -13,7 +13,7 @@ import { TagsComponent } from './pages/tags/tags.component';
 const routes: Routes = [
     {
         path: '',
-        redirectTo: 'login',
+        redirectTo: 'home',
         pathMatch: 'full'
     },
     {
@@ -49,6 +49,10 @@ const routes: Routes = [
         loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule),
     },
     {
+        path: 'sessions',
+        loadChildren: () => import('./sessions/sessions.module').then(m => m.SessionsModule),
+    },
+    {
         path: 'home',
         component: HomeComponent
     },
@@ -68,6 +72,7 @@ const routes: Routes = [
         path: 'profile',
         component: ProfileComponent
     },
+    
     {
         path: 'terms',
         component: TermsComponent

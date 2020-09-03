@@ -1,4 +1,4 @@
-import { SharedModule } from './../../shared/shared.module';
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ClientDetailComponent } from './pages/client-detail/client-detail.component';
@@ -7,7 +7,7 @@ import { CampusesModule } from './modules/campuses/campuses.module';
 import { ClientsRoutes } from './clients.routes';
 import { CoreModule } from 'src/app/core/core.module';
 
-
+import { SharedModule } from './../../../shared/shared.module';
 
 @NgModule({
   declarations: [

@@ -17,10 +17,10 @@
       <ngx-avatar name="{{user.displayName}}" size="40">
       </ngx-avatar>
     </button>
-    <mat-list-item style="font-size: 12px !important;" routerLink="/sessions/login"
+    <mat-list-item style="font-size: 12px !important;" routerLink="/auth/sessions/login"
       *ngIf="(user$ | async)?.uid == null">LOGIN
     </mat-list-item>
-    <mat-list-item style="font-size: 12px !important;" routerLink="/sessions/signup"
+    <mat-list-item style="font-size: 12px !important;" routerLink="/auth/sessions/signup"
       *ngIf="(user$ | async)?.uid == null">REGISTER
     </mat-list-item>
   </mat-nav-list>
