@@ -14,34 +14,39 @@
             <mat-button-toggle value="trending">Trending</mat-button-toggle>
           </mat-button-toggle-group>
 
-          <div class="dashboard-container"  style="padding:20px;">
+          <div class="dashboard-container" style="padding:20px;">
             <mat-card id="preload" class="project-card" routerLink="/auth/projects/project/{{project.id}}"
               *ngFor="let project of projects$ | async">
-              <mat-card-title> {{project.name}}</mat-card-title>
+              <mat-card-title>
+                <h5> {{project.name}} </h5>
+              </mat-card-title>
               <img mat-card-image src="{{project.previewURL}}" height="160px">
+              <mat-card-content>
 
-              <div class="module-description" fxLayout="column">
                 <h4>{{project.status}}</h4>
                 <h4>{{project.squareFeet}}</h4>
                 <div fxLayout="row" fxLayoutAlign="start center">
-                  <button mat-stroked-button>
-                    <i class="fal fa-heart"></i> Save
-                  </button>
-
                   <mat-chip-list>
                     <mat-chip style="font-size: 12px;">Power Systems</mat-chip>
                     <mat-chip style="font-size: 12px;">Electrical</mat-chip>
                   </mat-chip-list>
                 </div>
-                <h2>{{project.cost}}</h2>
 
-              </div>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-stroked-button>
+                  <i class="fal fa-heart"></i> Save
+                </button></mat-card-actions>
+              <mat-card-footer>
+                <h2>{{project.cost}}</h2>
+              </mat-card-footer>
             </mat-card>
 
-            <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]"
-              style="border-radius: 25px;">
-            </mat-paginator>
+
           </div>
+          <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]"
+            style="border-radius: 25px;">
+          </mat-paginator>
         </div>
       </div>
     </div>
