@@ -113,7 +113,7 @@ export class AuthService {
 
       .then(() => {
         // Redirect to Account Setup
-        this.router.navigate(['/sessions/setup']);
+        this.router.navigate(['/auth/sessions/setup']);
       });
   }
 
@@ -121,7 +121,7 @@ export class AuthService {
   signOut(): any {
     this.afAuth.auth.signOut().then(() => {
       this.isAuthenticated = false;
-      this.router.navigate(['/home'])
+      this.router.navigate(['/auth/home'])
         .then(() => {
           this.toastr.success('You have been successfully logged out.', 'LOGGED OUT', {
             timeOut: 2000,
