@@ -1,7 +1,5 @@
-
 import { Injectable, Inject } from '@angular/core';
 import { Router } from '@angular/router';
-
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Observable, of } from 'rxjs';
@@ -40,17 +38,6 @@ export class AuthService {
 
   }
 
-  getUser(): any {
-    return this.afAuth.authState.pipe(first()).toPromise();
-  }
-
-  isLoggedIn(): any {
-    if (this.user$ == null) {
-      return false;
-    } else {
-      return true;
-    }
-  }
 
   userStatus(): any {
     return this.afAuth.authState;
@@ -59,12 +46,14 @@ export class AuthService {
   // Update User Data to Firestore Collection after Login*
 
 
-  private updateUserData(user$): any {
+  updateUserData(user$): any {
     const userRef: AngularFirestoreDocument<UserInterface> = this.afs.doc(
       `users/${user$.uid}`
     );
     const data = {
       uid: user$.uid,
+      id: user$.uid,
+      email: user$.email
     };
     return userRef.set(data, { merge: true });
   }
@@ -98,7 +87,10 @@ export class AuthService {
 
   emailSignUp(email: string, password: string): any {
     this.afAuth.auth
-      .createUserWithEmailAndPassword(email, password)
+      .createUserWithEmailAndPassword(email, password).
+      then((credential) => {
+        this.updateUserData(credential.user);
+      })
       .then(() => {
         this.toastr.success('Account info saved, please continue with setting up your profile!', 'SAVED', {
           timeOut: 2000,
