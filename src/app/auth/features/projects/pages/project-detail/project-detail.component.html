@@ -15,20 +15,23 @@
       </div>
     </div>
 
-    <h2>COST TREND:</h2>
-    <div fxLayout="row wrap" fxLayoutAlign="start center" style="width: 90vw; height:360px; ">
-      <div fxLayout="column"  style="padding:30px" fxFlex>
-        <div style="height:350px;" echarts [options]="chartLineOption3">
-        </div>
-      </div>
-      <div fxLayout="column" style="padding:30px" fxFlex>
-        <div style="height:350px;" echarts [options]="salesChartBar " [autoResize]="true">
-        </div>
-      </div>
-    </div>
-
-
     <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          COST TREND
+        </mat-expansion-panel-header>
+        <div fxLayout="row wrap" fxLayoutAlign="start center" style="width: 90vw; height:360px; ">
+          <div fxLayout="column" style="padding:30px" fxFlex>
+            <div style="height:350px;" echarts [options]="chartLineOption3">
+            </div>
+          </div>
+          <div fxLayout="column" style="padding:30px" fxFlex>
+            <div style="height:350px;" echarts [options]="salesChartBar " [autoResize]="true">
+            </div>
+          </div>
+        </div>
+      </mat-expansion-panel>
+
       <mat-expansion-panel>
         <mat-expansion-panel-header>
           COST SOURCES

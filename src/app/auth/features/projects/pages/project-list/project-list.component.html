@@ -13,8 +13,6 @@
             <mat-button-toggle value="popular">Popular</mat-button-toggle>
             <mat-button-toggle value="trending">Trending</mat-button-toggle>
           </mat-button-toggle-group>
-
-
           <div id="preload" class="module-item" fxlayout="row wrap" fxLayout="start center" style="margin:20px;"
             routerLink="/auth/projects/project/{{project.id}}" *ngFor="let project of projects$ | async">
 
