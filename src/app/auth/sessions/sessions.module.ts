@@ -13,6 +13,7 @@ import { SetupFormComponent } from './pages/setup/setup-form/setup-form.componen
 import { SetupStepperComponent } from './pages/setup/setup-stepper/setup-stepper.component';
 import { AvatarModule } from 'ngx-avatar';
 import { CheckEmailComponent } from './pages/check-email/check-email.component';
+import { DownloadComponent } from './pages/download/download.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { CheckEmailComponent } from './pages/check-email/check-email.component';
     SetupFormComponent,
     SetupStepperComponent,
     CheckEmailComponent,
+    DownloadComponent,
   ],
   imports: [
     CommonModule,

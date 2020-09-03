@@ -6,6 +6,7 @@ import { SetupComponent } from './pages/setup/setup.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { VerifyComponent } from './pages/verify/verify.component';
 import { CheckEmailComponent } from './pages/check-email/check-email.component';
+import { DownloadComponent } from './pages/download/download.component';
 
 const routes: Routes = [
   {
@@ -36,6 +37,10 @@ const routes: Routes = [
   {
     path: 'confirm',
     component: CheckEmailComponent
+  },
+  {
+    path: 'download',
+    component: DownloadComponent
   },
 
 ];
