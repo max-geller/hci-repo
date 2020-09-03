@@ -18,14 +18,14 @@ export class IconMenuComponent {
     this.user$ = this.auth.userStatus();
   }
 
-  openDocumentation() {
-    window.open("https://docs.devmax.io", "_blank");
+  openDocumentation(): void {
+    window.open('https://docs.hcianalytics.com', '_blank');
   }
 
-  openSlack() {
-    window.open("https://devmax.slack.com", "_blank");
+  openSlack(): void {
+    window.open('https://hci.slack.com', '_blank');
   }
-  signOut() {
+  signOut(): void {
     this.auth.signOut()
     //      this.document.location.href = 'https://www.devmax.io';
   };
