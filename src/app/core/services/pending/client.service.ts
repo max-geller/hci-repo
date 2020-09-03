@@ -1,7 +1,7 @@
 import { Injectable, OnInit } from '@angular/core';
 
 import { AngularFirestore } from '@angular/fire/firestore';
-import { Client } from '../models/client.model';
+import { Client } from '../../models/client.model';
 
 @Injectable({
   providedIn: 'root'
@@ -10,19 +10,19 @@ import { Client } from '../models/client.model';
 export class ClientService {
 
   constructor(private afs: AngularFirestore) { }
-  getClients() {
+  getClients(): any {
     return this.afs.collection('clients').snapshotChanges();
   }
 
-  createClient(client: Client) {
+  createClient(client: Client): any {
     return this.afs.collection('clients').add(client);
   }
 
-  updateClient(client: Client) {
+  updateClient(client: Client): any {
     this.afs.doc('clients/' + client.id).update(client);
   }
 
-  deleteClient(client: Client) {
+  deleteClient(client: Client): any {
     this.afs.doc('clients/' + client).delete();
   }
 

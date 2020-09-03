@@ -6,7 +6,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Observable, of } from 'rxjs';
 import { switchMap, first } from 'rxjs/operators';
-import { User } from '../models/user.model';
+import { UserInterface } from '../models/user.model';
 import { DOCUMENT } from '@angular/common';
 import { ToastrService } from 'ngx-toastr';
 
@@ -14,7 +14,7 @@ import { ToastrService } from 'ngx-toastr';
 @Injectable()
 export class AuthService {
   // Define an Observable for User's Auth State
-  user$: Observable<User>;
+  user$: Observable<UserInterface>;
   isAuthenticated: boolean;
 
   constructor(
@@ -30,7 +30,7 @@ export class AuthService {
       switchMap(user => {
         // Logged in
         if (user) {
-          return this.afs.doc<User>(`users/${user.uid}`).valueChanges();
+          return this.afs.doc<UserInterface>(`users/${user.uid}`).valueChanges();
         } else {
           // Logged out
           return of(null);
@@ -58,7 +58,7 @@ export class AuthService {
 
   // Update User Data to Firestore Collection after Login*
   private updateUserData(user): any {
-    const userRef: AngularFirestoreDocument<User> = this.afs.doc(
+    const userRef: AngularFirestoreDocument<UserInterface> = this.afs.doc(
       `users/${user.uid}`
     );
     const data = {
@@ -142,5 +142,4 @@ export class AuthService {
         window.alert(error);
       });
   }
-
 }

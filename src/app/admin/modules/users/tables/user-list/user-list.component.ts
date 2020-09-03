@@ -1,4 +1,4 @@
-import { User } from './../../../../../core/models/user.model';
+import { UserInterface } from './../../../../../core/models/user.model';
 import { Component, OnInit, ViewChild, Inject } from '@angular/core';
 import { MatDialog, MatDialogConfig, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatSort } from '@angular/material/sort';
@@ -52,7 +52,7 @@ export class UserListComponent implements OnInit {
       data => this.service.createUser(data));
   }
 
-  editUser(user: User) {
+  editUser(user: UserInterface) {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = true;
     dialogConfig.maxHeight = "95vh";
@@ -60,7 +60,7 @@ export class UserListComponent implements OnInit {
     const dialogRef = this.dialog.open(EditUserComponent, dialogConfig);
   }
 
-  deleteUser(user: User) {
+  deleteUser(user: UserInterface) {
     this.afs.doc('users/' + user).delete();
   }
 

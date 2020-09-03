@@ -1,4 +1,4 @@
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 
 import { AngularFirestore } from '@angular/fire/firestore';
 import { ProjectInterface } from './../models/project.model';
@@ -10,22 +10,21 @@ import { ProjectInterface } from './../models/project.model';
 export class ProjectService {
 
     constructor(private afs: AngularFirestore) { }
-    getProjects() {
+    getProjects(): any {
         return this.afs.collection('projects').snapshotChanges();
     }
 
-    createProject(project: ProjectInterface) {
+    createProject(project: ProjectInterface): any {
         return this.afs.collection('projects').add(project);
     }
 
-    updateProject(project: ProjectInterface) {
+    updateProject(project: ProjectInterface): any {
         this.afs.doc('projects/' + project.id).update(project);
     }
 
-    deleteProject(project: ProjectInterface) {
+    deleteProject(project: ProjectInterface): any {
         this.afs.doc('projects/' + project).delete();
     }
-
 }
 
 

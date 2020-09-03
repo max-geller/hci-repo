@@ -1,5 +1,5 @@
 import { TenantService } from './../../../../../core/services/tenant.service';
-import { User } from './../../../../../core/models/user.model';
+import { UserInterface } from './../../../../../core/models/user.model';
 import { Component, OnInit, ViewChild, Inject } from '@angular/core';
 import { MatDialog, MatDialogConfig, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatSort } from '@angular/material/sort';
@@ -38,31 +38,31 @@ export class TenantListComponent implements OnInit {
   ) {
   }
 
-  addTenant(): void {
+  addTenant(): any {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = true;
-    dialogConfig.maxHeight = "95vh";
+    dialogConfig.maxHeight = '95vh';
     dialogConfig.autoFocus = true;
     const dialogRef = this.dialog.open(AddTenantComponent, dialogConfig);
     dialogRef.afterClosed().subscribe(
       data => this.service.createTenant(data));
   }
 
-  editTenant(): void {
+  editTenant(): any {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = true;
-    dialogConfig.maxHeight = "95vh";
+    dialogConfig.maxHeight = '95vh';
     dialogConfig.autoFocus = true;
     const dialogRef = this.dialog.open(EditTenantComponent, dialogConfig);
   }
 
-  deleteTenant(): void {
+  deleteTenant(): any {
     const deleteRef = this.confirmDeleteService.confirmDelete();
   }
 
 
 
-  ngOnInit() {
+  ngOnInit(): any {
     // Step 1: Make a Reference to Data in Firestore:
     // 1a: Invoke the 'afs' Property
     this.afs
@@ -80,11 +80,9 @@ export class TenantListComponent implements OnInit {
       });
   }
 
-  applyFilter(filterValue: string) {
+  applyFilter(filterValue: string): any {
     filterValue = filterValue.trim();
     filterValue = filterValue.toLowerCase();
     this.tenants.filter = filterValue;
   }
-
-
 }

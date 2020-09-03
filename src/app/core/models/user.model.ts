@@ -1,4 +1,4 @@
-export interface User {
+export interface UserInterface {
     // Basics
     id?: string;
     uid?: string;
@@ -7,8 +7,8 @@ export interface User {
     firstName?: string;
     lastName?: string;
     phone?: string;
-    email?: string,
-    company?: string,
+    email?: string;
+    company?: string;
     verifiedAccount?: boolean;
     sendWelcomeEmail?: boolean;
     role?: string;
