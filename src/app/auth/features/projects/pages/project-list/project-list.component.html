@@ -8,14 +8,16 @@
           <app-project-filter></app-project-filter>
         </div>
         <div fxFlex>
-
-          <mat-button-toggle-group name="fontStyle" style="padding:0px" aria-label="Font Style"
-            style="margin-left:20px">
-            <mat-button-toggle style="padding:0px" value="recent">Recent</mat-button-toggle>
-            <mat-button-toggle value="popular">Popular</mat-button-toggle>
-            <mat-button-toggle value="trending">Trending</mat-button-toggle>
-          </mat-button-toggle-group>
-
+          <mat-form-field class="lg-field" style="margin-left: 15px;">
+            <mat-label>Sort By</mat-label>
+            <mat-select>
+              <mat-option>Recently Active</mat-option>
+              <mat-option>Most Active</mat-option>
+              <mat-option>Alphabetical</mat-option>
+              <mat-option>Completion Date</mat-option>
+              <mat-option>Status</mat-option>
+            </mat-select>
+          </mat-form-field>
           <mat-form-field class="lg-field" style="margin-left: 15px;">
             <mat-label>Net Present Value Method</mat-label>
             <mat-select>
@@ -32,16 +34,25 @@
               fxLayout="column" style="padding:15px !important;overflow:hidden;display:flex"
               *ngFor="let project of projects$ | async">
               <img mat-card-image src="{{project.previewURL}}" height="180px">
-              <mat-card-title>
-                <h5> {{project.name}} </h5>
+              <mat-card-title fxLayout="row" fxLayoutAlign="center start" style="padding: 4px; display: flex">
+                <h5 style="text-align: center;"> {{project.name}} </h5>
               </mat-card-title>
               <mat-card-content style="padding: 15px" fxFlex>
+
                 <mat-chip-list>
                   <mat-chip style="font-size: 12px;">Commercial</mat-chip>
                   <mat-chip style="font-size: 12px;">High-Rise</mat-chip>
                 </mat-chip-list>
                 <h4>{{project.status}}</h4>
                 <h4>{{project.squareFeet}}</h4>
+                <img src="https://logowiki.net/wp-content/uploads/imgp/REVIT-Logo-1-8418.png" height="15px" width="15px"
+                  style="margin: 4px;">
+                <img
+                  src="https://img2.pngio.com/dynamics-365-logo-png-download-15041490-free-transparent-power-bi-png-900_900.jpg"
+                  height="15px" width="15px" style="margin: 4px;">
+                <img
+                  src="https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_4cf1afcba79428d399cada0516f7f0d5/procore.jpg"
+                  height="15px" width="15px" style="margin: 4px;">
                 <mat-card-actions>
                   <button mat-stroked-button>
                     <i class="fal fa-heart"></i> Save
