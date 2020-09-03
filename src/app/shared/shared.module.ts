@@ -8,6 +8,7 @@ import { AgmCoreModule } from '@agm/core';
 import { GoogleChartsModule } from 'angular-google-charts';
 import * as echarts from 'echarts';
 import { NgxEchartsModule } from 'ngx-echarts';
+import { AuthLayoutComponent } from './components/layouts/auth-layout/auth-layout.component';
 
 @NgModule({
   imports: [
@@ -24,7 +25,7 @@ import { NgxEchartsModule } from 'ngx-echarts';
 
   ],
   declarations: [
-    ConfirmDeleteComponent
+    ConfirmDeleteComponent,
 
   ],
   exports: [

@@ -48,7 +48,7 @@ export class UserService {
       })
       .then(() => {
         // Redirect to Profile Setup
-        this.router.navigate(['/projects']);
+        this.router.navigate(['/auth/projects']);
       });
   }
 

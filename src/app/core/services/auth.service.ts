@@ -82,7 +82,7 @@ export class AuthService {
       })
       .then(() => {
         // Redirect to Home
-        this.router.navigate(['/projects']);
+        this.router.navigate(['/auth/projects']);
       })
       .then(() => {
         this.toastr.success('Successfully signed in to your account!', 'LOGGED IN!', {
