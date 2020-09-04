@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "hci-repo"
+  },
+  "targets": {
+    "hci-repo": {
+      "hosting": {
+        "hci-repo": [
+          "hci-repo"
+        ]
+      }
+    }
   }
 }

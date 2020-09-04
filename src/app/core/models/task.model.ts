@@ -1,6 +1,8 @@
-export interface Task {
+export interface TaskInterface {
     id?: string;
+    title?: string;
     isActive?: boolean;
+    userId?: string;
     description?: string;
     priority?: string;
     dueDate?: string;

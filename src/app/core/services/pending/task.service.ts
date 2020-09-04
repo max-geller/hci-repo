@@ -25,6 +25,7 @@ export class TaskService {
         this.afs.doc('tasks/' + task).delete();
     }
 
+
 }
 
 
