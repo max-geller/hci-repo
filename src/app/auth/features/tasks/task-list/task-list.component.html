@@ -1,7 +1,13 @@
 <div class="wrapper">
   <div class="page-layout" fxLayout="column">
-    <h1>ACTIVE TASKS</h1>
-
+    <div fxLayout="row" fxLayoutAlign="space-between center" style="width: 100%;">
+      <div fxLayout="column" fxLayoutAlign="end center">
+        <h1 style="margin: 0;">ACTIVE TASKS</h1>
+      </div>
+      <div fxLayout="column" fxLayoutAlign="end end">
+        <button mat-stroked-button style="border-color:black;">Add Task</button>
+      </div>
+    </div>
 
     <mat-tab-group>
       <mat-tab label="DAILY">
