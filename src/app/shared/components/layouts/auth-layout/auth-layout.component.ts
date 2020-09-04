@@ -40,10 +40,13 @@ export type FadeState = 'visible' | 'hidden';
 })
 
 export class AuthLayoutComponent implements OnInit {
+
   config = {
     indexName: 'PROJECT',
     searchClient: algoliasearch('8K7V4TARGD', 'f4c1889dd27c98bebcaf99eb1e3c5fc2'),
+    hitsPerPage: 8,
   };
+
 
 
   user$: Observable<firebase.User>;
