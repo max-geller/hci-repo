@@ -2,33 +2,105 @@
   <div class="page-layout" fxLayout="column">
     <h1>ACTIVE TASKS</h1>
 
-    <div class="task-list-container" fxLayout="column">
-      <div fxLayout="column" *ngFor="let task of taskRef$ | async">
-        <div class="task-list-item" fxLayout="row" style="border-bottom-style: solid;padding: 6px;border-top-style: solid;border-color: rgb(206, 206, 206); border-width: 0.5px;margin-bottom: -1px;">
-          <div class="mark-container" fxLayout="column" >
-            <button mat-icon-button>
-              <i class="far fa-circle fa-1x"></i>
-            </button>
-          </div>
 
-          <div class="task-container" fxLayout="column" fxFlex>
-            <div class="task-header" fxLayout="row">
-              <h5 class="task-project">{{task.project}}</h5>
-            </div>
-            <h2 class="task-title">{{task.title}}</h2>
-            <div fxLayout="row">
-              <h5 style="padding-right:15px; margin:0px !important">
-                <i class="fal fa-clock" style="padding-right:4px"></i>10/15/2020
-              </h5>
-              <h5 style="padding-right: 15px;margin:0px">
-                <i class="fal fa-exclamation" style="padding-right:4px">
-                </i>Urgent</h5>
-              <h5> <i class="fal fa-users" style="padding-right:4px"> </i>Members
-              </h5>
+    <mat-tab-group>
+      <mat-tab label="DAILY">
+        <div class="task-list-container" fxLayout="column">
+          <div fxLayout="column" *ngFor="let task of taskRef$ | async">
+            <div class="task-list-item" fxLayout="row"
+              style="border-bottom-style: solid;padding: 6px;border-top-style: solid;border-color: rgb(206, 206, 206); border-width: 0.5px;margin-bottom: -1px;">
+              <div class="mark-container" fxLayout="column">
+                <button mat-icon-button>
+                  <i class="far fa-circle fa-1x"></i>
+                </button>
+              </div>
+
+              <div class="task-container" fxLayout="column" fxFlex>
+                <div class="task-header" fxLayout="row">
+                  <h5 class="task-project">{{task.project}}</h5>
+                </div>
+                <h2 class="task-title">{{task.title}}</h2>
+                <div fxLayout="row">
+                  <h5 style="padding-right:15px; margin:0px !important">
+                    <i class="fal fa-clock" style="padding-right:4px"></i>10/15/2020
+                  </h5>
+                  <h5 style="padding-right: 15px;margin:0px">
+                    <i class="fal fa-exclamation" style="padding-right:4px">
+                    </i>Urgent</h5>
+                  <h5> <i class="fal fa-users" style="padding-right:4px"> </i>Members
+                  </h5>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </mat-tab>
+
+      <mat-tab label="NEXT 10 DAYS">
+        <div class="task-list-container" fxLayout="column">
+          <div fxLayout="column" *ngFor="let task of taskRef$ | async">
+            <div class="task-list-item" fxLayout="row"
+              style="border-bottom-style: solid;padding: 6px;border-top-style: solid;border-color: rgb(206, 206, 206); border-width: 0.5px;margin-bottom: -1px;">
+              <div class="mark-container" fxLayout="column">
+                <button mat-icon-button>
+                  <i class="far fa-circle fa-1x"></i>
+                </button>
+              </div>
+
+              <div class="task-container" fxLayout="column" fxFlex>
+                <div class="task-header" fxLayout="row">
+                  <h5 class="task-project">{{task.project}}</h5>
+                </div>
+                <h2 class="task-title">{{task.title}}</h2>
+                <div fxLayout="row">
+                  <h5 style="padding-right:15px; margin:0px !important">
+                    <i class="fal fa-clock" style="padding-right:4px"></i>10/15/2020
+                  </h5>
+                  <h5 style="padding-right: 15px;margin:0px">
+                    <i class="fal fa-exclamation" style="padding-right:4px">
+                    </i>Urgent</h5>
+                  <h5> <i class="fal fa-users" style="padding-right:4px"> </i>Members
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-tab>
+      <mat-tab label="OVERDUE">
+        <div class="task-list-container" fxLayout="column">
+          <div fxLayout="column" *ngFor="let task of taskRef$ | async">
+            <div class="task-list-item" fxLayout="row"
+              style="border-bottom-style: solid;padding: 6px;border-top-style: solid;border-color: rgb(206, 206, 206); border-width: 0.5px;margin-bottom: -1px;">
+              <div class="mark-container" fxLayout="column">
+                <button mat-icon-button>
+                  <i class="far fa-circle fa-1x"></i>
+                </button>
+              </div>
+
+              <div class="task-container" fxLayout="column" fxFlex>
+                <div class="task-header" fxLayout="row">
+                  <h5 class="task-project">{{task.project}}</h5>
+                </div>
+                <h2 class="task-title">{{task.title}}</h2>
+                <div fxLayout="row">
+                  <h5 style="padding-right:15px; margin:0px !important">
+                    <i class="fal fa-clock" style="padding-right:4px"></i>10/15/2020
+                  </h5>
+                  <h5 style="padding-right: 15px;margin:0px">
+                    <i class="fal fa-exclamation" style="padding-right:4px">
+                    </i>Urgent</h5>
+                  <h5> <i class="fal fa-users" style="padding-right:4px"> </i>Members
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+
+
+
   </div>
 </div>
