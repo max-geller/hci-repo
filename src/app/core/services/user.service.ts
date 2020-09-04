@@ -42,10 +42,11 @@ export class UserService {
       lastName: user.lastName,
       displayName: user.firstName + ' ' + user.lastName
     };
-
+    this.afAuth.auth.currentUser.sendEmailVerification()
     const userRef: AngularFirestoreDocument<UserInterface> = this.afs.doc(
       `users/${this.afAuth.auth.currentUser.uid}`
     );
+    
     return userRef.set(data, { merge: true })
 
       .then(res => {

@@ -50,7 +50,8 @@
         <ais-hits fxLayout="column">
           <ng-template let-hits="hits">
             <mat-nav-list class="ais-Hits-list" fxLayout="column">
-              <mat-list-item routerLink="/auth/projects/project/{{hit.id}}" (click)="toggleSearch()" *ngFor="let hit of hits" class="ais-Hits-item">
+              <mat-list-item routerLink="/auth/projects/project/{{hit.id}}" (click)="toggleSearch()"
+                *ngFor="let hit of hits" class="ais-Hits-item">
                 <h5 style="font-size:12px;font-weight: 700;margin-right:6px;margin-top:10px">{{hit.assetType}}:</h5>
                 {{hit.name}}
               </mat-list-item>
@@ -64,12 +65,17 @@
   <div id="preload" class="main-container" fxLayout="column" style="max-width: 100vw !important;overflow: hidden; ">
     <mat-sidenav-container>
       <mat-sidenav #snav>
-        <mat-nav-list style="padding:20px;">
-          <mat-list-item routerLink="/auth/projects" (click)="snav.toggle()">PROJECTS</mat-list-item>
-          <mat-list-item routerLink="/auth/rates" (click)="snav.toggle()">LABOR RATES</mat-list-item>
-          <mat-list-item routerLink="/auth/indices" (click)="snav.toggle()">COST INDICES</mat-list-item>
-          <mat-list-item routerLink="/auth/database" (click)="snav.toggle()">DATABASE</mat-list-item>
-        </mat-nav-list>
+        <div class="setup-form" fxLayout="column">
+          <div id="preload" fxLayout="column" fxLayoutAlign="center center">
+            <img id="preload" src="assets/images/white-logo.png" style="padding: 50px;" height="40px" />
+            <mat-nav-list style="padding:20px;">
+              <mat-list-item routerLink="/auth/projects" (click)="snav.toggle()" style="color: white;">PROJECTS</mat-list-item>
+              <mat-list-item routerLink="/auth/rates" (click)="snav.toggle()" style="color: white;">LABOR RATES</mat-list-item>
+              <mat-list-item routerLink="/auth/indices" (click)="snav.toggle()" style="color: white;">COST INDICES</mat-list-item>
+              <mat-list-item routerLink="/auth/database" (click)="snav.toggle()" style="color: white;">DATABASE</mat-list-item>
+            </mat-nav-list>
+          </div>
+        </div>
       </mat-sidenav>
 
       <mat-sidenav-content>
