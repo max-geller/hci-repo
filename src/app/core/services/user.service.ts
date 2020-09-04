@@ -1,6 +1,6 @@
 
 import { Injectable } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { UserInterface } from './../models/user.model';
 import { FormGroup, FormControl } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
@@ -36,7 +36,19 @@ export class UserService {
   }
 
   createUser(user: UserInterface): any {
-    return this.afs.collection('users').add(user)
+    const data = {
+      phone: user.phone,
+      company: user.company,
+      firstName: user.firstName,
+      lastName: user.lastName,
+      displayName: user.firstName + ' ' + user.lastName
+    };
+
+    const userRef: AngularFirestoreDocument<UserInterface> = this.afs.doc(
+      `users/${this.afAuth.auth.currentUser.uid}`
+    );
+    return userRef.set(data, { merge: true })
+
       .then(res => {
         console.log(this.afAuth.auth.currentUser.uid + 'Account creation successful!');
       })
@@ -44,7 +56,6 @@ export class UserService {
         this.toastr.success('Successfully created your account!', 'ACCOUNT CREATED!', {
           timeOut: 2000,
         })
-
       })
       .then(() => {
         // Redirect to Profile Setup

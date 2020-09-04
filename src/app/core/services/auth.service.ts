@@ -35,9 +35,7 @@ export class AuthService {
         }
       })
     );
-
   }
-
 
   userStatus(): any {
     return this.afAuth.authState;
