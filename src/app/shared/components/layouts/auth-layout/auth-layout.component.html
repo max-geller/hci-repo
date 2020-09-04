@@ -49,11 +49,12 @@
         <ais-search-box></ais-search-box>
         <ais-hits fxLayout="column">
           <ng-template let-hits="hits">
-            <ol class="ais-Hits-list">
-              <li *ngFor="let hit of hits" class="ais-Hits-item">
+            <mat-nav-list class="ais-Hits-list" fxLayout="column">
+              <mat-list-item routerLink="/projects/{{hit.id}}" *ngFor="let hit of hits" class="ais-Hits-item">
+                <h5 style="font-size:12px;font-weight: 700;margin-right:6px;margin-top:8px">{{hit.assetType}}:</h5>
                 {{hit.name}}
-              </li>
-            </ol>
+              </mat-list-item>
+            </mat-nav-list>
           </ng-template>
         </ais-hits>
       </ais-instantsearch>

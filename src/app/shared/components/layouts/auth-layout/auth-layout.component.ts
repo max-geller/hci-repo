@@ -14,10 +14,7 @@ import algoliasearch from 'algoliasearch/lite';
 
 export type FadeState = 'visible' | 'hidden';
 
-const searchClient = algoliasearch(
-  '8K7V4TARGD',
-  'f4c1889dd27c98bebcaf99eb1e3c5fc2'
-);
+
 
 @Component({
   selector: 'app-auth-layout',
@@ -44,8 +41,8 @@ const searchClient = algoliasearch(
 
 export class AuthLayoutComponent implements OnInit {
   config = {
-    indexName: 'instant_search',
-    searchClient: algoliasearch('latency', '6be0576ff61c053d5f9a3225e2a90f76'),
+    indexName: 'PROJECT',
+    searchClient: algoliasearch('8K7V4TARGD', 'f4c1889dd27c98bebcaf99eb1e3c5fc2'),
   };
 
 
@@ -66,13 +63,13 @@ export class AuthLayoutComponent implements OnInit {
     }
   }
 
-  animationDone(event: AnimationEvent) {
+  animationDone(event: AnimationEvent): any {
     if (event.fromState === 'visible' && event.toState === 'hidden') {
       this._show = false;
     }
   }
 
-  public buttonName: any = 'Show';
+
 
   constructor(public auth: AuthService, private spinner: NgxSpinnerService, @Inject(DOCUMENT) private document: Document,
   ) {
