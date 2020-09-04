@@ -1,19 +1,18 @@
-.tasks-container {
-    max-width: 350px;
-    background-color: white;
-    z-index: 100;
-  
-    .mat-menu {
-      width: 355px;
-    }
-  
-    .mat-cell {
-      font-size: 10px;
-      max-height: 15px;
-    }
-  
-    .mat-row {
-      max-height: 15px;
-    }
+.task-list-container {
+  .task-header {
+    padding-top: 3px;
   }
-  
+
+  .task-project {
+    font-size: 12px;
+    margin: 0px;
+    padding: 0px;
+    line-height: 0.8em;
+  }
+
+  .task-title {
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+  }
+}
