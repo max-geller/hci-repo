@@ -15,8 +15,8 @@ import algoliasearch from 'algoliasearch/lite';
 export type FadeState = 'visible' | 'hidden';
 
 const searchClient = algoliasearch(
-  'B1G2GM9NG0',
-  'aadef574be1f9252bb48d4ea09b5cfe5'
+  '8K7V4TARGD',
+  'f4c1889dd27c98bebcaf99eb1e3c5fc2'
 );
 
 @Component({
