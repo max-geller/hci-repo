@@ -1,10 +1,7 @@
-import { Observable } from 'rxjs/internal/Observable';
-
-import { AngularFireAuth } from '@angular/fire/auth';
-import { TaskInterface } from './../../../../core/models/task.model';
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Observable } from 'rxjs/internal/Observable';
 import { AngularFirestore, } from '@angular/fire/firestore';
-
+import { AngularFireAuth } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-task-list',
