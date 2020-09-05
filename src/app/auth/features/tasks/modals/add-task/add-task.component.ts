@@ -8,6 +8,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
   templateUrl: './add-task.component.html',
 })
 
+
 export class AddTaskComponent implements OnInit {
   addTaskFormGroup: FormGroup;
 
@@ -24,6 +25,7 @@ export class AddTaskComponent implements OnInit {
       priority: '',
       dueDate: '',
       project: '',
+      isActive: true,
       userId: userAuthId,
     });
   }

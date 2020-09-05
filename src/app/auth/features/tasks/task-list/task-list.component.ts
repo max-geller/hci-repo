@@ -11,6 +11,7 @@ import { EditTaskComponent } from './../modals/edit-task/edit-task.component';
 import { TaskService } from './../../../../core/services/task.service';
 import { MatPaginator } from '@angular/material/paginator';
 
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-task-list',
@@ -27,10 +28,12 @@ export class TaskListComponent implements OnInit {
 
 
   tasks: MatTableDataSource<any>;
+  
   displayedColumns = [
     'title',
     'status',
     'priority',
+    'dueDate',
     'edit',
     'delete',
   ];
@@ -43,7 +46,7 @@ export class TaskListComponent implements OnInit {
   constructor(
     private afs: AngularFirestore, public afAuth: AngularFireAuth,
     public service: TaskService,
-
+    public datepipe: DatePipe,
     public dialog: MatDialog,) {
 
   }
@@ -90,6 +93,8 @@ export class TaskListComponent implements OnInit {
       this.tasks.paginator = this.paginator;
       this.tasks.sort = this.sort;
     });
+    
+    
 
   }
 }

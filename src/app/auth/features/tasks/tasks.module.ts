@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import { TaskListComponent } from './task-list/task-list.component';
 import { TaskDetailComponent } from './task-detail/task-detail.component';
 import { SharedModule } from 'src/app/shared/shared.module';
@@ -27,7 +27,8 @@ import { TaskService } from 'src/app/core/services/task.service';
     RouterModule
   ],
   providers: [
-    TaskService
+    TaskService,
+    DatePipe
   ],
   entryComponents: [
     // Put Modals Here
