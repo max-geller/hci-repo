@@ -1,13 +1,13 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: 'AIzaSyDHAg659tzFEUYMkbjX0y_uxWtmG21GC1E',
-    authDomain: 'hci-repo.firebaseapp.com',
-    databaseURL: 'https://hci-repo.firebaseio.com',
-    projectId: 'hci-repo',
-    storageBucket: 'hci-repo.appspot.com',
-    messagingSenderId: '1089800392533',
-    appId: '1:1089800392533:web:db65a04b4622a7776629dc',
-    measurementId: 'G-QWLVCV71FH'
+    apiKey: "AIzaSyBQ-xY50t8-7C94QQU0l1wsjdHnq02PSkw",
+    authDomain: "hci-dev-c221a.firebaseapp.com",
+    databaseURL: "https://hci-dev-c221a.firebaseio.com",
+    projectId: "hci-dev-c221a",
+    storageBucket: "hci-dev-c221a.appspot.com",
+    messagingSenderId: "297853138636",
+    appId: "1:297853138636:web:a86b5a67bf1d0fa6523469",
+    measurementId: "G-01QZY41GLM"
   }
 };
