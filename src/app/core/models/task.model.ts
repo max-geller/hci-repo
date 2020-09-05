@@ -7,4 +7,5 @@ export interface TaskInterface {
     priority?: string;
     dueDate?: string;
     status?: string;
+    project?: string;
 }

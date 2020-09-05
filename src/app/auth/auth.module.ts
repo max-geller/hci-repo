@@ -29,6 +29,7 @@ import { SupportComponent } from './pages/support/support.component';
 import { DocsComponent } from './pages/docs/docs.component';
 import { AuthGuard } from '../core/guards/auth.guard';
 import { AuthService } from '../core/services/auth.service';
+import { FilesComponent } from './pages/files/files.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { AuthService } from '../core/services/auth.service';
     FavoritesTableComponent,
     SupportComponent,
     DocsComponent,
+    FilesComponent,
   ],
   imports: [
     CommonModule,
