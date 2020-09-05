@@ -47,7 +47,7 @@ export class AuthLayoutComponent implements OnInit {
     hitsPerPage: 8,
   };
   taskSearchConfig = {
-    indexName: 'TASKS',
+    indexName: 'TASK',
     searchClient: algoliasearch('8K7V4TARGD', 'f4c1889dd27c98bebcaf99eb1e3c5fc2'),
     hitsPerPage: 8,
   };

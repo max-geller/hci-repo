@@ -66,13 +66,12 @@
               <mat-list-item routerLink="/auth/projects/project/{{hit.id}}" (click)="toggleSearch()"
                 *ngFor="let hit of hits" class="ais-Hits-item">
                 <h5 style="font-size:12px;font-weight: 700;margin-right:6px;margin-top:10px">{{hit.assetType}}:</h5>
-                {{hit.name}}
+                {{hit.title}}
               </mat-list-item>
             </mat-nav-list>
           </ng-template>
         </ais-hits>
       </ais-instantsearch>
-
     </div>
   </div>
 
@@ -83,10 +82,14 @@
           <div id="preload" fxLayout="column" fxLayoutAlign="center center">
             <img id="preload" src="assets/images/white-logo.png" style="padding: 50px;" height="40px" />
             <mat-nav-list style="padding:20px;">
-              <mat-list-item routerLink="/auth/projects" (click)="snav.toggle()" style="color: white;">PROJECTS</mat-list-item>
-              <mat-list-item routerLink="/auth/rates" (click)="snav.toggle()" style="color: white;">LABOR RATES</mat-list-item>
-              <mat-list-item routerLink="/auth/indices" (click)="snav.toggle()" style="color: white;">COST INDICES</mat-list-item>
-              <mat-list-item routerLink="/auth/database" (click)="snav.toggle()" style="color: white;">DATABASE</mat-list-item>
+              <mat-list-item routerLink="/auth/projects" (click)="snav.toggle()" style="color: white;">PROJECTS
+              </mat-list-item>
+              <mat-list-item routerLink="/auth/rates" (click)="snav.toggle()" style="color: white;">LABOR RATES
+              </mat-list-item>
+              <mat-list-item routerLink="/auth/indices" (click)="snav.toggle()" style="color: white;">COST INDICES
+              </mat-list-item>
+              <mat-list-item routerLink="/auth/database" (click)="snav.toggle()" style="color: white;">DATABASE
+              </mat-list-item>
             </mat-nav-list>
           </div>
         </div>
