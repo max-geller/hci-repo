@@ -70,6 +70,29 @@ export class UserService {
   deleteUser(user: UserInterface): any {
     this.afs.doc('users/' + user).delete();
   }
+
+
+
+// Obtain Projects by User
+
+
+
+
+// Obtain Settings by User
+
+
+
+// Obtain Tasks by User
+
+
+
+// Obtain Favorites by User
+
+
+// Obtain Notifications by User
+
+
+
 }
 
 
