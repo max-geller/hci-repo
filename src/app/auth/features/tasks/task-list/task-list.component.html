@@ -9,9 +9,9 @@
       </div>
     </div>
 
-    <mat-tab-group>
-      <mat-tab label="DAILY">
-        <div class="task-list-container" fxLayout="column">
+    <mat-tab-group >
+      <mat-tab label="DAILY" >
+        <div id='preload' class="task-list-container" fxLayout="column">
           <div fxLayout="column" *ngFor="let task of taskRef$ | async">
             <div class="task-list-item" fxLayout="row"
               style="border-bottom-style: solid;padding: 6px;border-top-style: solid;border-color: rgb(206, 206, 206); border-width: 0.5px;margin-bottom: -1px;">
