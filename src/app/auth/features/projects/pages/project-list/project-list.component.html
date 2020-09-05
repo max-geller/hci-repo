@@ -33,7 +33,7 @@
             <mat-card id="preload" class="project-card" routerLink="/auth/projects/project/{{project.id}}"
               fxLayout="column" style="padding:15px !important;overflow:hidden;display:flex"
               *ngFor="let project of projects$ | async">
-              <img mat-card-image src="{{project.previewURL}}" height="180px">
+              <img mat-card-image src="{{project.previewURL}}" height="210px">
               <mat-card-title fxLayout="row" fxLayoutAlign="center start" style="padding: 4px; display: flex">
                 <h5 style="text-align: center;"> {{project.name}} </h5>
               </mat-card-title>
