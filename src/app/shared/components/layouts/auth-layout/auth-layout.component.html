@@ -43,7 +43,7 @@
 
   <div id="searchNav" fxLayout="row" fxLayoutAlign="center center" *ngIf="show" class="fade" [@state]="state"
     (@state.done)="animationDone($event)">
-    <div class="search-container">
+    <div class="search-container" style="max-height: 90vh;">
       <ng-content #fadeableContent></ng-content>
       <ais-instantsearch [config]="projectSearchConfig">
         <ais-search-box></ais-search-box>
