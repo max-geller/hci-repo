@@ -10,8 +10,8 @@ import { AddTaskComponent } from './../modals/add-task/add-task.component';
 import { EditTaskComponent } from './../modals/edit-task/edit-task.component';
 import { TaskService } from './../../../../core/services/task.service';
 import { MatPaginator } from '@angular/material/paginator';
+import { DateAdapter } from '@angular/material/core';
 
-import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-task-list',
@@ -19,41 +19,21 @@ import { DatePipe } from '@angular/common';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 
-
-
 export class TaskListComponent implements OnInit {
   tasks$: any;
   taskRef$: Observable<any>;
 
-
-
-  tasks: MatTableDataSource<any>;
-  
-  displayedColumns = [
-    'title',
-    'status',
-    'priority',
-    'dueDate',
-    'edit',
-    'delete',
-  ];
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort, { static: false }) sort: MatSort;
-
-
-
 
   constructor(
     private afs: AngularFirestore, public afAuth: AngularFireAuth,
     public service: TaskService,
-    public datepipe: DatePipe,
-    public dialog: MatDialog,) {
-
+    public dialog: MatDialog, private dateAdapter: DateAdapter<Date>) {
+      this.dateAdapter.setLocale('en-US'); 
   }
 
   addTask(): void {
-    
-
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = true;
     dialogConfig.maxHeight = "95vh";
@@ -74,27 +54,9 @@ export class TaskListComponent implements OnInit {
   deleteTask(): void {
   }
 
-
-
   ngOnInit(): void {
     const userAuthId = this.afAuth.auth.currentUser.uid;
     this.taskRef$ = this.afs.collectionGroup('tasks', ref => ref.where('userId', '==', userAuthId)).valueChanges();
     console.log(userAuthId);
-    this.afs
-    // 1b: Point to collection
-    .collection<any>('tasks')
-    // 1c: Request an Observable with valueChanges()
-    .valueChanges()
-    // 1d: Subscribe to that Observable...
-    .subscribe(data => {
-      // 1e: ...and Pass that Data to the Material Data Table
-      this.tasks = new MatTableDataSource(data);
-      this.tasks.sort = this.sort;
-      this.tasks.paginator = this.paginator;
-      this.tasks.sort = this.sort;
-    });
-    
-    
-
   }
 }

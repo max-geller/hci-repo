@@ -9,6 +9,7 @@ import { CoreModule } from 'src/app/core/core.module';
 import { AddTaskComponent } from './modals/add-task/add-task.component';
 import { EditTaskComponent } from './modals/edit-task/edit-task.component';
 import { TaskService } from 'src/app/core/services/task.service';
+import { MAT_DATE_LOCALE } from '@angular/material/core';
 
 
 
@@ -28,7 +29,7 @@ import { TaskService } from 'src/app/core/services/task.service';
   ],
   providers: [
     TaskService,
-    DatePipe
+    { provide: MAT_DATE_LOCALE, useValue: 'en-US' }
   ],
   entryComponents: [
     // Put Modals Here
