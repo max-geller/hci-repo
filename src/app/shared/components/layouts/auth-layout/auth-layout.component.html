@@ -45,7 +45,7 @@
     (@state.done)="animationDone($event)">
     <div class="search-container">
       <ng-content #fadeableContent></ng-content>
-      <ais-instantsearch [config]="config">
+      <ais-instantsearch [config]="projectSearchConfig">
         <ais-search-box></ais-search-box>
         <ais-hits fxLayout="column">
           <ng-template let-hits="hits">
@@ -59,6 +59,20 @@
           </ng-template>
         </ais-hits>
       </ais-instantsearch>
+      <ais-instantsearch [config]="taskSearchConfig">
+        <ais-hits fxLayout="column">
+          <ng-template let-hits="hits">
+            <mat-nav-list class="ais-Hits-list" fxLayout="column">
+              <mat-list-item routerLink="/auth/projects/project/{{hit.id}}" (click)="toggleSearch()"
+                *ngFor="let hit of hits" class="ais-Hits-item">
+                <h5 style="font-size:12px;font-weight: 700;margin-right:6px;margin-top:10px">{{hit.assetType}}:</h5>
+                {{hit.name}}
+              </mat-list-item>
+            </mat-nav-list>
+          </ng-template>
+        </ais-hits>
+      </ais-instantsearch>
+
     </div>
   </div>
 
