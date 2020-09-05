@@ -29,6 +29,7 @@ import { AuthLayoutComponent } from './shared/components/layouts/auth-layout/aut
 import { IconMenuComponent } from './shared/nav/icon-menu/icon-menu.component';
 import { FooterComponent } from './shared/nav/footer/footer.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { AnalyticsModule } from './auth/features/analytics/analytics.module';
 
 
 
@@ -60,7 +61,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
       HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { delay: 100 }) : [],
     AvatarModule,
     AuthModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    AnalyticsModule
   ],
   providers: [
     AuthService,

@@ -57,6 +57,10 @@ const routes: Routes = [
         canActivate: [AuthGuard]
     },
     {
+        path: 'analytics',
+        loadChildren: () => import('./features/analytics/analytics.module').then(m => m.AnalyticsModule),
+    }, 
+    {
         path: 'admin',
         loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule),
         canActivate: [AuthGuard]
@@ -65,6 +69,7 @@ const routes: Routes = [
         path: 'sessions',
         loadChildren: () => import('./sessions/sessions.module').then(m => m.SessionsModule),
     },
+
     {
         path: 'home',
         component: HomeComponent
