@@ -55,6 +55,7 @@ export class TaskListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    
     const userAuthId = this.afAuth.auth.currentUser.uid;
     this.taskRef$ = this.afs.collectionGroup('tasks', ref => ref.where('userId', '==', userAuthId)).valueChanges();
     console.log(userAuthId);
