@@ -28,6 +28,7 @@ export class AddTaskComponent implements OnInit {
       dueDate: '',
       project: '',
       isActive: true,
+      assetType: 'Task',
       userId: userAuthId,
     });
   }
