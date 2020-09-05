@@ -6,7 +6,7 @@
     <button mat-icon-button *ngIf="(user$ | async)?.uid" routerLink="/auth/favorites" fxShow fxHide.lt-xs>
       <i class="fal fa-heart"></i>
     </button>
-    <button mat-icon-button *ngIf="(user$ | async)?.uid" routerLink="/auth/notifications" fxShow fxHide.lt-xs>
+    <button mat-icon-button *ngIf="(user$ | async)?.uid" routerLink="/auth/files" fxShow fxHide.lt-xs>
       <i class="fal fa-folder"></i><span class="icon-badge">8</span>
     </button>
     <button mat-icon-button *ngIf="(user$ | async)?.uid" routerLink="/auth/notifications" fxShow fxHide.lt-xs>

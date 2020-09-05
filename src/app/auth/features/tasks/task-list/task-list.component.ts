@@ -58,6 +58,7 @@ export class TaskListComponent implements OnInit {
     
     const userAuthId = this.afAuth.auth.currentUser.uid;
     this.taskRef$ = this.afs.collectionGroup('tasks', ref => ref.where('userId', '==', userAuthId)).valueChanges();
+    this.displayDate$ = this.taskRef$.subscribe()
     console.log(userAuthId);
   }
 }

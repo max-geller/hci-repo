@@ -13,6 +13,7 @@ import { AuthGuard } from '../core/guards/auth.guard';
 import { ContactComponent } from './pages/contact/contact.component';
 import { SupportComponent } from './pages/support/support.component';
 import { DocsComponent } from './pages/docs/docs.component';
+import { FilesComponent } from './pages/files/files.component';
 
 const routes: Routes = [
     {
@@ -71,6 +72,10 @@ const routes: Routes = [
     {
         path: 'about',
         component: AboutComponent
+    },
+    {
+        path: 'files',
+        component: FilesComponent
     },
     {
         path: 'tags',
