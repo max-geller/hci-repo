@@ -2,9 +2,25 @@
   <div class="page-layout" fxLayout="column" *ngIf="task">
     <div fxLayout="row" fxLayout="center center">
       <mat-checkbox style="margin-top: 5px; padding-right: 8px"></mat-checkbox>
-      <h1 style="padding:0px; margin:0px;">{{ task.title }}</h1>
+      <h1 style="padding:0px; margin:0px; padding-bottom:20px">{{ task.title }}</h1>
     </div>
-
+    <div fxLayout="row">
+      <button mat-icon-button>
+        <i class="fal fa-list"></i>
+      </button>
+      <button mat-icon-button>
+        <i class="fal fa-tag"></i>
+      </button>
+      <button mat-icon-button>
+        <i class="fal fa-flag-alt"></i>
+      </button>
+      <button mat-icon-button>
+        <i class="fal fa-alarm-clock"></i>
+      </button>
+      <button mat-icon-button>
+        <i class="fas fa-ellipsis-v"></i>
+      </button>
+    </div>
     <button mat-stroked-button style="width: min-content;"> {{ task.dueDate }}</button>
 
     <div fxLayout="row wrap">
