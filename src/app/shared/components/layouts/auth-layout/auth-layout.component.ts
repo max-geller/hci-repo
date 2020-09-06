@@ -18,24 +18,7 @@ export type FadeState = 'visible' | 'hidden';
 @Component({
   selector: 'app-auth-layout',
   templateUrl: './auth-layout.component.html',
-  animations: [
-    trigger('state', [
-      state(
-        'visible',
-        style({
-          opacity: '1'
-        })
-      ),
-      state(
-        'hidden',
-        style({
-          opacity: '0'
-        })
-      ),
-      transition('* => visible', [animate('500ms ease-out')]),
-      transition('visible => hidden', [animate('500ms ease-out')])
-    ])
-  ],
+
 })
 
 export class AuthLayoutComponent implements OnInit {
@@ -45,27 +28,7 @@ export class AuthLayoutComponent implements OnInit {
 
 
   user$: Observable<firebase.User>;
-  state: FadeState;
   // tslint:disable-next-line: variable-name
-  private _show: boolean;
-  get show() {
-    return this._show;
-  }
-  @Input()
-  set show(value: boolean) {
-    if (value) {
-      this._show = value;
-      this.state = 'visible';
-    } else {
-      this.state = 'hidden';
-    }
-  }
-
-  animationDone(event: AnimationEvent): any {
-    if (event.fromState === 'visible' && event.toState === 'hidden') {
-      this._show = false;
-    }
-  }
 
 
 
@@ -88,11 +51,5 @@ export class AuthLayoutComponent implements OnInit {
     setTimeout(() => {
       this.spinner.hide();
     }, 3000);
-  }
-
-
-
-  toggleSearch(): void {
-    this.show = !this.show;
   }
 }
