@@ -59,6 +59,7 @@ const routes: Routes = [
     {
         path: 'analytics',
         loadChildren: () => import('./features/analytics/analytics.module').then(m => m.AnalyticsModule),
+        canActivate: [AuthGuard]
     }, 
     {
         path: 'admin',
