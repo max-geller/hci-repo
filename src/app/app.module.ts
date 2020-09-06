@@ -30,7 +30,6 @@ import { FooterComponent } from './shared/nav/footer/footer.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { AnalyticsModule } from './auth/features/analytics/analytics.module';
 import { GoogleAnalyticsService } from './core/services/google-analytics.service';
-import { SearchBarComponent } from './shared/components/search-bar/search-bar.component';
 
 
 
@@ -39,7 +38,6 @@ import { SearchBarComponent } from './shared/components/search-bar/search-bar.co
     AppComponent,
     ParallaxDirective,
     AuthLayoutComponent,
-    SearchBarComponent,
     IconMenuComponent,
     FooterComponent,
     NotFoundComponent
