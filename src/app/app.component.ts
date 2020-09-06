@@ -11,6 +11,10 @@ import { DOCUMENT } from '@angular/common';
 import { AuthService } from './core/services/auth.service';
 import { NgxSpinnerService } from 'ngx-spinner';
 import algoliasearch from 'algoliasearch/lite';
+import { Router, NavigationEnd } from '@angular/router';
+
+
+declare let gtag: Function;
 
 export type FadeState = 'visible' | 'hidden';
 
@@ -74,9 +78,22 @@ export class AppComponent implements OnInit {
 
   public buttonName: any = 'Show';
 
-  constructor(public auth: AuthService, private spinner: NgxSpinnerService, @Inject(DOCUMENT) private document: Document,
+  constructor(
+    public auth: AuthService,
+    private spinner: NgxSpinnerService, @Inject(DOCUMENT)
+    private document: Document,
+    public router: Router
   ) {
     this.user$ = this.auth.userStatus();
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        gtag('config', 'xx-xxxxx-xx',
+          {
+            'page_path': event.urlAfterRedirects
+          }
+        );
+      }
+    })
   }
 
   ngOnInit(): void {

@@ -30,6 +30,7 @@ import { IconMenuComponent } from './shared/nav/icon-menu/icon-menu.component';
 import { FooterComponent } from './shared/nav/footer/footer.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { AnalyticsModule } from './auth/features/analytics/analytics.module';
+import { GoogleAnalyticsService } from './core/services/google-analytics.service';
 
 
 
@@ -66,6 +67,7 @@ import { AnalyticsModule } from './auth/features/analytics/analytics.module';
   ],
   providers: [
     AuthService,
+    GoogleAnalyticsService
   ],
   bootstrap: [
     AppComponent
