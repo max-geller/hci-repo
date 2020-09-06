@@ -1,3 +1,4 @@
+import { TaskInterface } from './../models/task.model';
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Observable } from 'rxjs/internal/Observable';
@@ -13,6 +14,8 @@ export class FirestoreService {
   constructor(private afs: AngularFirestore) { }
   private projectDoc: AngularFirestoreDocument<ProjectInterface>;
   private project: Observable<ProjectInterface>;
+  private task: Observable<ProjectInterface>;
+  private taskDoc: AngularFirestoreDocument<ProjectInterface>;
 
 
   getOneProject(idProject: string): any {
@@ -23,6 +26,21 @@ export class FirestoreService {
       } else {
         const data = action.payload.data() as ProjectInterface;
         console.log(idProject);
+        data.id = action.payload.id;
+        return data;
+      }
+    }));
+  }
+
+
+  getOneTask(idTask: string): any {
+    this.taskDoc = this.afs.doc<TaskInterface>(`tasks/${idTask}`);
+    return this.task = this.taskDoc.snapshotChanges().pipe(map(action => {
+      if (action.payload.exists === false) {
+        return null;
+      } else {
+        const data = action.payload.data() as TaskInterface;
+        console.log(idTask);
         data.id = action.payload.id;
         return data;
       }

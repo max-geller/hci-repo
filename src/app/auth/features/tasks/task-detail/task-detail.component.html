@@ -1,1 +1,8 @@
-<p>task-detail works!</p>
+<div class="wrapper" fxLayout="column">
+  <div class="page-layout" fxLayout="column" *ngIf="task">
+    <div fxLayout="row" fxLayout="center center" style="padding: 8px;">
+      <mat-checkbox></mat-checkbox>
+      <h1>{{ task.title }}</h1>
+    </div>
+  </div>
+</div>

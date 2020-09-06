@@ -30,9 +30,9 @@
             </mat-form-field>
             <div class="project-list-container" style="padding:20px;">
   
-              <mat-card id="preload" class="project-card" routerLink="/auth/projects/project/{{project.id}}"
+              <mat-card id="preload" class="project-card" 
                 fxLayout="column" style="padding:15px !important;overflow:hidden;display:flex"
-                *ngFor="let project of projects$ | async">
+                *ngFor="let project of projects$ | async" routerLink="/auth/projects/project/{{project.id}}">
                 <img mat-card-image src="{{project.previewURL}}" height="210px">
                 <mat-card-title fxLayout="row" fxLayoutAlign="center start" style="padding: 4px; display: flex">
                   <h5 style="text-align: center;"> {{project.name}} </h5>
