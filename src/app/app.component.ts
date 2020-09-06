@@ -87,7 +87,7 @@ export class AppComponent implements OnInit {
     this.user$ = this.auth.userStatus();
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        gtag('config', 'xx-xxxxx-xx',
+        gtag('config', '244924387',
           {
             'page_path': event.urlAfterRedirects
           }
