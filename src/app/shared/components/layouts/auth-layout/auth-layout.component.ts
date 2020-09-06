@@ -10,7 +10,6 @@ import { Observable, of } from 'rxjs';
 import { DOCUMENT } from '@angular/common';
 import { AuthService } from './../../../../core/services/auth.service';
 import { NgxSpinnerService } from 'ngx-spinner';
-import algoliasearch from 'algoliasearch/lite';
 
 export type FadeState = 'visible' | 'hidden';
 
@@ -41,16 +40,7 @@ export type FadeState = 'visible' | 'hidden';
 
 export class AuthLayoutComponent implements OnInit {
 
-  projectSearchConfig = {
-    indexName: 'PROJECT',
-    searchClient: algoliasearch('8K7V4TARGD', 'f4c1889dd27c98bebcaf99eb1e3c5fc2'),
-    hitsPerPage: 8,
-  };
-  taskSearchConfig = {
-    indexName: 'TASK',
-    searchClient: algoliasearch('8K7V4TARGD', 'f4c1889dd27c98bebcaf99eb1e3c5fc2'),
-    hitsPerPage: 8,
-  };
+
 
 
 

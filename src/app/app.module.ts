@@ -21,7 +21,6 @@ import { AuthService } from './core/services/auth.service';
 import { AngularFireFunctionsModule } from '@angular/fire/functions';
 import { ParallaxDirective } from './shared/directives/parallax.directive';
 import { NotFoundComponent } from './shared/components/pages/not-found/not-found.component';
-import { NgAisModule } from 'angular-instantsearch';
 import { ToastrModule } from 'ngx-toastr';
 import { AvatarModule } from 'ngx-avatar';
 import { AuthModule } from './auth/auth.module';
@@ -57,7 +56,6 @@ import { GoogleAnalyticsService } from './core/services/google-analytics.service
     AngularFireFunctionsModule,
     AngularFireStorageModule,
     ToastrModule.forRoot(),
-    NgAisModule.forRoot(),
     environment.production ?
       HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { delay: 100 }) : [],
     AvatarModule,
@@ -76,7 +74,6 @@ import { GoogleAnalyticsService } from './core/services/google-analytics.service
     HttpClientModule,
     NgxSpinnerModule,
     ToastrModule,
-    NgAisModule,
     AvatarModule,
   ]
 })

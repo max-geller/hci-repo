@@ -1,3 +1,4 @@
+import { NgAisModule } from 'angular-instantsearch';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from './vendors/material/material.module';
@@ -17,6 +18,7 @@ import { AuthLayoutComponent } from './components/layouts/auth-layout/auth-layou
     FlexLayoutModule,
     FormsModule,
     ReactiveFormsModule,
+    NgAisModule.forRoot(),
     NgxEchartsModule.forRoot({
       echarts,
     }),
@@ -36,7 +38,8 @@ import { AuthLayoutComponent } from './components/layouts/auth-layout/auth-layou
     ReactiveFormsModule,
     AgmCoreModule,
     GoogleChartsModule,
-    NgxEchartsModule
+    NgxEchartsModule,
+    NgAisModule
   ]
 })
 export class SharedModule { }
