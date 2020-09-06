@@ -2,7 +2,9 @@
   <h1>ADMIN DASHBOARD</h1>
   <mat-divider style="margin-top: 0px !important;"></mat-divider>
   <div class="actions-container">
-    <mat-stroked-button routerLink="/admin/users/manage">Manage Users</mat-stroked-button>
+    <button mat-stroked-button routerLink="/auth/admin/users/manage">Manage Users</button>
+    <button mat-stroked-button routerLink="/auth/admin/users/manage">Manage Clients</button>
+    <button mat-stroked-button routerLink="/auth/admin/users/manage">Manage Estimates</button>
   </div>
   <mat-accordion class="menu-accordion">
     <mat-expansion-panel [expanded]=true>
