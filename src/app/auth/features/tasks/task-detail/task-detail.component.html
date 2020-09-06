@@ -1,8 +1,48 @@
 <div class="wrapper" fxLayout="column">
   <div class="page-layout" fxLayout="column" *ngIf="task">
-    <div fxLayout="row" fxLayout="center center" style="padding: 8px;">
-      <mat-checkbox></mat-checkbox>
-      <h1>{{ task.title }}</h1>
+    <div fxLayout="row" fxLayout="center center">
+      <mat-checkbox style="margin-top: 5px; padding-right: 8px"></mat-checkbox>
+      <h1 style="padding:0px; margin:0px;">{{ task.title }}</h1>
+    </div>
+
+    <button mat-stroked-button style="width: min-content;"> {{ task.dueDate }}</button>
+
+    <div fxLayout="row wrap">
+      <mat-form-field class="md-field">
+        <mat-label>Priority</mat-label>
+        <input matInput formControlName="priority">
+        <mat-select>
+          <mat-option value="Urgent">Urgent</mat-option>
+          <mat-option value="High">High</mat-option>
+          <mat-option value="Normal">Normal</mat-option>
+          <mat-option value="Low">Low</mat-option>
+          <mat-option value="Deferred">Deferred</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="md-field">
+        <mat-label>Project</mat-label>
+        <input matInput formControlName="priority">
+        <mat-select>
+          <mat-option value="Urgent">Development</mat-option>
+          <mat-option value="High">Stanford Block E</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-tab-group mat-align-tabs="center">
+        <mat-tab label="Comments">
+
+        </mat-tab>
+
+        <mat-tab label="Sub-Tasks">
+
+        </mat-tab>
+
+        <mat-tab label="Activity">
+
+        </mat-tab>
+      </mat-tab-group>
     </div>
   </div>
 </div>
