@@ -30,7 +30,6 @@ import { DocsComponent } from './pages/docs/docs.component';
 import { AuthGuard } from '../core/guards/auth.guard';
 import { AuthService } from '../core/services/auth.service';
 import { FilesComponent } from './pages/files/files.component';
-import { SearchBarComponent } from '../shared/components/search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +42,6 @@ import { SearchBarComponent } from '../shared/components/search-bar/search-bar.c
     FavoritesComponent,
     NotificationsComponent,
     SidenavComponent,
-    SearchBarComponent,
     FavoritesTableComponent,
     SupportComponent,
     DocsComponent,
