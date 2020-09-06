@@ -29,6 +29,7 @@ export class TaskListComponent implements OnInit {
   constructor(
     private afs: AngularFirestore, public afAuth: AngularFireAuth,
     public service: TaskService,
+
     public dialog: MatDialog, private dateAdapter: DateAdapter<Date>) {
       this.dateAdapter.setLocale('en-US'); 
   }

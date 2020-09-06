@@ -1,16 +1,11 @@
+import { ProjectService } from './../../../../../core/services/project.service';
 import { Component, OnInit, ViewChild, Inject } from '@angular/core';
 import { MatDialog, MatDialogConfig, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatSort } from '@angular/material/sort';
-
 import { AngularFirestore } from '@angular/fire/firestore';
 import { MatTableDataSource } from '@angular/material/table';
-
-import { ProjectService } from './../../../../../core/services/project.service';
-import { ConfirmDeleteService } from '../../../../../shared/services/confirm-delete.service';
 import { PageEvent, MatPaginator } from '@angular/material/paginator';
-import { ProjectInterface } from './../../../../../core/models/project.model';
-import { EditProjectComponent } from './../edit-project/edit-project.component';
-import { AddProjectComponent } from './../add-project/add-project.component';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-project-cost-sources',
@@ -18,13 +13,16 @@ import { AddProjectComponent } from './../add-project/add-project.component';
 })
 
 export class ProjectCostSourcesComponent implements OnInit {
-  projects: MatTableDataSource<any>;
+  estimates: MatTableDataSource<any>;
   displayedColumns = [
-    'id',
-    'name',
+    'assetType',
+    'author',
+    'preparedFor',
+    'designStage',
+    'designPackages',
+    'issuedDate',
     'status',
     'cost',
-    'client',
     'view',
   ];
 
@@ -34,57 +32,28 @@ export class ProjectCostSourcesComponent implements OnInit {
   constructor(
     private afs: AngularFirestore,
     public dialog: MatDialog,
-    public service: ProjectService,
-    public confirmDeleteService: ConfirmDeleteService,
+    private route: ActivatedRoute,
+    public service: ProjectService
   ) {
-  }
-  // MatPaginator Output
-
-
-  addProject(): void {
-    const dialogConfig = new MatDialogConfig();
-    dialogConfig.disableClose = true;
-    dialogConfig.maxHeight = '95vh';
-    dialogConfig.autoFocus = true;
-    const dialogRef = this.dialog.open(AddProjectComponent, dialogConfig);
-    dialogRef.afterClosed().subscribe(
-      data => this.service.createProject(data));
-  }
-
-  editProject(project: ProjectInterface): void {
-    const dialogConfig = new MatDialogConfig();
-    dialogConfig.disableClose = true;
-    dialogConfig.maxHeight = '95vh';
-    dialogConfig.autoFocus = true;
-    const dialogRef = this.dialog.open(EditProjectComponent, dialogConfig);
-  }
-
-  deleteProject(project: ProjectInterface): void {
-    this.afs.doc('projects/' + project).delete();
-  }
-
-  confirmDeleteProject(): void {
   }
 
   ngOnInit(): void {
-    this.afs
-      .collection<any>('projects')
-      // 1c: Request an Observable with valueChanges()
-      .valueChanges()
+    const idProject = this.route.snapshot.params['id'];
+    this.afs.collectionGroup('estimates', ref => ref.where('projectId', '==', idProject)).valueChanges()
       // 1d: Subscribe to that Observable...
       .subscribe(data => {
         // 1e: ...and Pass that Data to the Material Data Table
-        this.projects = new MatTableDataSource(data);
-        this.projects.sort = this.sort;
-        this.projects.paginator = this.paginator;
-        this.projects.sort = this.sort;
+        this.estimates = new MatTableDataSource(data);
+        this.estimates.sort = this.sort;
+        this.estimates.paginator = this.paginator;
+        this.estimates.sort = this.sort;
       });
   }
 
   applyFilter(filterValue: string): void {
     filterValue = filterValue.trim();
     filterValue = filterValue.toLowerCase();
-    this.projects.filter = filterValue;
+    this.estimates.filter = filterValue;
   }
 
 }
