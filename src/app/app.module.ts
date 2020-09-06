@@ -1,4 +1,3 @@
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -32,7 +31,7 @@ import { AnalyticsModule } from './auth/features/analytics/analytics.module';
 import { GoogleAnalyticsService } from './core/services/google-analytics.service';
 import { EstimatesModule } from './auth/features/projects/modules/estimates/estimates.module';
 import { ContractsModule } from './auth/features/projects/modules/contracts/contracts.module';
-
+import { WindowService } from './core/services/window.service';
 
 
 @NgModule({
@@ -69,6 +68,7 @@ import { ContractsModule } from './auth/features/projects/modules/contracts/cont
   ],
   providers: [
     AuthService,
+    WindowService,
     GoogleAnalyticsService
   ],
   bootstrap: [
