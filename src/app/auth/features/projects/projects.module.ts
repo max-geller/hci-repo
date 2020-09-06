@@ -16,6 +16,7 @@ import { ProjectMapComponent } from './components/project-map/project-map.compon
 import { ProjectCostTrendComponent } from './components/project-cost-trend/project-cost-trend.component';
 import { ProjectCostSourcesComponent } from './components/project-cost-sources/project-cost-sources.component';
 import { ProjectDesignPackagesComponent } from './components/project-design-packages/project-design-packages.component';
+import { ProjectItemComponent } from './pages/project-list/components/project-item/project-item.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ProjectDesignPackagesComponent } from './components/project-design-pack
     ProjectMapComponent,
     ProjectCostTrendComponent,
     ProjectCostSourcesComponent,
-    ProjectDesignPackagesComponent
+    ProjectDesignPackagesComponent,
+    ProjectItemComponent
   ],
   imports: [
     CommonModule,

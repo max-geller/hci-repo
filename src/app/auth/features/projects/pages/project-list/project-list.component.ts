@@ -1,3 +1,4 @@
+import { ProjectInterface } from './../../../../../core/models/project.model';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { AngularFirestore } from '@angular/fire/firestore';
@@ -9,9 +10,11 @@ import { AngularFirestore } from '@angular/fire/firestore';
 })
 export class ProjectListComponent {
   projects$: Observable<any>;
+  projectsOverdue$: Observable<any>;
   constructor(afs: AngularFirestore) {
-    
-    this.projects$ = afs.collection('projects', ref => ref.orderBy('id')).valueChanges();
-  }
 
+    this.projects$ = afs.collection('projects', ref => ref.orderBy('id')).valueChanges();
+
+
+  }
 }

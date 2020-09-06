@@ -8,4 +8,5 @@ export interface ProjectInterface {
     client?: string;
     description?: string;
     previewURL?: string;
+    tags?: string;
 }

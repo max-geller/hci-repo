@@ -20,6 +20,7 @@ import { DateAdapter } from '@angular/material/core';
 })
 
 export class TaskListComponent implements OnInit {
+  tasksOverdue$: Observable<any>;
   tasks$: any;
   taskRef$: Observable<any>;
 
@@ -31,7 +32,8 @@ export class TaskListComponent implements OnInit {
     public service: TaskService,
 
     public dialog: MatDialog, private dateAdapter: DateAdapter<Date>) {
-      this.dateAdapter.setLocale('en-US'); 
+
+    this.dateAdapter.setLocale('en-US');
   }
 
   addTask(): void {
@@ -56,9 +58,15 @@ export class TaskListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    
     const userAuthId = this.afAuth.auth.currentUser.uid;
-    this.taskRef$ = this.afs.collectionGroup('tasks', ref => ref.where('userId', '==', userAuthId)).valueChanges();
+    this.taskRef$ = this.afs.collectionGroup('tasks', ref => ref.
+      where('userId', '==', userAuthId))
+      .valueChanges();
+    this.tasksOverdue$ = this.afs.collectionGroup('tasks', ref => ref.
+      where('userId', '==', userAuthId)
+      .where('isOverdue', '==', false))
+      .valueChanges();
     console.log(userAuthId);
+
   }
 }
