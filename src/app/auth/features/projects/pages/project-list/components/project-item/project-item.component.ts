@@ -8,9 +8,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProjectItemComponent implements OnInit {
-  projects$: Observable<any>;
   constructor(afs: AngularFirestore) {
-    this.projects$ = afs.collection('projects', ref => ref.orderBy('id')).valueChanges();
   }
 
 
