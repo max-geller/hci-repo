@@ -7,8 +7,9 @@ import { AngularFireAuth } from '@angular/fire/auth';
 @Injectable({
     providedIn: 'root'
 })
-export class TaskService {
 
+
+export class TaskService {
 
     constructor(private afs: AngularFirestore, private afAuth: AngularFireAuth) { }
     getTasks(): any {
@@ -27,6 +28,13 @@ export class TaskService {
     deleteTask(task: TaskInterface): any {
         this.afs.doc('tasks/' + task).delete();
     }
+
+    // Create Variable for "Overdue" tasks
+
+
+
+    // 
+
 
 
 }
