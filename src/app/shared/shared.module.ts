@@ -22,7 +22,7 @@ import { AuthLayoutComponent } from './components/layouts/auth-layout/auth-layou
     NgxEchartsModule.forRoot({
       echarts,
     }),
-    AgmCoreModule.forRoot({ apiKey: 'AIzaSyCYTxkREIgB7sNozUDIhlVNNDwXg9SS3wk' }),
+    AgmCoreModule.forRoot({ apiKey: 'AIzaSyDHAg659tzFEUYMkbjX0y_uxWtmG21GC1E' }),
     GoogleChartsModule
 
   ],
