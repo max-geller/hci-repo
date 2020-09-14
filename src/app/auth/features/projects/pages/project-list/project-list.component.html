@@ -33,7 +33,13 @@
             <mat-card id="preload" class="project-card" routerLink="/auth/projects/project/{{project.id}}"
               fxLayout="column" style="padding:15px !important;overflow:hidden;display:flex"
               *ngFor="let project of projects$ | async">
-              <img mat-card-image src="{{project.previewURL}}" height="210px">
+              <div class="favorite-icon" style="position: relative; ">
+                <img mat-card-image src="{{project.previewURL}}" height="210px" style="display: block;">
+                <button mat-icon-button style="top: 0;position: absolute;" >
+                  <i class="fal fa-heart" style="color: white;"></i>
+                </button>
+              </div>
+
               <mat-card-title fxLayout="row" fxLayoutAlign="center start" style="padding: 4px; display: flex">
                 <h5 style="text-align: center;"> {{project.name}} </h5>
               </mat-card-title>
@@ -54,9 +60,8 @@
                   src="https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_4cf1afcba79428d399cada0516f7f0d5/procore.jpg"
                   height="15px" width="15px" style="margin: 4px;">
                 <mat-card-actions>
-                  <button mat-stroked-button>
-                    <i class="fal fa-heart"></i> Save
-                  </button></mat-card-actions>
+
+                </mat-card-actions>
               </mat-card-content>
 
               <mat-card-footer fxLayout="row" fxLayoutAlign="center end"

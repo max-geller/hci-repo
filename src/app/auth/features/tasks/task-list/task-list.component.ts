@@ -60,10 +60,12 @@ export class TaskListComponent implements OnInit {
   ngOnInit(): void {
     const userAuthId = this.afAuth.auth.currentUser.uid;
     this.taskRef$ = this.afs.collectionGroup('tasks', ref => ref.
-      where('userId', '==', userAuthId))
+      where('userId', '==', userAuthId)
+      .where('completed', '==', false))
       .valueChanges();
     this.tasksOverdue$ = this.afs.collectionGroup('tasks', ref => ref.
       where('userId', '==', userAuthId)
+      .where('completed', '==', false)
       .where('isOverdue', '==', false))
       .valueChanges();
     console.log(userAuthId);
