@@ -2,7 +2,13 @@
   <div class="page-layout" fxLayout="column">
     <h1>MANAGE USERS</h1>
     <mat-divider style="margin-bottom: 10px !important;"></mat-divider>
-
+    <div class="actions-container">
+      <button class="action-button" mat-stroked-button
+        style="border-color: var(--main-theme-color); color: var(--main-theme-color);" routerLink='/team/clients'>Change
+        Password</button>
+      <button class="action-button" mat-stroked-button routerLink='/team/clients'>Verify Email</button>
+      <button class="action-button" mat-stroked-button crouterLink='/team/clients'>Two-Factor</button>
+    </div>
 
 
     <admin-user-list></admin-user-list>

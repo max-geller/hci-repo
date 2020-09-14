@@ -13,4 +13,5 @@ export class ProjectListComponent {
   constructor(afs: AngularFirestore) {
     this.projects$ = afs.collection('projects', ref => ref.orderBy('id')).valueChanges();
 
+  }
 }

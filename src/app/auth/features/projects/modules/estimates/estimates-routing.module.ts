@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { EstimateListComponent } from './pages/estimate-list/estimate-list.component';
 
 
 const routes: Routes = [
@@ -8,6 +9,11 @@ const routes: Routes = [
     redirectTo: 'list',
     pathMatch: 'full'
   },
+  {
+    path: '',
+    component: EstimateListComponent
+  }
+
 ];
 
 @NgModule({

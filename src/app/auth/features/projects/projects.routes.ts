@@ -18,8 +18,8 @@ const routes: Routes = [
         component: ProjectDetailComponent,
     },
     {
-        path: 'estimates,
-        loadchildren: TaskDetailComponent,
+        path: 'estimates',
+        loadChildren: () => import('./modules/estimates/estimates.module').then(m => m.EstimatesModule),
     },
 ];
 
