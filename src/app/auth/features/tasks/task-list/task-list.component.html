@@ -1,5 +1,5 @@
 <div class="wrapper">
-  <div class="page-layout" fxLayout="column">
+  <div class="page-layout" fxLayout="column" >
     <div fxLayout="row" fxLayoutAlign="space-between center" style="width: 100%;">
       <div fxLayout="column" fxLayoutAlign="end center">
         <h1 style="margin: 0;">ACTIVE TASKS</h1>
@@ -15,7 +15,7 @@
       <mat-tab label="DAILY">
         <div id='preload' class="task-list-container" fxLayout="column">
           <div fxLayout="column" *ngFor="let task of taskRef$ | async">
-            <div class="task-list-item" fxLayout="row"
+            <div class="task-list-item" fxLayout="row" routerLink="/auth/tasks/task/{{task.id}}" 
               style="border-bottom-style: solid;padding: 6px;border-top-style: solid;border-color: rgb(206, 206, 206); border-width: 0.5px;margin-bottom: -1px;">
               <div class="mark-container" fxLayout="column" fxLayoutAlign="center center">
                 <mat-checkbox style="padding:15px"></mat-checkbox>

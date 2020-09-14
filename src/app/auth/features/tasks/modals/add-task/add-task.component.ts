@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder,  FormGroup } from '@angular/forms';
 import { TaskService } from './../../../../../core/services/task.service';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { DateAdapter } from '@angular/material/core';
@@ -8,7 +8,6 @@ import { DateAdapter } from '@angular/material/core';
 @Component({
   templateUrl: './add-task.component.html',
 })
-
 
 export class AddTaskComponent implements OnInit {
   addTaskFormGroup: FormGroup;
@@ -23,6 +22,7 @@ export class AddTaskComponent implements OnInit {
   ngOnInit(): any {
     const userAuthId = this.afAuth.auth.currentUser.uid;
     this.addTaskFormGroup = this.fb.group({
+      id: '' ,
       title: '',
       priority: '',
       dueDate: '',

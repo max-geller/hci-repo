@@ -17,6 +17,10 @@ const routes: Routes = [
         path: 'project/:id',
         component: ProjectDetailComponent,
     },
+    {
+        path: 'estimates,
+        loadchildren: TaskDetailComponent,
+    },
 ];
 
 @NgModule({

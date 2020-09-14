@@ -1,1 +1,52 @@
-<p>task-detail works!</p>
+<div class="wrapper" fxLayout="column">
+  <div class="task-detail" fxLayout="column" *ngIf="task">
+    <div fxLayout="row" fxLayout="center center">
+      <mat-checkbox style="margin-top: 5px; padding-right: 8px"></mat-checkbox>
+      <h1 style="padding:0px; margin:0px; padding-bottom:20px">{{ task.title }}</h1>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+      <div fxLayout="row">
+        <button mat-stroked-button style="width: min-content;"> {{ task.dueDate }}</button>
+      </div>
+
+      <div fxLayout="row">
+        <button mat-icon-button>
+          <i class="fal fa-list"></i>
+        </button>
+        <button mat-icon-button>
+          <i class="fal fa-tag"></i>
+        </button>
+        <button mat-icon-button>
+          <i class="fal fa-flag-alt" style=""></i>
+        </button>
+        <button mat-icon-button>
+          <i class="fal fa-alarm-clock"></i>
+        </button>
+        <button mat-icon-button>
+          <i class="far fa-ellipsis-v"></i>
+        </button>
+      </div>
+    </div>
+
+    <div>
+      <mat-tab-group mat-align-tabs="center">
+        <mat-tab label="Sub-Tasks">
+          <div class="task-tab" fxLayout="center center">
+            <button mat-stroked-button>Add Subtasks</button>
+            <button mat-stroked-button>Add Website as Task</button>
+          </div>
+        </mat-tab>
+        <mat-tab label="Comments">
+          <div class="task-tab" fxLayout="center center">
+            <p>Add notes, file uploads, and voice memos to your tasks, so you always have the information you need right
+              when you need it.</p>
+          </div>
+        </mat-tab>
+        <mat-tab label="Activity">
+          <div class="task-tab" fxLayout="center center">
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+</div>

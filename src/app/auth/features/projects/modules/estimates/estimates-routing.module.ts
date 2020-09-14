@@ -8,11 +8,6 @@ const routes: Routes = [
     redirectTo: 'list',
     pathMatch: 'full'
   },
-  {
-    path: '',
-    redirectTo: 'list',
-    pathMatch: 'full'
-  }
 ];
 
 @NgModule({

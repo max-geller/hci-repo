@@ -21,7 +21,11 @@ export class ProjectDetailComponent implements OnInit {
   chartLineOption3: EChartOption;
   salesChartBar: EChartOption;
   salesChartPie: EChartOption;
-  constructor(private dataApi: FirestoreService, public afs: AngularFirestore, private route: ActivatedRoute) { }
+  constructor(
+    private dataApi: FirestoreService,
+    public afs: AngularFirestore,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
     const idProject = this.route.snapshot.params['id'];
