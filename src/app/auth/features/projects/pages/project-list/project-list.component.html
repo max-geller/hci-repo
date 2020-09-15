@@ -35,40 +35,49 @@
               *ngFor="let project of projects$ | async">
               <div class="favorite-icon" style="position: relative; ">
                 <img mat-card-image src="{{project.previewURL}}" height="210px" style="display: block;">
-                <button mat-icon-button style="top: 0;position: absolute;" >
-                  <i class="fal fa-heart" style="color: white;"></i>
+                <button mat-icon-button style="top: 0;position: absolute;">
+                  <i class="far fa-heart" style="color: white;"></i>
                 </button>
               </div>
 
-              <mat-card-title fxLayout="row" fxLayoutAlign="center start" style="padding: 4px; display: flex">
-                <h5 style="text-align: center;"> {{project.name}} </h5>
-              </mat-card-title>
-              <mat-card-content style="padding: 15px" fxFlex>
+              <div fxLayout="row" fxLayoutAlign="center start" style="padding: 0px; display: flex">
+                <div fxLayout="column" fxFlex>
+                  <h5 style="text-align: left;"> {{project.name}} </h5>
+                </div>
+                <div fxLayout="row">
+                  <img src="https://logowiki.net/wp-content/uploads/imgp/REVIT-Logo-1-8418.png" height="15px"
+                    width="15px" style="margin: 4px;">
+                  <img
+                    src="https://img2.pngio.com/dynamics-365-logo-png-download-15041490-free-transparent-power-bi-png-900_900.jpg"
+                    height="15px" width="15px" style="margin: 4px;">
+                  <img
+                    src="https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_4cf1afcba79428d399cada0516f7f0d5/procore.jpg"
+                    height="15px" width="15px" style="margin: 4px;">
+                </div>
+              </div>
 
-                <mat-chip-list>
-                  <mat-chip style="font-size: 12px;">Commercial</mat-chip>
-                  <mat-chip style="font-size: 12px;">High-Rise</mat-chip>
-                </mat-chip-list>
-                <h4>{{project.status}}</h4>
-                <h4>{{project.squareFeet}}</h4>
-                <img src="https://logowiki.net/wp-content/uploads/imgp/REVIT-Logo-1-8418.png" height="15px" width="15px"
-                  style="margin: 4px;">
-                <img
-                  src="https://img2.pngio.com/dynamics-365-logo-png-download-15041490-free-transparent-power-bi-png-900_900.jpg"
-                  height="15px" width="15px" style="margin: 4px;">
-                <img
-                  src="https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_4cf1afcba79428d399cada0516f7f0d5/procore.jpg"
-                  height="15px" width="15px" style="margin: 4px;">
-                <mat-card-actions>
+              <mat-chip-list >
+                <mat-chip *ngFor="let tags of tags$" style="font-size: 10px;">{{project.tags}}</mat-chip>
+              </mat-chip-list>
 
-                </mat-card-actions>
-              </mat-card-content>
+
+
+              <h4 style="margin:0px;padding:0px;">
+                {{project.status}}
+              </h4>
+              <h4 style="margin:0px;padding:0px;">
+                {{project.squareFeet}}
+              </h4>
+
+              <p style="font-size: 11px;margin:0px;padding:0px;">
+                {{project.description}}</p>
 
               <mat-card-footer fxLayout="row" fxLayoutAlign="center end"
                 style="padding: 15px;height: 36px;  display: flex">
                 <div>
                   <h4 style="font-size:18px; font-weight: 500;">
-                    {{project.cost}}</h4>
+                    {{project.cost}}
+                  </h4>
                 </div>
 
               </mat-card-footer>
