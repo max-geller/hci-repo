@@ -11,17 +11,17 @@
           <mat-form-field class="lg-field" style="margin-left: 15px;">
             <mat-label>Sort By</mat-label>
             <mat-select>
-              <mat-option>Recently Active</mat-option>
-              <mat-option>Most Active</mat-option>
-              <mat-option>Alphabetical</mat-option>
-              <mat-option>Completion Date</mat-option>
-              <mat-option>Status</mat-option>
+              <mat-option value="recent">Recently Active</mat-option>
+              <mat-option value="active">Most Active</mat-option>
+              <mat-option value="alphabetical">Alphabetical</mat-option>
+              <mat-option value="date">Completion Date</mat-option>
+              <mat-option value="status">Status</mat-option>
             </mat-select>
           </mat-form-field>
           <mat-form-field class="lg-field" style="margin-left: 15px;">
             <mat-label>Net Present Value Method</mat-label>
             <mat-select>
-              <mat-option>Turner Building Cost Index (TBCI)</mat-option>
+              <mat-option value="tbci">Turner Building Cost Index (TBCI)</mat-option>
               <mat-option>ENR Building Index</mat-option>
               <mat-option>Rider-Levitt Bucknall</mat-option>
               <mat-option>US Consumer Basket Index</mat-option>
@@ -31,7 +31,7 @@
           <div class="project-list-container" style="padding:20px;">
 
             <mat-card id="preload" class="project-card" routerLink="/auth/projects/project/{{project.id}}"
-              fxLayout="column" style="padding:15px !important;overflow:hidden;display:flex"
+              fxLayout="column" style="padding:15px !important;overflow:hidden;position: flex;"
               *ngFor="let project of projects$ | async">
               <div class="favorite-icon" style="position: relative; ">
                 <img mat-card-image src="{{project.previewURL}}" height="210px" style="display: block;">
@@ -56,11 +56,6 @@
                 </div>
               </div>
 
-              <mat-chip-list >
-                <mat-chip *ngFor="let tags of tags$" style="font-size: 10px;">{{project.tags}}</mat-chip>
-              </mat-chip-list>
-
-
 
               <h4 style="margin:0px;padding:0px;">
                 {{project.status}}
@@ -71,11 +66,9 @@
 
               <p style="font-size: 11px;margin:0px;padding:0px;">
                 {{project.description}}</p>
-
-              <mat-card-footer fxLayout="row" fxLayoutAlign="center end"
-                style="padding: 15px;height: 36px;  display: flex">
+              <mat-card-footer fxLayout="row" style="padding: 15px;height: 36px;position:relative">
                 <div>
-                  <h4 style="font-size:18px; font-weight: 500;">
+                  <h4 style="font-size:18px; font-weight: 500;position:absolute;bottom:0px;">
                     {{project.cost}}
                   </h4>
                 </div>
