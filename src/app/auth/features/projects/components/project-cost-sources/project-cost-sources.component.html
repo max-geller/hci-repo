@@ -1,55 +1,29 @@
 <mat-form-field>
     <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
   </mat-form-field>
-  
-  <mat-table [dataSource]="estimates"  matSort class="animate">
+  <mat-table [dataSource]="sources"  matSort class="animate">
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
     <mat-row *matRowDef="let row; columns: displayedColumns;" class="animate"></mat-row>
   
-    <ng-container matColumnDef="assetType">
-      <mat-header-cell *matHeaderCellDef mat-sort-header fxFlex> Type </mat-header-cell>
-      <mat-cell *matCellDef="let data "> {{ data.assetType }} </mat-cell>
+    <ng-container matColumnDef="designIssuance">
+      <mat-header-cell *matHeaderCellDef mat-sort-header fxFlex> Name </mat-header-cell>
+      <mat-cell *matCellDef="let data "> {{ data.designIssuance }} </mat-cell>
     </ng-container>
-    <ng-container matColumnDef="author">
-      <mat-header-cell *matHeaderCellDef mat-sort-header> Author </mat-header-cell>
-      <mat-cell *matCellDef="let data"> {{ data.author }} </mat-cell>
+    <ng-container matColumnDef="packages">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Packages </mat-header-cell>
+      <mat-cell *matCellDef="let data"> {{ data.packages }} </mat-cell>
     </ng-container>
-    <ng-container matColumnDef="preparedFor">
-      <mat-header-cell *matHeaderCellDef mat-sort-header> Prepared For </mat-header-cell>
-      <mat-cell *matCellDef="let data"> {{ data.preparedFor }} </mat-cell>
-    </ng-container>
-    <ng-container matColumnDef="designStage">
-      <mat-header-cell *matHeaderCellDef mat-sort-header> designStage </mat-header-cell>
-      <mat-cell *matCellDef="let data"> {{ data.designStage }} </mat-cell>
-    </ng-container>
-    <ng-container matColumnDef="designPackages">
-      <mat-header-cell *matHeaderCellDef mat-sort-header> Design Package </mat-header-cell>
-      <mat-cell *matCellDef="let data"> {{ data.designPackages }} </mat-cell>
-    </ng-container>
-    <ng-container matColumnDef="issuedDate">
-      <mat-header-cell *matHeaderCellDef mat-sort-header> Issue Date </mat-header-cell>
-      <mat-cell *matCellDef="let data"> {{ data.issuedDate }} </mat-cell>
+    <ng-container matColumnDef="type">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Type </mat-header-cell>
+      <mat-cell *matCellDef="let data"> {{ data.type }} </mat-cell>
     </ng-container>
     <ng-container matColumnDef="status">
-      <mat-header-cell *matHeaderCellDef mat-sort-header> status </mat-header-cell>
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Status </mat-header-cell>
       <mat-cell *matCellDef="let data"> {{ data.status }} </mat-cell>
-    </ng-container>
-    <ng-container matColumnDef="cost">
-      <mat-header-cell *matHeaderCellDef mat-sort-header> Cost </mat-header-cell>
-      <mat-cell *matCellDef="let data"> {{ data.cost }} </mat-cell>
-    </ng-container>
-    <ng-container matColumnDef="view">
-      <mat-header-cell *matHeaderCellDef>
-        <button mat-icon-button color="primary" >
-          <i class="fas fa-plus"></i>
-        </button>
-      </mat-header-cell>
-      <mat-cell *matCellDef="let row; let i=index;">
-        <button mat-icon-button color="accent">
-          <i class="fas fa-eye"></i>
-        </button>
-      </mat-cell>
-    </ng-container>
-    
+    </ng-container>   
+    <ng-container matColumnDef="tier">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Tier </mat-header-cell>
+      <mat-cell *matCellDef="let data"> {{ data.tier }} </mat-cell>
+    </ng-container>   
   </mat-table>
   <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>

@@ -36,7 +36,6 @@ export class ProjectDesignPackagesComponent implements OnInit {
   };
 
   ngOnInit(): any {
-    
     const idProject = this.route.snapshot.params['id'];
     this.getDetails(idProject);
     console.log(idProject);
@@ -47,13 +46,14 @@ export class ProjectDesignPackagesComponent implements OnInit {
       this.packages.sort = this.sort;
       this.packages.paginator = this.paginator;
       this.packages.sort = this.sort;
+      console.log(this.packages)
     });
-    console.log('heres the project:' + idProject);
   }
 
   getDetails(idProject: string): void {
     this.dataApi.getOneProject(idProject).subscribe(project => {
       this.project = project;
+
 
     });
   }

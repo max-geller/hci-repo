@@ -2,7 +2,7 @@
   <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
 </mat-form-field>
 
-<mat-table [dataSource]="packages$" matSort class="animate">
+<mat-table [dataSource]="packages" matSort class="animate">
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
   <mat-row *matRowDef="let row; columns: displayedColumns;" class="animate"></mat-row>
   <ng-container matColumnDef="description">

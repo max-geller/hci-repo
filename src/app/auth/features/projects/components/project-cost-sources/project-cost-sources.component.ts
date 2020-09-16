@@ -13,17 +13,13 @@ import { ActivatedRoute } from '@angular/router';
 })
 
 export class ProjectCostSourcesComponent implements OnInit {
-  estimates: MatTableDataSource<any>;
+  sources: MatTableDataSource<any>;
   displayedColumns = [
-    'assetType',
-    'author',
-    'preparedFor',
-    'designStage',
-    'designPackages',
-    'issuedDate',
+    'designIssuance',
+    'packages',
+    'type',
     'status',
-    'cost',
-    'view',
+    'tier',
   ];
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -39,21 +35,21 @@ export class ProjectCostSourcesComponent implements OnInit {
 
   ngOnInit(): void {
     const idProject = this.route.snapshot.params['id'];
-    this.afs.collectionGroup('estimates', ref => ref.where('projectId', '==', idProject)).valueChanges()
+    this.afs.collectionGroup('sources', ref => ref.where('projectId', '==', idProject)).valueChanges()
       // 1d: Subscribe to that Observable...
       .subscribe(data => {
         // 1e: ...and Pass that Data to the Material Data Table
-        this.estimates = new MatTableDataSource(data);
-        this.estimates.sort = this.sort;
-        this.estimates.paginator = this.paginator;
-        this.estimates.sort = this.sort;
+        this.sources = new MatTableDataSource(data);
+        this.sources.sort = this.sort;
+        this.sources.paginator = this.paginator;
+        this.sources.sort = this.sort;
       });
   }
 
   applyFilter(filterValue: string): void {
     filterValue = filterValue.trim();
     filterValue = filterValue.toLowerCase();
-    this.estimates.filter = filterValue;
+    this.sources.filter = filterValue;
   }
 
 }
