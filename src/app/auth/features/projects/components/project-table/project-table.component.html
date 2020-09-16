@@ -5,11 +5,6 @@
 <mat-table [dataSource]="projects"  matSort class="animate">
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
   <mat-row *matRowDef="let row; columns: displayedColumns;" class="animate"></mat-row>
-
-  <ng-container matColumnDef="id">
-    <mat-header-cell *matHeaderCellDef mat-sort-header fxFlex> id </mat-header-cell>
-    <mat-cell *matCellDef="let data "> {{ data.id }} </mat-cell>
-  </ng-container>
   <ng-container matColumnDef="status">
     <mat-header-cell *matHeaderCellDef mat-sort-header> status </mat-header-cell>
     <mat-cell *matCellDef="let data"> {{ data.status }} </mat-cell>

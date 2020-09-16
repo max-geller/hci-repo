@@ -33,13 +33,11 @@
           <div class="project-container" fxlayout="column">
             <mat-card id="preload" class="project-card" routerLink="/auth/projects/project/{{project.id}}"
               *ngFor="let project of projects$ | async">
-
               <div class="project-item-container" fxLayout="row" style="display: flex">
-
                 <!--Image Container-->
                 <div class="image-container" fxLayout="column">
                   <div class="favorite-icon" style="position: relative; ">
-                    <img src="{{project.previewURL}}" width="210px" style="display: block;">
+                    <img src="{{project.previewURL}}" width="210px" style="display: block;border-radius: 3px; " fxShow fxHide.lt-sm >
                     <button mat-icon-button style="top: 0;position: absolute;">
                       <i class="far fa-heart" style="color: white;"></i>
                     </button>
@@ -50,7 +48,7 @@
                 <div class="info-container" fxLayout="column" style="padding:20px;" fxFlex>
                   <div class="title-row" fxLayout="row" style="display: flex;">
                     <div class="proj-name-container" fxLayout="column">
-                      <h5 style="text-align: left;"> {{project.name}} </h5>
+                      <h5 style="text-align: left;margin-bottom: 0px;"> {{project.name}} </h5>
                     </div>
                     <div fxFlex></div>
                     <div class="icon-container" fxLayout="row">
@@ -67,12 +65,10 @@
                   <div class="status-sf-row" fxLayout="row">
                     <h4 style="margin:0px;padding:0px;">
                       {{project.status}}
-                      {{project.owner}}
-                      {{project.client}}
-                      {{project.category}}
-                      {{project.structure}}
-                      
                     </h4>
+                    {{project.owner}}
+                    {{project.client}}
+                    {{project.category}}
                     <h4 style="margin:0px;padding:0px;">
                       {{project.squareFeet}}
                     </h4>
@@ -87,8 +83,6 @@
                     </h4>
                   </mat-card-footer>
                 </div>
-
-
               </div>
             </mat-card>
           </div>

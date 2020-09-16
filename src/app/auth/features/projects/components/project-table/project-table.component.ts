@@ -20,7 +20,6 @@ import { AddProjectComponent } from './../add-project/add-project.component';
 export class ProjectTableComponent implements OnInit {
   projects: MatTableDataSource<any>;
   displayedColumns = [
-    'id',
     'name',
     'status',
     'cost',

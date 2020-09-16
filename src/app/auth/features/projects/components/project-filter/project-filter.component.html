@@ -1,105 +1,107 @@
-<div>
-  <mat-form-field  fxFlex>
-    <mat-label>KEYWORDS</mat-label>
-    <input matInput>
-  </mat-form-field>
-</div>
+<div fxLayout="column" style="display: flex;">
+  <div>
+    <mat-form-field fxFlex>
+      <mat-label>KEYWORDS</mat-label>
+      <input matInput>
+    </mat-form-field>
+  </div>
 
 
-<mat-accordion style="align-items: center;">
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      PROJECT TYPE
-    </mat-expansion-panel-header>
-    <div>
+  <mat-accordion style="align-items: center; ">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        PROJECT TYPE
+      </mat-expansion-panel-header>
+      <div>
+        <form>
+          <mat-list>
+            <mat-list-item>
+              <mat-checkbox>Airport/Terminal</mat-checkbox>
+            </mat-list-item>
+            <mat-list-item>
+              <mat-checkbox>Industrial</mat-checkbox>
+            </mat-list-item>
+            <mat-list-item>
+              <mat-checkbox>Central Utility Upgrade</mat-checkbox>
+            </mat-list-item>
+            <mat-list-item>
+              <mat-checkbox>High-Rise Residential</mat-checkbox>
+            </mat-list-item>
+            <mat-list-item>
+              <mat-checkbox>High-Rise Office</mat-checkbox>
+            </mat-list-item>
+            <mat-list-item>
+              <mat-checkbox>High-Rise Mixed-Use</mat-checkbox>
+            </mat-list-item>
+            <mat-list-item>
+              <mat-checkbox>Tenant Improvement</mat-checkbox>
+            </mat-list-item>
+            <mat-list-item>
+              <mat-checkbox>Hospital</mat-checkbox>
+            </mat-list-item>
+            <mat-list-item>
+              <mat-checkbox>Medical Office Building</mat-checkbox>
+            </mat-list-item>
+          </mat-list>
+        </form>
+      </div>
+    </mat-expansion-panel>
+
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        CONDITION
+      </mat-expansion-panel-header>
       <form>
         <mat-list>
           <mat-list-item>
-            <mat-checkbox>Airport/Terminal</mat-checkbox>
+            <mat-checkbox>New Project</mat-checkbox>
           </mat-list-item>
           <mat-list-item>
-            <mat-checkbox>Industrial</mat-checkbox>
-          </mat-list-item>
-          <mat-list-item>
-            <mat-checkbox>Central Utility Upgrade</mat-checkbox>
-          </mat-list-item>
-          <mat-list-item>
-            <mat-checkbox>High-Rise Residential</mat-checkbox>
-          </mat-list-item>
-          <mat-list-item>
-            <mat-checkbox>High-Rise Office</mat-checkbox>
-          </mat-list-item>
-          <mat-list-item>
-            <mat-checkbox>High-Rise Mixed-Use</mat-checkbox>
+            <mat-checkbox>Renovation</mat-checkbox>
           </mat-list-item>
           <mat-list-item>
             <mat-checkbox>Tenant Improvement</mat-checkbox>
           </mat-list-item>
-          <mat-list-item>
-            <mat-checkbox>Hospital</mat-checkbox>
-          </mat-list-item>
-          <mat-list-item>
-            <mat-checkbox>Medical Office Building</mat-checkbox>
-          </mat-list-item>
         </mat-list>
       </form>
-    </div>
-  </mat-expansion-panel>
+    </mat-expansion-panel>
 
-
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      CONDITION
-    </mat-expansion-panel-header>
-    <form>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        CONTRACTOR
+      </mat-expansion-panel-header>
       <mat-list>
         <mat-list-item>
-          <mat-checkbox>New Project</mat-checkbox>
+          <mat-checkbox>Webcor Builders</mat-checkbox>
         </mat-list-item>
         <mat-list-item>
-          <mat-checkbox>Renovation</mat-checkbox>
-        </mat-list-item>
-        <mat-list-item>
-          <mat-checkbox>Tenant Improvement</mat-checkbox>
+          <mat-checkbox>Level 10 Construction</mat-checkbox>
         </mat-list-item>
       </mat-list>
-    </form>
-  </mat-expansion-panel>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        SIZE
+      </mat-expansion-panel-header>
+      <mat-checkbox>Level 10 Construction</mat-checkbox>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        DATE COMPLETED
+      </mat-expansion-panel-header>
+      <mat-checkbox>Whoa</mat-checkbox>
+    </mat-expansion-panel>
 
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      CONTRACTOR
-    </mat-expansion-panel-header>
-    <mat-list>
-      <mat-list-item>
-        <mat-checkbox>Webcor Builders</mat-checkbox>
-      </mat-list-item>
-      <mat-list-item>
-        <mat-checkbox>Level 10 Construction</mat-checkbox>
-      </mat-list-item>
-    </mat-list>
-  </mat-expansion-panel>
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      SIZE
-    </mat-expansion-panel-header>
-    <mat-checkbox>Level 10 Construction</mat-checkbox>
-  </mat-expansion-panel>
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      DATE COMPLETED
-    </mat-expansion-panel-header>
-    <mat-checkbox>Whoa</mat-checkbox>
-  </mat-expansion-panel>
-
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      CONTRACT TYPE
-    </mat-expansion-panel-header>
-    <mat-list>
-      <mat-list-item>
-        <mat-checkbox>Design-Build</mat-checkbox>
-      </mat-list-item>
-    </mat-list>
-  </mat-expansion-panel>
-</mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        CONTRACT TYPE
+      </mat-expansion-panel-header>
+      <mat-list>
+        <mat-list-item>
+          <mat-checkbox>Design-Build</mat-checkbox>
+        </mat-list-item>
+      </mat-list>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
