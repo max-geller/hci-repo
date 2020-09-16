@@ -39,22 +39,18 @@
           </div>
         </div>
       </mat-expansion-panel>
-
       <mat-expansion-panel>
         <mat-expansion-panel-header>
           COST SOURCES
         </mat-expansion-panel-header>
         <app-project-cost-sources></app-project-cost-sources>
       </mat-expansion-panel>
-
       <mat-expansion-panel>
         <mat-expansion-panel-header>
           DESIGN PACKAGES
         </mat-expansion-panel-header>
         <app-project-design-packages></app-project-design-packages>
       </mat-expansion-panel>
-
-
       <mat-expansion-panel>
         <mat-expansion-panel-header>
           <img
@@ -62,30 +58,32 @@
             class="responsive" height="20px" width="20px" style="margin-right: 5px;">
           POWER BI DASHBOARD
         </mat-expansion-panel-header>
-
-        <iframe width="100%" height="800"
-          src="https://app.powerbi.com/view?r=eyJrIjoiZDQ0YTg4OGYtNWYzYy00ODBhLTlkMjItY2YzNTQ3ODBiZTU0IiwidCI6IjM3ZjhiNGE4LWQzNzgtNGMzNS1iZmIxLWNmZDdjNDZiMWM2NyIsImMiOjZ9&pageName=ReportSection"
-          frameborder="0" allowFullScreen="true"></iframe>
-
+        <div>
+          <iframe width="100%" height="800" class="responsive"
+            src="https://app.powerbi.com/view?r=eyJrIjoiZDQ0YTg4OGYtNWYzYy00ODBhLTlkMjItY2YzNTQ3ODBiZTU0IiwidCI6IjM3ZjhiNGE4LWQzNzgtNGMzNS1iZmIxLWNmZDdjNDZiMWM2NyIsImMiOjZ9&pageName=ReportSection"
+            frameborder="0" allowFullScreen="true"></iframe>
+        </div>
       </mat-expansion-panel>
-
       <mat-expansion-panel>
         <mat-expansion-panel-header>
           CONTRACTS
         </mat-expansion-panel-header>
       </mat-expansion-panel>
-
       <mat-expansion-panel>
         <mat-expansion-panel-header>
           LOCATION
         </mat-expansion-panel-header>
-        <div fxLayout="column" fxLayoutAlign="center" style="padding:20px; width: 50%;" fxFlex>
-          <app-project-map></app-project-map>
+        <div fxLayout="row">
+          <div fxLayout="column" fxLayoutAlign="center" style="padding:20px; width: 50%;" fxFlex>
+            <app-project-map></app-project-map>
+          </div>
+          <div fxLayout="column">
+            {{project.address}}
+            {{project.city}}
+            {{project.state}}
+            {{project.zip}}
+          </div>
         </div>
-        {{project.address}}
-        {{project.city}}
-        {{project.state}}
-        {{project.zip}}
       </mat-expansion-panel>
       <mat-expansion-panel>
         <mat-expansion-panel-header>
