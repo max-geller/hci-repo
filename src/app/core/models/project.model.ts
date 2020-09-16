@@ -9,4 +9,7 @@ export interface ProjectInterface {
     description?: string;
     previewURL?: string;
     tags?: string;
+    category?: string;
+    structure?: string;
+
 }
