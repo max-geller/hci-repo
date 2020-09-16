@@ -3,7 +3,17 @@
     <h2>LABOR RATE DASHBOARD</h2>
     <mat-divider></mat-divider>
     <div class="main-container" fxLayout="column">
-      <app-chart></app-chart>
+      <mat-tab-group>
+        <mat-tab label="BY TRADE" id="preload">
+          <app-chart></app-chart>
+        </mat-tab>
+        <mat-tab label="BY SOURCE" id="preload">
+          <app-chart></app-chart>
+        </mat-tab>
+        <mat-tab label="BY REGION" id="preload">
+          <app-chart></app-chart>
+        </mat-tab>     </mat-tab-group>
+
     </div>
   </div>
 </div>

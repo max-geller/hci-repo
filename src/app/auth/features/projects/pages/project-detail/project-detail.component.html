@@ -7,14 +7,25 @@
       <h5> {{project.squareFeet}} GSF</h5>
       <h5> {{project.type}}</h5>
       <h5> {{project.client}}</h5>
+      {{project.category}}
+      {{project.structure}}
     </div>
-    <div fxLayout="row wrap" style="width: 100%" fxLayoutAlign="center  center">
+    <div fxLayout="column" style="width: 100%" fxLayoutAlign="center  center">
       <div fxLayout="column" fxLayoutAlign="center center" style="padding:20px" fxFlex>
-        <img src={{project.previewURL}} height="350px">
+        <img src={{project.previewURL}} height="220px">
       </div>
-      <div fxLayout="column" fxLayoutAlign="center" style="padding:20px;" fxFlex>
+      <div fxLayout="column" fxLayoutAlign="center" style="padding:20px; width: 50%;" fxFlex>
         <app-project-map></app-project-map>
       </div>
+    </div>
+    <div>
+      <h4>COST SOURCES:</h4>
+      <ul>
+        <li>98% CD Estimate</li>
+        <li>75% CD Estimate</li>
+
+
+      </ul>
     </div>
 
     <mat-accordion>

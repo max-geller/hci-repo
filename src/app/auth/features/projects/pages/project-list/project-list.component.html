@@ -28,55 +28,67 @@
               <mat-option>US Gross Domestic Product</mat-option>
             </mat-select>
           </mat-form-field>
-          <div class="project-list-container" style="padding:20px;">
 
+
+          <div class="project-container" fxlayout="column">
             <mat-card id="preload" class="project-card" routerLink="/auth/projects/project/{{project.id}}"
-              fxLayout="column" style="padding:15px !important;overflow:hidden;position: flex;"
               *ngFor="let project of projects$ | async">
-              <div class="favorite-icon" style="position: relative; ">
-                <img mat-card-image src="{{project.previewURL}}" height="210px" style="display: block;">
-                <button mat-icon-button style="top: 0;position: absolute;">
-                  <i class="far fa-heart" style="color: white;"></i>
-                </button>
+
+              <div class="project-item-container" fxLayout="row" style="display: flex">
+
+                <!--Image Container-->
+                <div class="image-container" fxLayout="column">
+                  <div class="favorite-icon" style="position: relative; ">
+                    <img src="{{project.previewURL}}" width="210px" style="display: block;">
+                    <button mat-icon-button style="top: 0;position: absolute;">
+                      <i class="far fa-heart" style="color: white;"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!--Image Container-->
+                <div class="info-container" fxLayout="column" style="padding:20px;" fxFlex>
+                  <div class="title-row" fxLayout="row" style="display: flex;">
+                    <div class="proj-name-container" fxLayout="column">
+                      <h5 style="text-align: left;"> {{project.name}} </h5>
+                    </div>
+                    <div fxFlex></div>
+                    <div class="icon-container" fxLayout="row">
+                      <img src="https://logowiki.net/wp-content/uploads/imgp/REVIT-Logo-1-8418.png" height="15px"
+                        width="15px" style="margin: 4px;">
+                      <img
+                        src="https://img2.pngio.com/dynamics-365-logo-png-download-15041490-free-transparent-power-bi-png-900_900.jpg"
+                        height="15px" width="15px" style="margin: 4px;">
+                      <img
+                        src="https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_4cf1afcba79428d399cada0516f7f0d5/procore.jpg"
+                        height="15px" width="15px" style="margin: 4px;">
+                    </div>
+                  </div>
+                  <div class="status-sf-row" fxLayout="row">
+                    <h4 style="margin:0px;padding:0px;">
+                      {{project.status}}
+                      {{project.client}}
+                      {{project.category}}
+                      {{project.structure}}
+                    </h4>
+                    <h4 style="margin:0px;padding:0px;">
+                      {{project.squareFeet}}
+                    </h4>
+                  </div>
+                  <div class="status-sf-row" fxLayout="row" fxFlex>
+                    <p style="font-size: 11px;margin:0px;padding:0px;">
+                      {{project.description}}</p>
+                  </div>
+                  <mat-card-footer fxLayout="row" style="padding: 15px;height: 36px;position:relative">
+                    <h4 style="font-size:18px; font-weight: 500;position:absolute;bottom:0px;">
+                      {{project.cost}}
+                    </h4>
+                  </mat-card-footer>
+                </div>
+
+
               </div>
-
-              <div fxLayout="row" fxLayoutAlign="center start" style="padding: 0px; display: flex">
-                <div fxLayout="column" fxFlex>
-                  <h5 style="text-align: left;"> {{project.name}} </h5>
-                </div>
-                <div fxLayout="row">
-                  <img src="https://logowiki.net/wp-content/uploads/imgp/REVIT-Logo-1-8418.png" height="15px"
-                    width="15px" style="margin: 4px;">
-                  <img
-                    src="https://img2.pngio.com/dynamics-365-logo-png-download-15041490-free-transparent-power-bi-png-900_900.jpg"
-                    height="15px" width="15px" style="margin: 4px;">
-                  <img
-                    src="https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_4cf1afcba79428d399cada0516f7f0d5/procore.jpg"
-                    height="15px" width="15px" style="margin: 4px;">
-                </div>
-              </div>
-
-
-              <h4 style="margin:0px;padding:0px;">
-                {{project.status}}
-              </h4>
-              <h4 style="margin:0px;padding:0px;">
-                {{project.squareFeet}}
-              </h4>
-
-              <p style="font-size: 11px;margin:0px;padding:0px;">
-                {{project.description}}</p>
-              <mat-card-footer fxLayout="row" style="padding: 15px;height: 36px;position:relative">
-                <div>
-                  <h4 style="font-size:18px; font-weight: 500;position:absolute;bottom:0px;">
-                    {{project.cost}}
-                  </h4>
-                </div>
-
-              </mat-card-footer>
             </mat-card>
-
-
           </div>
           <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]"
             style="border-radius: 25px;">
