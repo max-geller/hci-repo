@@ -1,5 +1,5 @@
 <div class="wrapper">
-  <div class="page-layout" fxLayout="column" *ngIf="project" fxLayoutAlign="start center">
+  <div id="preload" class="page-layout" fxLayout="column" *ngIf="project" fxLayoutAlign="start center">
     <h1 style=" text-transform: uppercase;">{{project.name}}</h1>
     <div fxLayout="row" fxLayoutAlign="space-evenly center" style="width: 90%;">
 
@@ -28,18 +28,18 @@
       </ul>
     </div>
 
-    <mat-accordion>
+    <mat-accordion style="width: 95%;">
       <mat-expansion-panel>
         <mat-expansion-panel-header>
           COST TREND
         </mat-expansion-panel-header>
-        <div fxLayout="row wrap" fxLayoutAlign="start center" style="width: 90vw; height:360px; ">
-          <div fxLayout="column" style="padding:30px" fxFlex>
+        <div fxLayout="row wrap" fxLayoutAlign="start center" >
+          <div fxLayout="column" style="padding:30px">
             <div style="height:350px;" echarts [options]="chartLineOption3">
             </div>
           </div>
           <div fxLayout="column" style="padding:30px" fxFlex>
-            <div style="height:350px;" echarts [options]="salesChartBar " [autoResize]="true">
+            <div style="height:350px;" echarts [options]="salesChartBar" [autoResize]="true">
             </div>
           </div>
         </div>
@@ -71,6 +71,11 @@
         <mat-expansion-panel-header>
           PROJECT INFORMATION
         </mat-expansion-panel-header>
+        
+<iframe width="600" height="373.5"
+src=""
+frameborder="0" allowFullScreen="true"></iframe>
+
       </mat-expansion-panel>
 
       <mat-expansion-panel>
@@ -103,7 +108,7 @@
         </mat-list-item>
         <mat-list-item>
           <img
-            src="https://img2.pngio.com/dynamics-365-logo-png-download-15041490-free-transparent-power-bi-png-900_900.jpg"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Power_bi_logo_black.svg/1200px-Power_bi_logo_black.svg.png"
             class="responsive" height="30px" width="30px" style="margin: 8px;"> VIEW POWER BI DASHBOARD
         </mat-list-item>
 
