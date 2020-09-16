@@ -31,7 +31,7 @@ import { ProjectItemComponent } from './pages/project-list/components/project-it
     ProjectCostTrendComponent,
     ProjectCostSourcesComponent,
     ProjectDesignPackagesComponent,
-    ProjectItemComponent
+    ProjectItemComponent,
   ],
   imports: [
     CommonModule,

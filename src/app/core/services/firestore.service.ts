@@ -1,9 +1,8 @@
 import { TaskInterface } from './../models/task.model';
 import { Injectable } from '@angular/core';
-import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore';
+import { AngularFirestore,  AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Observable } from 'rxjs/internal/Observable';
 import { map } from 'rxjs/operators';
-import { CourseInterface } from './../models/course.model';
 import { ProjectInterface } from '../models/project.model';
 
 @Injectable({
@@ -46,6 +45,5 @@ export class FirestoreService {
       }
     }));
   }
-
-
 }
+

@@ -9,14 +9,14 @@
       <h5> {{project.client}}</h5>
       {{project.category}}
       {{project.structure}}
+
+      {{project.locationSlug}}
     </div>
     <div fxLayout="column" style="width: 100%" fxLayoutAlign="center  center">
       <div fxLayout="column" fxLayoutAlign="center center" style="padding:20px" fxFlex>
         <img src={{project.previewURL}} height="220px">
       </div>
-      <div fxLayout="column" fxLayoutAlign="center" style="padding:20px; width: 50%;" fxFlex>
-        <app-project-map></app-project-map>
-      </div>
+
     </div>
     <div>
       <h4>COST SOURCES:</h4>
@@ -81,8 +81,15 @@
 
       <mat-expansion-panel>
         <mat-expansion-panel-header>
-          DOCUMENTATION
+          LOCATION
         </mat-expansion-panel-header>
+        <div fxLayout="column" fxLayoutAlign="center" style="padding:20px; width: 50%;" fxFlex>
+          <app-project-map></app-project-map>
+        </div>
+        {{project.address}}
+        {{project.city}}
+        {{project.state}}
+        {{project.zip}}
       </mat-expansion-panel>
       <mat-expansion-panel>
         <mat-expansion-panel-header>
