@@ -1,39 +1,34 @@
 <div class="wrapper">
-  <div id="preload" class="page-layout" fxLayout="column" *ngIf="project" fxLayoutAlign="start center">
-    <h1 style=" text-transform: uppercase;">{{project.name}}</h1>
-    <div fxLayout="row" fxLayoutAlign="space-evenly center" style="width: 90%;">
-
-      <h5>{{project.status}}</h5>
-      <h5> {{project.squareFeet}} GSF</h5>
-      <h5> {{project.type}}</h5>
-      <h5> {{project.client}}</h5>
-      {{project.category}}
-      {{project.structure}}
-
-      {{project.locationSlug}}
+  <div id="preload" class="page-layout" fxLayout="column" *ngIf="project" fxLayoutAlign="start start">
+    <div class="project-title-container" fxLayout="column" style="width:100%">
+      <div class="title-row" fxLayout="row" style="width:100%">
+        <h1 style=" text-transform: uppercase;margin-bottom: 0px !important;">{{project.name}}</h1>
+      </div>
+      <div class="subtitle-row" fxLayout="row" style="width: 100%;">
+        <h4 style=" text-transform: uppercase;">{{project.locationSlug}}</h4>
+      </div>
     </div>
-    <div fxLayout="column" style="width: 100%" fxLayoutAlign="center  center">
-      <div fxLayout="column" fxLayoutAlign="center center" style="padding:20px" fxFlex>
+
+    <div fxLayout="row wrap">
+      <div fxLayout="column">
         <img src={{project.previewURL}} height="220px">
       </div>
-
-    </div>
-    <div>
-      <h4>COST SOURCES:</h4>
-      <ul>
-        <li>98% CD Estimate</li>
-        <li>75% CD Estimate</li>
-
-
-      </ul>
+      <div class="info-container" fxLayout="column" style="padding:20px">
+        <h5> {{project.squareFeet}} GSF</h5>
+        <h5> {{project.type}}</h5>
+        <h5> {{project.client}}</h5>
+        <h5>{{project.category}}</h5>
+        <h5>{{project.structure}}</h5>
+        <h5>{{project.status}}</h5>
+      </div>
     </div>
 
-    <mat-accordion style="width: 95%;">
+    <mat-accordion style="width: 98%;">
       <mat-expansion-panel>
         <mat-expansion-panel-header>
           COST TREND
         </mat-expansion-panel-header>
-        <div fxLayout="row wrap" fxLayoutAlign="start center" >
+        <div fxLayout="row wrap" fxLayoutAlign="start center">
           <div fxLayout="column" style="padding:30px">
             <div style="height:350px;" echarts [options]="chartLineOption3">
             </div>
@@ -60,21 +55,18 @@
         <app-project-table></app-project-table>
       </mat-expansion-panel>
 
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          DESCRIPTION
-        </mat-expansion-panel-header>
-        {{project.description}}
 
-      </mat-expansion-panel>
       <mat-expansion-panel>
         <mat-expansion-panel-header>
-          PROJECT INFORMATION
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Power_bi_logo_black.svg/1200px-Power_bi_logo_black.svg.png"
+            class="responsive" height="20px" width="20px" style="margin-right: 5px;">
+          POWER BI DASHBOARD
         </mat-expansion-panel-header>
-        
-<iframe width="600" height="373.5"
-src=""
-frameborder="0" allowFullScreen="true"></iframe>
+
+        <iframe width="100%" height="800"
+          src="https://app.powerbi.com/view?r=eyJrIjoiZDQ0YTg4OGYtNWYzYy00ODBhLTlkMjItY2YzNTQ3ODBiZTU0IiwidCI6IjM3ZjhiNGE4LWQzNzgtNGMzNS1iZmIxLWNmZDdjNDZiMWM2NyIsImMiOjZ9&pageName=ReportSection"
+          frameborder="0" allowFullScreen="true"></iframe>
 
       </mat-expansion-panel>
 
@@ -106,11 +98,7 @@ frameborder="0" allowFullScreen="true"></iframe>
           <img src="https://logowiki.net/wp-content/uploads/imgp/REVIT-Logo-1-8418.png" class="responsive" height="30px"
             width="30px" style="margin: 8px;">VIEW REVIT MODEL
         </mat-list-item>
-        <mat-list-item>
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Power_bi_logo_black.svg/1200px-Power_bi_logo_black.svg.png"
-            class="responsive" height="30px" width="30px" style="margin: 8px;"> VIEW POWER BI DASHBOARD
-        </mat-list-item>
+
 
         <mat-list-item>
           <img
@@ -122,7 +110,7 @@ frameborder="0" allowFullScreen="true"></iframe>
     </mat-accordion>
   </div>
 
-  <div fxLayout="row">
-    <button mat-stroked-button style="color: white; border-color: white">Enroll</button>
-  </div>
+
+
+
 </div>
