@@ -64,7 +64,7 @@
                     </div>
                   </div>
                   <div class="project-detail-container" fxLayout="column">
-                    <div fxLayout="row" >
+                    <div fxLayout="row">
                       <h4 style="margin:0px;padding:0px;">
                         {{project.status}}
                       </h4>
@@ -73,18 +73,20 @@
                     <h4 style="margin:0px;padding:0px;">
                       {{project.owner}}
                     </h4>
-                    <mat-chip-list>
-                      <mat-chip>
-                        {{project.type}}
-                      </mat-chip>
-                    </mat-chip-list>
+
 
                   </div>
                   <div class="status-sf-row" fxLayout="row" fxFlex>
                     <p style="font-size: 11px;margin:0px;padding:0px;">
                       {{project.description}}</p>
                   </div>
-                  <mat-card-footer fxLayout="row" fxLayoutAlign="space-evenly center" style="padding: 15px;height: 36px;padding-bottom: 10px;" >
+                  <mat-chip-list>
+                    <mat-chip>
+                      {{project.type}}
+                    </mat-chip>
+                  </mat-chip-list>
+                  <mat-card-footer fxLayout="row" fxLayoutAlign="space-evenly center"
+                    style="padding: 15px;height: 36px;padding-bottom: 10px;">
                     <h4 style="font-size:18px; font-weight: 500">
                       ${{project.cost}}
                     </h4>
@@ -106,4 +108,4 @@
       </div>
     </div>
   </div>
-7
+  7
