@@ -64,34 +64,35 @@
                     </div>
                   </div>
                   <div class="project-detail-container" fxLayout="column">
-                    <div fxLayout="row">
-                      <h5 style="margin:0px;padding:0px;">
-                        Status: 
-                      </h5>
-                      <h5 style="margin:0px;padding:0px;">
+                    <div fxLayout="row" >
+                      <h4 style="margin:0px;padding:0px;">
                         {{project.status}}
-                      </h5>
+                      </h4>
                     </div>
 
                     <h4 style="margin:0px;padding:0px;">
-                      Owner: {{project.owner}}
+                      {{project.owner}}
                     </h4>
+                    <mat-chip-list>
+                      <mat-chip>
+                        {{project.type}}
+                      </mat-chip>
+                    </mat-chip-list>
 
-                    <h4 style="margin:0px;padding:0px;">
-                      Category: {{project.category}}
-                    </h4>
-
-                    <h4 style="margin:0px;padding:0px;">
-                      Size: {{project.squareFeet}}
-                    </h4>
                   </div>
                   <div class="status-sf-row" fxLayout="row" fxFlex>
                     <p style="font-size: 11px;margin:0px;padding:0px;">
                       {{project.description}}</p>
                   </div>
-                  <mat-card-footer fxLayout="row" style="padding: 15px;height: 36px;position:relative">
-                    <h4 style="font-size:18px; font-weight: 500;position:absolute;bottom:0px;">
-                      {{project.cost}}
+                  <mat-card-footer fxLayout="row" fxLayoutAlign="space-evenly center" style="padding: 15px;height: 36px;padding-bottom: 10px;" >
+                    <h4 style="font-size:18px; font-weight: 500">
+                      ${{project.cost}}
+                    </h4>
+                    <h4 style="font-size:14px; ">
+                      {{project.squareFeet}} SF
+                    </h4>
+                    <h4 style="font-size:14px; ">
+                      $415.85/SF
                     </h4>
                   </mat-card-footer>
                 </div>
@@ -105,3 +106,4 @@
       </div>
     </div>
   </div>
+7
