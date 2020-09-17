@@ -4,7 +4,6 @@
   <div mat-dialog-content>
     <form [formGroup]="addTaskFormGroup">
       <div fxLayout="column">
-
         <mat-form-field class="md-field">
           <mat-label>Title</mat-label>
           <input matInput formControlName="title">
@@ -26,7 +25,6 @@
             <mat-option value="Deferred">Deferred</mat-option>
           </mat-select>
         </mat-form-field>
-        
         <mat-form-field class="md-field">
           <mat-label>Project</mat-label>
 
@@ -36,7 +34,7 @@
     </form>
   </div>
   <div fxLayout="row" mat-dialog-actions>
-    <button mat-raised-button color="primary" (click)="save()">Save</button>
+    <button mat-raised-button color="primary" (click)="save()" (keyup)="save()">Save</button>
     <button class="mat-raised-button" (click)="close()">Close</button>
   </div>
 </div>
