@@ -1,13 +1,13 @@
 export const environment = {
-  production: true,
+  production: false,
   firebase: {
-    apiKey: "AIzaSyDHAg659tzFEUYMkbjX0y_uxWtmG21GC1E",
-    authDomain: "hci-repo.firebaseapp.com",
-    databaseURL: "https://hci-repo.firebaseio.com",
-    projectId: "hci-repo",
-    storageBucket: "hci-repo.appspot.com",
-    messagingSenderId: "1089800392533",
-    appId: "1:1089800392533:web:db65a04b4622a7776629dc",
-    measurementId: "G-QWLVCV71FH"
+    apiKey: "AIzaSyCRMOu8oGsAG3iZodBoRze6DXB6XYxpQAQ",
+    authDomain: "estibase-prod.firebaseapp.com",
+    databaseURL: "https://estibase-prod.firebaseio.com",
+    projectId: "estibase-prod",
+    storageBucket: "estibase-prod.appspot.com",
+    messagingSenderId: "850662037874",
+    appId: "1:850662037874:web:88823e9f4d58b2babce5eb",
+    measurementId: "G-LWHCLW0F0S"
   }
 };

@@ -163,5 +163,8 @@
       }
     }
   },
-  "defaultProject": "hci-repo"
+  "defaultProject": "hci-repo",
+  "cli": {
+    "analytics": false
+  }
 }
